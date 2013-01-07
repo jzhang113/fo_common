@@ -11,7 +11,7 @@
  * @param $form_state: A keyed array containing the current state of the form.
  */
  
-function ovpr_common_form_system_theme_settings_alter(&$form, &$form_state)  {
+function fo_common_form_system_theme_settings_alter(&$form, &$form_state)  {
 
   $form['at-settings']['ovpr'] = array(
     '#type' => 'fieldset',

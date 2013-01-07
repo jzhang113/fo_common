@@ -1,8 +1,8 @@
 
 ;----------// Theme Information
 
-  name        = OVPR Common
-  description = The shared common theme for Office of the Vice President for Research affiliated websites.
+  name        = FO Common
+  description = The shared common theme for Financial Ops affiliated websites.
   core        = 7.x
   base theme  = adaptivetheme
   release     = 7.x-3.x

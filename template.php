@@ -26,7 +26,7 @@
  * Preprocess variables for the html template.
  */
 /* -- Delete this line to enable.
-function ovpr_common_preprocess_html(&$vars) {
+function fo_common_preprocess_html(&$vars) {
   global $theme_key;
 
   // Two examples of adding custom classes to the body.
@@ -45,7 +45,7 @@ function ovpr_common_preprocess_html(&$vars) {
  * Process variables for the html template.
  */
 /* -- Delete this line if you want to use this function
-function ovpr_common_process_html(&$vars) {
+function fo_common_process_html(&$vars) {
 }
 // */
 
@@ -53,7 +53,7 @@ function ovpr_common_process_html(&$vars) {
 /**
  * Override or insert variables for the page templates.
  */
-function ovpr_common_preprocess_page(&$vars) {
+function fo_common_preprocess_page(&$vars) {
     $departmentname = theme_get_setting('ovpr_depts_name');
     $sitepath = $GLOBALS['base_url'];
     $vars['ovpr_branding'] = '<a id="research-link" href="http://www.uiowa.edu/">University of Iowa</a>' 
@@ -73,7 +73,7 @@ function ovpr_common_preprocess_page(&$vars) {
   	}
 }
 
-/*function ovpr_common_process_page(&$vars) {
+/*function fo_common_process_page(&$vars) {
 }
 // */
 
@@ -81,9 +81,9 @@ function ovpr_common_preprocess_page(&$vars) {
  * Override or insert variables into the node templates.
  */
 /* -- Delete this line if you want to use these functions
-function ovpr_common_preprocess_node(&$vars) {
+function fo_common_preprocess_node(&$vars) {
 }
-function ovpr_common_process_node(&$vars) {
+function fo_common_process_node(&$vars) {
 }
 // */
 
@@ -92,9 +92,9 @@ function ovpr_common_process_node(&$vars) {
  * Override or insert variables into the comment templates.
  */
 /* -- Delete this line if you want to use these functions
-function ovpr_common_preprocess_comment(&$vars) {
+function fo_common_preprocess_comment(&$vars) {
 }
-function ovpr_common_process_comment(&$vars) {
+function fo_common_process_comment(&$vars) {
 }
 // */
 
@@ -103,8 +103,8 @@ function ovpr_common_process_comment(&$vars) {
  * Override or insert variables into the block templates.
  */
 /* -- Delete this line if you want to use these functions
-function ovpr_common_preprocess_block(&$vars) {
+function fo_common_preprocess_block(&$vars) {
 }
-function ovpr_common_process_block(&$vars) {
+function fo_common_process_block(&$vars) {
 }
 // */
