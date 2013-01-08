@@ -6,3 +6,8 @@
 #site-name a {
   font-family: inherit;
 }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/fo\.scss}line{font-family:\000038}}
+#content {
+  color: #150517;
+}
