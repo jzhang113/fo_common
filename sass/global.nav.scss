@@ -278,16 +278,16 @@ ul.menu {
 
 #breadcrumb-wrapper .container {
   background: #FFC822; /* Old browsers */
-  @include background(linear-gradient(top, #FFF6D9, #FFC61A));       
+  //@include background(linear-gradient(top, #FFF6D9, #FFC61A));       
   border: 1px solid #FFC61A;
-  height: 3em;
+  height: auto;
 }
 
 // Breadcrumbs as an ordered list
 #breadcrumb {
-  padding-top: .5em;
-  padding-bottom: .5em;
-  
+  padding-top: .1em;
+  padding-bottom: .1em;
+  font-size: .8em;
   #breadcrumb {
     margin-left: 0px;
   }
@@ -324,8 +324,8 @@ ul.menu {
   a {
     
     color: #000000;
-    font-weight: bold;
-    font-size: .8em;
+    font-weight: normal;
+    font-size: 1em;
     
     &:link,
     &:visited {}

@@ -148,32 +148,28 @@
       </div>
     </div>
 
-    <?php if ($page['menu_bar'] || $primary_navigation || $secondary_navigation): ?>
+    <?php if ( $secondary_navigation): ?>
       <div id="nav-wrapper">
         <div class="container clearfix">
           <?php print render($page['menu_bar']); ?>
-          <?php if ($primary_navigation): print $primary_navigation; endif; ?>
           <?php if ($secondary_navigation): print $secondary_navigation; endif; ?>
         </div>
       </div>
     <?php endif; ?>
-    <!-- OVPR branding bar -->
-      <?php if(theme_get_setting('ovpr_branding_bar') === 1): ?>
-        <div id="research-depts-wrapper">
-          <div class="container clearfix">
-            <div id="research-depts-nav">
-              <?php print $ovpr_branding; ?>
-            </div>
-          </div>
-        </div>    
-    <?php endif; ?>
+    <div id="research-depts-wrapper">
+      <div class="container clearfix">
+        <div id="research-depts-nav">
+          <?php if ($page['menu_bar']): print render($page['menu_bar']); endif; ?>
+        </div>
+      </div>
+    </div>    
     <?php //if ($breadcrumb): ?>
       <div id="breadcrumb-wrapper">
         <div class="container clearfix">
           <section id="breadcrumb" class="clearfix">
             <?php 
               if ($breadcrumb) { 
-                print $breadcrumb; 
+                print $breadcrumb . $title; 
               } else {
                 print " ";
               }

@@ -4,7 +4,7 @@
   name        = FO Common
   description = The shared common theme for Financial Ops affiliated websites.
   core        = 7.x
-  base theme  = adaptivetheme
+  base theme  = gravitas
   release     = 7.x-3.x
   engine      = phptemplate
   screenshot  = screenshot.png
@@ -14,6 +14,7 @@
 
   ; Globals CSS, loads all global.[type].css files in /css/
   stylesheets[screen][] = css/globals.css
+  stylesheets[screen][] = css/fo.css
 
   ; Print - uncomment to load basic print styles.
   ; stylesheets[print][] = css/print.css
