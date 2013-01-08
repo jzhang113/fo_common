@@ -193,7 +193,7 @@ ul.sf-menu {
 
 
 ul.menu {
-  list-style-position: inside;
+  list-style-position: outside;
   
   .region-header & {
     text-transform: uppercase;
@@ -213,7 +213,7 @@ ul.menu {
   }
 
   li {
-    margin: 2px 0;
+    margin: 2px 0 2px 20px;
     .region-header & {
       float: left;
       margin: 0 2px !important;
