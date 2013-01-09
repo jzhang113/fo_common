@@ -16,9 +16,10 @@
   float: left;
   margin-bottom: 10px;
   margin-top: 30px;
+  width: 100%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/responsive\.tablet\.landscape\.scss}line{font-family:\0000324}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/responsive\.tablet\.landscape\.scss}line{font-family:\0000325}}
 #research-depts-nav {
   background: #3B3B3C;
   padding: 5px;
@@ -26,14 +27,14 @@
   overflow: auto;
   width: 100%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/responsive\.tablet\.landscape\.scss}line{font-family:\0000330}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/responsive\.tablet\.landscape\.scss}line{font-family:\0000331}}
 #research-depts-nav a {
   color: #FFC344;
   font-size: 0.8em;
   font-weight: bold;
   vertical-align: middle;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/responsive\.tablet\.landscape\.scss}line{font-family:\0000336}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/responsive\.tablet\.landscape\.scss}line{font-family:\0000337}}
 #research-depts-nav #current-department-link {
   float: left;
   background-color: #FFC344;
@@ -47,7 +48,7 @@
   margin-top: 2px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/responsive\.tablet\.landscape\.scss}line{font-family:\0000347}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/responsive\.tablet\.landscape\.scss}line{font-family:\0000348}}
 #research-link {
   float: left;
   margin-right: 10px;
@@ -55,17 +56,17 @@
   margin-top: 2px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/responsive\.tablet\.landscape\.scss}line{font-family:\0000354}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/responsive\.tablet\.landscape\.scss}line{font-family:\0000355}}
 #depts-links-top {
   margin: 0;
   float: right;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/responsive\.tablet\.landscape\.scss}line{font-family:\0000357}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/responsive\.tablet\.landscape\.scss}line{font-family:\0000358}}
 #depts-links-top a {
   height: 100%;
   padding: 0 4px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/responsive\.tablet\.landscape\.scss}line{font-family:\0000360}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/responsive\.tablet\.landscape\.scss}line{font-family:\0000361}}
 #depts-links-top a:hover {
   color: #000;
   background-color: #FFC344;
@@ -76,30 +77,30 @@
   -o-border-radius: 5px;
   border-radius: 5px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/responsive\.tablet\.landscape\.scss}line{font-family:\0000367}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/responsive\.tablet\.landscape\.scss}line{font-family:\0000368}}
 #depts-links-top li {
   display: inline;
   margin: 0 5px;
   border-left: 1px solid #FFC344;
   padding-left: 10px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/responsive\.tablet\.landscape\.scss}line{font-family:\0000372}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/responsive\.tablet\.landscape\.scss}line{font-family:\0000373}}
 #depts-links-top li.first {
   border-left: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/responsive\.tablet\.landscape\.scss}line{font-family:\0000378}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/responsive\.tablet\.landscape\.scss}line{font-family:\0000379}}
 #main-content {
   margin-left: 20px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/responsive\.tablet\.landscape\.scss}line{font-family:\0000384}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/responsive\.tablet\.landscape\.scss}line{font-family:\0000385}}
 .flexslider .slides img {
   width: 410px;
   float: left;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/responsive\.tablet\.landscape\.scss}line{font-family:\0000390}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/responsive\.tablet\.landscape\.scss}line{font-family:\0000391}}
 .flexslider ul.slides li img {
   padding-right: 10px;
 }

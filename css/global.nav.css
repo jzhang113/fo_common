@@ -144,7 +144,7 @@ ul.sf-menu a:focus, ul.sf-menu a:hover, ul.sf-menu a:active {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/global\.nav\.scss}line{font-family:\00003195}}
 ul.menu {
-  list-style-position: inside;
+  list-style-position: outside;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/global\.nav\.scss}line{font-family:\00003198}}
 .region-header ul.menu {
@@ -165,7 +165,7 @@ ul.menu ul ul ul {
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/global\.nav\.scss}line{font-family:\00003215}}
 ul.menu li {
-  margin: 2px 0;
+  margin: 2px 0 2px 20px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/global\.nav\.scss}line{font-family:\00003217}}
 .region-header ul.menu li {

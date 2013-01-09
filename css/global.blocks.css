@@ -26,7 +26,7 @@
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/global\.blocks\.scss}line{font-family:\00003135}}
 #block-system-main-menu li {
   border-bottom: 1px solid #FFC344;
-  padding: 10px;
+  padding: 10px 10px 10px 0;
   position: relative;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/global\.blocks\.scss}line{font-family:\00003139}}
@@ -43,12 +43,13 @@
 #block-system-main-menu li li {
   border-bottom: none;
   padding: 2px;
+  margin-left: 0px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/global\.blocks\.scss}line{font-family:\00003151}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/global\.blocks\.scss}line{font-family:\00003152}}
 #block-system-main-menu li li:after {
   display: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/global\.blocks\.scss}line{font-family:\00003156}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/global\.blocks\.scss}line{font-family:\00003157}}
 #block-system-main-menu .block-inner {
   margin-left: 0;
   margin-right: 20px;
