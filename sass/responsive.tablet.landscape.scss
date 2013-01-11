@@ -28,12 +28,20 @@
   clear: both;
   overflow: auto;
   width: 100%;
-    a {
-      color: #FFC344;
-      font-size: 0.8em;
-      font-weight: bold;
-      vertical-align: middle;
+  a {
+    color: #F1F1F1;
+    font-size: 0.8em;
+    font-weight: bold;
+    vertical-align: middle;
+
+    &:hover,
+    &:focus {
+      color:#FFF;
     }
+  }
+  li{
+    float: right;
+  }
   #current-department-link {
     float: left;
     background-color: #FFC344;
