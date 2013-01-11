@@ -15,41 +15,35 @@
 #name-and-slogan {
   float: left;
   width: 100%;
+  padding: 0.5em 0 1em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/responsive\.desktop\.scss}line{font-family:\0000325}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/responsive\.desktop\.scss}line{font-family:\0000326}}
 #main-content {
   margin-left: 40px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/responsive\.desktop\.scss}line{font-family:\0000329}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/responsive\.desktop\.scss}line{font-family:\0000330}}
 #research-depts-nav {
   background: #3B3B3C;
   padding: 5px;
   clear: both;
   overflow: auto;
   width: 100%;
+  text-align: right;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/responsive\.desktop\.scss}line{font-family:\0000335}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/responsive\.desktop\.scss}line{font-family:\0000337}}
 #research-depts-nav a {
   color: #F1F1F1;
   font-size: 0.8em;
   font-weight: bold;
   vertical-align: middle;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/responsive\.desktop\.scss}line{font-family:\0000342}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/responsive\.desktop\.scss}line{font-family:\0000344}}
 #research-depts-nav a:hover, #research-depts-nav a:focus {
   color: #FFF;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/responsive\.desktop\.scss}line{font-family:\0000347}}
-#research-depts-nav li {
-  border-right: 1px solid #FFF;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/responsive\.desktop\.scss}line{font-family:\0000350}}
-#research-depts-nav li.last {
-  border-right: none;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/responsive\.desktop\.scss}line{font-family:\0000353}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/responsive\.desktop\.scss}line{font-family:\0000348}}
 #research-depts-nav #current-department-link {
   float: left;
   background-color: #FFC344;
@@ -63,7 +57,7 @@
   margin-top: 2px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/responsive\.desktop\.scss}line{font-family:\0000364}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/responsive\.desktop\.scss}line{font-family:\0000359}}
 #research-link {
   float: left;
   margin-right: 10px;
@@ -71,17 +65,17 @@
   margin-top: 2px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/responsive\.desktop\.scss}line{font-family:\0000373}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/responsive\.desktop\.scss}line{font-family:\0000368}}
 #depts-links-top {
   margin: 0;
   float: right;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/responsive\.desktop\.scss}line{font-family:\0000376}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/responsive\.desktop\.scss}line{font-family:\0000371}}
 #depts-links-top a {
   height: 100%;
   padding: 0 4px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/responsive\.desktop\.scss}line{font-family:\0000379}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/responsive\.desktop\.scss}line{font-family:\0000374}}
 #depts-links-top a:hover {
   color: #000;
   background-color: #FFC344;
@@ -92,25 +86,25 @@
   -o-border-radius: 5px;
   border-radius: 5px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/responsive\.desktop\.scss}line{font-family:\0000386}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/responsive\.desktop\.scss}line{font-family:\0000381}}
 #depts-links-top li {
   display: inline;
   margin: 0 5px;
-  border-left: 1px solid #FFC344;
+  border-left: 1px solid #ffc344;
   padding-left: 10px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/responsive\.desktop\.scss}line{font-family:\0000391}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/responsive\.desktop\.scss}line{font-family:\0000386}}
 #depts-links-top li.first {
   border-left: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/responsive\.desktop\.scss}line{font-family:\0000398}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/responsive\.desktop\.scss}line{font-family:\0000393}}
 .flexslider .slides img {
   width: 440px;
   float: left;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/responsive\.desktop\.scss}line{font-family:\00003103}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/responsive\.desktop\.scss}line{font-family:\0000398}}
 .flexslider ul.slides li img {
   padding-right: 10px;
 }

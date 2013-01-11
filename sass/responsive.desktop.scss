@@ -20,6 +20,7 @@
 #name-and-slogan {
   float: left;
   width:100%;
+  padding: .5em 0 1em;
 }
 
 #main-content {
@@ -32,6 +33,7 @@
   clear: both;
   overflow: auto;
   width: 100%;
+  text-align: right;
   a {
     color: #F1F1F1;
     font-size: 0.8em;
@@ -42,13 +44,6 @@
     &:focus {
       color:#FFF;
     }
-  }
-
-  li {
-    border-right: 1px solid #FFF;
-  }
-  li.last{
-    border-right: none;
   }
   #current-department-link {
     float: left;
