@@ -48,7 +48,7 @@
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/global\.pages\.scss}line{font-family:\00003107}}
 #site-name a:hover, #site-name a:focus {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/global\.pages\.scss}line{font-family:\00003114}}
