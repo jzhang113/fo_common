@@ -285,9 +285,10 @@ ul.menu {
 
 // Breadcrumbs as an ordered list
 #breadcrumb {
-  padding-top: .1em;
-  padding-bottom: .1em;
-  font-size: .8em;
+  color: #3B3B3C;
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+  font-size: 0.8em;
   #breadcrumb {
     margin-left: 0px;
   }
@@ -322,10 +323,9 @@ ul.menu {
   li.crumb-last {}
 
   a {
-    
-    color: #000000;
+    color: #3B3B3C;  
+    font-size: 1.0em;
     font-weight: normal;
-    font-size: 1em;
     
     &:link,
     &:visited {}
