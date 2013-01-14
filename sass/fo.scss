@@ -9,6 +9,21 @@
 	color: #150517;
 }
 
+.menu-name-main-menu li{
+	border-bottom: 1px solid rgb(255, 195, 68);
+	padding: 10px;
+	position: relative;
+	&:after {
+      content: ' ';
+      background: #FFC344;
+      height: 6px;
+      width: 6px;
+      position: absolute;
+      bottom: -3px;
+      right: 0;
+    }
+}
+
 #footer-panels-wrapper{
 	.region.region-three-33-first{
 		width: 66.6666%;
