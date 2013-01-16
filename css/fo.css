@@ -13,13 +13,13 @@
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/fo\.scss}line{font-family:\0000312}}
-.menu-name-main-menu li {
+.region-sidebar-first .menu-name-main-menu li {
   border-bottom: 1px solid #ffc344;
   padding: 10px;
   position: relative;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/fo\.scss}line{font-family:\0000316}}
-.menu-name-main-menu li:after {
+.region-sidebar-first .menu-name-main-menu li:after {
   content: ' ';
   background: #FFC344;
   height: 6px;
