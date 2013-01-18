@@ -35,6 +35,21 @@
     }
 }
 
+// Department & Unit List
+
+.view-id-departments_units{
+	h3{
+		margin-top: 20px;
+	}
+	.item-list{
+		float: left;
+		width: 50%;
+	}
+	.item-list:nth-child(2n+1){
+		clear:left;
+	}
+}
+
 //Fix for header nav on GAO
 
 .site-name-grant-accounting-office #branding {
