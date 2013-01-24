@@ -57,7 +57,7 @@
 
 // Featured Page on GAO
 
-.pane-front-page-featured-content{
+.pane-front-page-featured-content, #block-book-navigation{
 	background-color: #D9EDF7;
 	border: 1px solid #BCE8F1;
 	border-radius: 4px;
@@ -69,6 +69,19 @@
 		text-transform: uppercase;
 		font-size: 1.4em;
 		padding: 10px 0;
+	}
+	h2{
+		font-family: 'Trebuchet MS', sans-serif;
+		line-height: 1.2em;
+		a{
+			text-transform: capitalize;
+			text-decoration: none;
+			&:hover,
+			&:focus {
+				text-decoration: underline;
+				color: inherit;
+			}
+		}
 	}
 	.node {
 	margin-bottom:0;
