@@ -60,16 +60,15 @@ th {
   padding: 5px 7px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/global\.tables\.scss}line{font-family:\0000373}}
-tr.even {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/global\.tables\.scss}line{font-family:\0000374}}
+tr.odd, tr:nth-child(2n+2) {
   border-bottom: 0;
   background-color: #fff;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/global\.tables\.scss}line{font-family:\0000380}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/global\.tables\.scss}line{font-family:\0000381}}
 tr.info, tr.odd, tr:nth-child(2n+1) {
   border-bottom: 0;
-  background-color: #f5f5f5;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: #F9F9F9;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/global\.tables\.scss}line{font-family:\0000390}}
 tr.odd td.active {
