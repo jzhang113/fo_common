@@ -39,6 +39,8 @@
     }
 }
 
+// Adding border for panel pane heading
+
 .panel-pane h2 {
 border-bottom: 1px solid rgb(255, 195, 68);
 		position: relative;
@@ -52,6 +54,20 @@ border-bottom: 1px solid rgb(255, 195, 68);
       bottom: -3px;
       right: 0;
     }
+}
+
+.view-staff-directory{
+	.views-row{
+		margin-bottom: 40px;
+		clear: left;
+	}
+	.views-field{
+		margin-left: 120px;
+	}
+	.views-field-field-photo{
+		margin-left: 0px;
+		float: left;
+	}
 }
 
 // Department & Unit List
