@@ -133,38 +133,48 @@
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/fo\.scss}line{font-family:\00003137}}
+.page-announcements h2 a {
+  color: #086782;
+  text-decoration: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/fo\.scss}line{font-family:\00003140}}
+.page-announcements h2 a:hover {
+  text-decoration: underline;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/fo\.scss}line{font-family:\00003147}}
 .pane-front-page-featured-content, #block-book-navigation {
   background-color: #D9EDF7;
   border: 1px solid #bce8f1;
   border-radius: 4px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/fo\.scss}line{font-family:\00003141}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/fo\.scss}line{font-family:\00003151}}
 .pane-front-page-featured-content h1, #block-book-navigation h1 {
   font-size: 1.2em;
   line-height: 1.2em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/fo\.scss}line{font-family:\00003145}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/fo\.scss}line{font-family:\00003155}}
 .pane-front-page-featured-content .block-title, #block-book-navigation .block-title {
   text-transform: uppercase;
   font-size: 1.4em;
   padding: 10px 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/fo\.scss}line{font-family:\00003150}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/fo\.scss}line{font-family:\00003160}}
 .pane-front-page-featured-content h2, #block-book-navigation h2 {
   font-family: "Trebuchet MS", sans-serif;
   line-height: 1.2em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/fo\.scss}line{font-family:\00003153}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/fo\.scss}line{font-family:\00003163}}
 .pane-front-page-featured-content h2 a, #block-book-navigation h2 a {
   text-transform: capitalize;
   text-decoration: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/fo\.scss}line{font-family:\00003157}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/fo\.scss}line{font-family:\00003167}}
 .pane-front-page-featured-content h2 a:hover, .pane-front-page-featured-content h2 a:focus, #block-book-navigation h2 a:hover, #block-book-navigation h2 a:focus {
   text-decoration: underline;
   color: inherit;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/fo\.scss}line{font-family:\00003163}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mahrens\/Documents\/Sitenow\/sites\/all\/themes\/fo_common\/sass\/fo\.scss}line{font-family:\00003173}}
 .pane-front-page-featured-content .node, #block-book-navigation .node {
   margin-bottom: 0;
 }
