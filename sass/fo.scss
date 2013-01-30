@@ -132,6 +132,16 @@ border-bottom: 1px solid rgb(255, 195, 68);
 	display:none;
 }
 
+// Announcements Titles on GAO
+
+.page-announcements h2 a {
+	color: #086782;
+	text-decoration: none;
+	&:hover{
+		text-decoration: underline;
+	}
+}
+
 // Featured Page on GAO
 
 .pane-front-page-featured-content, #block-book-navigation{
