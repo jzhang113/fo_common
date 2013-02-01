@@ -160,6 +160,8 @@ border-bottom: 1px solid rgb(255, 195, 68);
 	h2{
 		font-family: 'Trebuchet MS', sans-serif;
 		line-height: 1.2em;
+		border-bottom: none;
+		margin-bottom: 0;
 		a{
 			text-transform: capitalize;
 			text-decoration: none;
@@ -168,6 +170,9 @@ border-bottom: 1px solid rgb(255, 195, 68);
 				text-decoration: underline;
 				color: inherit;
 			}
+		}
+		&:after {
+			background: none;
 		}
 	}
 	.node {
