@@ -14,10 +14,10 @@
  * powerful way to easily modify the output of any template variable.
  * 
  * Preprocess and Process Functions SEE: http://drupal.org/node/254940#variables-processor
- * 1. Rename each function and instance of "adaptivetheme_subtheme" to match
+ * 1. Rename each function and instance of "fo_common" to match
  *    your subthemes name, e.g. if your theme name is "footheme" then the function
  *    name will be "footheme_preprocess_hook". Tip - you can search/replace
- *    on "adaptivetheme_subtheme".
+ *    on "fo_common".
  * 2. Uncomment the required function to use.
  */
 
@@ -53,22 +53,13 @@ function fo_common_process_html(&$vars) {
 /**
  * Override or insert variables for the page templates.
  */
-
-function fo_common_breadcrumb($variables) {
-  $sep = ' / ';
-  if (count($variables['breadcrumb']) > 0) {
-    return implode($sep, $variables['breadcrumb']) . $sep;
-  }
-  else {
-    return t(" ");
-  }
+/* -- Delete this line if you want to use these functions
+function fo_common_preprocess_page(&$vars) {
 }
-
-
-
-/*function fo_common_process_page(&$vars) {
+function fo_common_process_page(&$vars) {
 }
 // */
+
 
 /**
  * Override or insert variables into the node templates.

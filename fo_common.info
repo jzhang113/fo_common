@@ -7,14 +7,16 @@
   base theme  = gravitas
   release     = 7.x-3.x
   engine      = phptemplate
-  screenshot  = screenshot.png
+  screenshot  = screenshot_gravitas_sub.png
+  version = "7.x-3.1"
+  core = "7.x"
 
 
 ;----------// Stylesheets
 
-  ; Globals CSS, loads all global.[type].css files in /css/
-  stylesheets[screen][] = css/globals.css
-  stylesheets[screen][] = css/fo.css
+  ; See each stylesheet for extensive documentation and help.
+  stylesheets[screen][] = css/global.base.css
+  stylesheets[screen][] = css/global.styles.css
 
   ; Print - uncomment to load basic print styles.
   ; stylesheets[print][] = css/print.css
@@ -52,13 +54,11 @@
   ; unset_css[path/to/css/file.css] = 1
   ;
   ; For example to unset foobar_module.css you might use something like this:
+
   ; unset_css[sites/all/modules/foobar_module/foobar_module.css] = 1
 
 
 ;----------// Scripts
-  ; Theme js
-  scripts[] = js/jquery.tools.tooltip.min.js
-  scripts[] = js/script.js
 
   ; Internet Explorer Scripts
   ;
@@ -105,14 +105,26 @@ regions[three_33_second] = Footer panel - second
 regions[three_33_third]  = Footer panel - third
 regions[three_33_bottom] = Footer panel - bottom
 
+;----------// Custom Layout Plugins
 
-;----------// Custom Page Layout Plugins
+  ; Adaptivetheme supports both Page Layout plugins (it's own native layout
+  ; plugin type) and Panels layout plugins. Page layouts control the sidebars
+  ; and main content column layout - these are controlled via theme settings for
+  ; Page layouts. The Panels layouts are for Panels module and are controlled via
+  ; the theme settings for Panels layouts.
 
-  ; Don't uncomment this unless you are actually developing a page layout
-  ; plugin, it will add a layout to all device groups that does little else
-  ; except provide and example page_layout plugin.
+  ; There are seperate directories for each type of layout and an example
+  ; plugin for each. These don't do very much, they are just examples, you can
+  ; use the core themes layout plugins as a guide. Please see the _README in the
+  ; layouts directory of this subtheme.
 
-  ; plugins[page_layout][layouts] = custom_layouts
+  ; Remove the semicolon to umcomment and clear the sites cache.
+
+  ; Page layout plugins
+  ; plugins[page_layout][layouts] = layouts/page
+
+  ; Panels layout plugins
+  ; plugins[panels][layouts] = layouts/panels
 
 
 ;----------// Site Features
@@ -139,7 +151,7 @@ regions[three_33_bottom] = Footer panel - bottom
   settings[bigscreen_sidebar_first]  = 25
   settings[bigscreen_sidebar_second] = 25
   settings[bigscreen_set_max_width]  = 1
-  settings[bigscreen_max_width] = 960
+  settings[bigscreen_max_width]      = 1140
   settings[bigscreen_media_query]    = 'only screen and (min-width:1025px)'
 
 
@@ -259,7 +271,6 @@ regions[three_33_bottom] = Footer panel - bottom
   settings[load_html5js]       = 1
   settings[load_respondjs]     = 1
   settings[load_ltie8css]      = 0
-  settings[load_selectivizr]   = 0
   settings[load_scalefixjs]    = 1
 
 
@@ -283,19 +294,11 @@ regions[three_33_bottom] = Footer panel - bottom
   settings[enable_float_region_blocks] = 0
   settings[enable_markup_overides]     = 1
 
-  ; University of Iowa Branding Bar Settings
-  settings[ovpr_branding_bar] = 1
-  settings[ovpr_depts_links] = 1
-  
-  ; OVPR Branding Bar Settings
-  settings[ui_globalbar] = skin-a
-  settings[ui_globalbar_link_style] = link-style-icons
 
   ; Font type
   settings[base_font_type] = gwf
   settings[base_font] = bf-sss
   settings[base_font_gwf] = Open Sans
-  settings[base_font_size] = 81.3%
   settings[site_name_font_type] = gwf
   settings[site_name_font] = bf-sss
   settings[site_name_font_gwf] = Oswald
@@ -303,7 +306,6 @@ regions[three_33_bottom] = Footer panel - bottom
   settings[page_title_font_type] = gwf
   settings[page_title_font] = bf-sss
   settings[page_title_font_gwf] = Oswald
-  settings[page_title_font_size] = 2.2em
   settings[node_title_font_type] = gwf
   settings[node_title_font] = bf-sss
   settings[node_title_font_gwf] = Oswald
@@ -312,7 +314,7 @@ regions[three_33_bottom] = Footer panel - bottom
   settings[comment_title_font_gwf] = Oswald
   settings[block_title_font_type] = gwf
   settings[block_title_font] = bf-sss
-  settings[block_title_font_gwf] = Oswald  
+  settings[block_title_font_gwf] = Oswald
   settings[main_menu_font_type]      = '<none>'
   settings[secondary_menu_font_type] = '<none>'
   settings[block_menu_font_type]     = '<none>'
@@ -327,7 +329,7 @@ regions[three_33_bottom] = Footer panel - bottom
   settings[base_font_size] = 81.3%
   settings[site_name_font_size]      = '<none>'
   settings[site_slogan_font_size]    = '<none>'
-  settings[page_title_font_size]     = '<none>'
+  settings[page_title_font_size] = 2.2em
   settings[node_title_font_size]     = '<none>'
   settings[comment_title_font_size]  = '<none>'
   settings[block_title_font_size]    = '<none>'
@@ -383,8 +385,9 @@ regions[three_33_bottom] = Footer panel - bottom
 
   ; Breadcrumb
   settings[breadcrumb_display]   = 1
-  settings[breadcrumb_home]      = 1
+  settings[breadcrumb_home]      = 0
   settings[breadcrumb_label]     = 0
+  settings[breadcrumb_title]     = 0
   settings[breadcrumb_separator] = ' &#187; '
 
 
@@ -415,6 +418,7 @@ regions[three_33_bottom] = Footer panel - bottom
   settings[comments_hide_title]           = 0
   settings[feed_icons]                    = 0
   settings[unset_block_system_main_front] = 0
+  settings[unset_menu_titles]             = 0
 
 
   ; Accessibility
