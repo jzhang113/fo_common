@@ -11,6 +11,24 @@
  *
  * - Read the _README file in this directory, it contains useful help and other information.
  */
+ 
+#name-and-slogan {
+  float: left;
+  margin-bottom: 10px;
+  margin-top: 30px;
+  width: 100%;
+}
 
-/* Increase the body font size on small devices */
-html {}
+#nav-wrapper {
+  display: none;
+}
+
+// Featured content views
+.flexslider .slides img {
+    width: 400px;
+    float: left;
+}
+
+.flexslider ul.slides li img {
+    padding-right: 10px;
+}

@@ -68,6 +68,22 @@ h6 {}
 
 p {}
 
+a {
+  color: #086782;
+  text-decoration: none;
+
+  &:link,
+  &:visited {}
+
+  &:active,
+  &.active {}
+
+  &:hover,
+  &:focus {
+    color: #8B9084;
+  }
+}
+
 
 b,
 strong {}
@@ -145,6 +161,8 @@ var {}
  * Main wrapper in page.tpl.php, the .container class sets the width of the page, do not add width to it!
  */
 #page  {
+  * {@include box-sizing(border-box);
+  }
   .container {}
 }
 
@@ -158,7 +176,9 @@ var {}
 /*
  * Wraps the sidebars the content column
  */
-#columns {}
+#columns {
+  margin-bottom: 25px;
+}
 
 
 /*
@@ -176,13 +196,84 @@ var {}
 /*
  * Wraps the content region, avoid applying styles to this wrapper, its used mainly for position and invisible gutters and can be problematic to style
  */
-#content {}
+#content {
+	color: #150517;
+}
 
 
 /*
  * Footer wrapper
  */
 #footer {}
+
+#footer-panels-wrapper {
+  background-color: #E5E5E5;
+  color: #150517;
+  margin-bottom: 0;
+  padding: 25px 0 10px;
+  
+  div.block-content.content {
+  	margin-left: 0;
+  	
+  	a {
+	  color: #086782;
+	  &:hover {
+		 text-decoration: underline;
+	}
+	img {
+		margin-left: 10px;
+		margin-top: 5px;
+	}
+	h3 a {
+		color: inherit;
+		text-decoration: none;
+	}
+	p {
+		padding-left: 0.5em;
+	}
+	ul li {
+		background-color: #464E55;
+		text-align: center;
+		margin: 5px;
+		height: 40px;
+		width: 40px;
+		display: inline;
+		float: left;
+		font-weight: bold;
+		position: relative;
+		&.active {
+			background-color: #FFC344;
+			a {
+				color: #000000;
+			}
+		}
+		a {
+			display: block;
+			padding-top: 12px;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+	h2.block-title {
+		color: #FFFFFF;
+		float: left;
+		font-weight: bold;
+		font-size: 1.6em;
+		text-transform: uppercase;
+	}
+
+  }
+}
+  
+  .region.region-three-33-first {
+	 width: 66.6666%;
+  }
+  
+  .region.region-three-33-third {
+	  float: right;
+  }
+}
 
 
 /*
@@ -235,9 +326,15 @@ var {}
  * Wraps breadcrumb
  */
 #breadcrumb-wrapper {
-  .container {}
+  margin-bottom: 2.5em;
+  
+  .container {
+	background: #FFC822;
+	border: 1px solid #FFC61A;
+	height: auto;
+	min-height: 18px;
+  }
 }
-
 
 /*
  * Wraps messages and help
@@ -275,6 +372,12 @@ var {}
  * Footer wrapper
  */
 #footer-wrapper {
+  background-color: #000000;
+  border-top: 1px solid #4A4E50;
+  color: #FFFFFF;
+  font-weight: bold;
+  padding-top: 20px;
+  text-align: center;
   .container {}
 }
 
@@ -286,15 +389,23 @@ var {}
 /*
  * Wraps all the branding elements, logo, name and slogan
  */
-#branding {}
+#branding {
+  float: left;
+  padding: 0;
+  width: 100%;
+}
 
 
 /*
  * Logo
  */
 #logo {
+  float: left;
+  padding: 10px 15px 10px 0;
 
-  img {}
+  img {
+	vertical-align: bottom;
+  }
 }
 
 
@@ -308,14 +419,22 @@ var {}
  * Site name (h1)
  */
 #site-name {
-
+  float: left;
   a {
-
+    color: #414042;
+    font-family: 'PT Sans';
+    font-weight: 700;
+    letter-spacing: 0;
+    
     &:link,
-    &:visited {}
+    &:visited {
+	  text-decoration: none;
+    }
 
     &:hover,
-    &:focus {}
+    &:focus {
+	  text-decoration: none;
+    }
   }
 }
 
@@ -323,7 +442,12 @@ var {}
 /*
  * Site slogan (h2)
  */
-#site-slogan {}
+#site-slogan {
+  color: #414042;
+  float: right;
+  margin-right: 0.83em;
+  margin-top: 0.6em;
+}
 
 
 /* =============================================================================
@@ -361,6 +485,44 @@ var {}
 .feed-details dt,
 .feed-details dd {}
 
+/*
+ * Buttons
+ */
+.btn {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #F5F5F5;
+    background-image: -moz-linear-gradient(center top , #FFFFFF, #E6E6E6);
+    background-repeat: repeat-x;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) #A2A2A2;
+    border-radius: 4px 4px 4px 4px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+    color: #333333;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 0;
+    padding: 4px 12px;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+    vertical-align: middle;
+}
+
+.btn-info {
+    background-color: #49AFCD;
+    background-image: -moz-linear-gradient(center top , #5BC0DE, #2F96B4);
+    background-repeat: repeat-x;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    color: #FFFFFF;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
 
 /*
  * Generic styles for the more link
@@ -372,10 +534,18 @@ var {}
  * Generic styles for links. See the ul.links declaration in node and comment stylesheets
  */
 ul.links {
+  margin: 0;
+  padding: 0;
 
-  &.inline {}
+  &.inline {
+	display: block;
+  }
 
-  li {}
+  li {
+	display: inline;
+	list-style: none;
+	padding: 0 10px 0 0;
+  }
 }
 
 
@@ -410,7 +580,9 @@ ul.links {
 /*
  * Header region, embedded in the #header
  */
-.region-header {}
+.region-header {
+  float: right;
+}
 
 
 /*
@@ -446,7 +618,27 @@ ul.links {
 /*
  * First sidebar
  */
-.region-sidebar-first {}
+.region-sidebar-first {
+	
+	.menu-name-main-menu {
+	  
+	  li {
+		border-bottom: 1px solid #FFC344;
+		padding: 10px;
+		position: relative;
+		
+		:after {
+			background: #FFC344;
+			bottom: -3px;
+			content: " ";
+			height: 6px;
+			position: absolute;
+			right: 0;
+			width: 6px;
+		}
+	  }
+   }
+}
 
 
 /*
@@ -497,23 +689,44 @@ a {
  */
 
 .nav {
+  clear: both;
+  margin: 0;
 
-  ul,
-  ul.menu {}
-
-  li,
-  ul.menu li {}
-
-  li a,
-  ul.menu li a {
-
-    &:visited {}
-
-    &:hover,
-    &:focus {}
+  ul.menu {
+    margin: 0;
+    
   }
 
-  .block {}
+  li, .menu li {
+    display: inline;
+    float: left;
+    list-style: none;
+  }
+
+  li a, .menu li a {
+    display: block;
+    white-space: nowrap;
+    padding: 0 10px;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    &.menu {
+      margin: 0;
+      padding: 0;
+
+      li {
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+
+  .block {
+    margin-bottom: 0;
+  }
 }
 
 
@@ -522,8 +735,15 @@ a {
  * ========================================================================== */
 
 ul.sf-menu {
+  margin-bottom: 0;
 
   a {
+    border-left: 0;
+    border-top: 0;
+    padding: 0 10px;
+    text-decoration: none;
+    height: 2.5em;
+    line-height: 2.5em;
 
     &:link,
     &:visited {}
@@ -531,13 +751,17 @@ ul.sf-menu {
 
   li {
     &:hover,
-    &.sfHover {}
+    &.sfHover {
+      outline: 0;
+    }
   }
 
   a {
     &:focus,
     &:hover,
-    &:active {}
+    &:active {
+      outline: 0;
+    }
   }
 }
 
@@ -550,15 +774,29 @@ ul.sf-menu {
   .block-inner .content {}
 
   ul {
+    margin: 0 !important;
+    padding: 0 !important;
 
     ul {
+      margin: 0 !important;
+      padding: 0 !important;
+
       ul {
-        ul {}
+        margin: 0 !important;
+        padding: 0 !important;
+
+        ul {
+          margin: 0 !important;
+          padding: 0 !important;
+        }
       }
     }
   }
 
-  li {}
+  li {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
 }
 
 
@@ -566,15 +804,25 @@ ul.sf-menu {
  * Vertical style
  */
 .sf-vertical {
+  width: 100%;
 
   li {
+    width: 100%;
 
     &.last {}
 
     &:hover ul,
-    &.sfHover ul {}
+    &.sfHover ul {
+      left: 100%;
+      /* match ul width */
+      top: 0;
+      margin: 0;
+      padding: 0;
+    }
 
-    a {}
+    a {
+      padding: 0 10px;
+    }
   }
 }
 
@@ -583,35 +831,83 @@ ul.sf-menu {
  * Navbar style
  */
 .sf-navbar {
+  padding-bottom: 0 !important;
 }
 
 
 /*
  * Sensible padding for the default style
  */
-.sf-menu.sf-style-default a {}
+.sf-menu.sf-style-default a {
+  padding: 0 10px;
+}
 
 
 /* =============================================================================
  *   Menus, usually blocks
  * ========================================================================== */
 
+.block-content ul.menu {
+  padding: 0;
+  margin: 4px 0;
+  ul {
+    margin-left: 15px;
+  }
+}
+
+
 ul.menu {
+  list-style-position: outside;
+  
+  .region-header & {
+    text-transform: uppercase;
+  }
 
   ul {
+    margin-left: 15px;   
+    padding-left: 25px;
 
     ul {
-      ul {}
+      margin-left: 15px;
+
+      ul {
+        margin-left: 15px;
+      }
     }
   }
 
   li {
+    margin: 2px 0 2px 20px;
+    .region-header & {
+      float: left;
+      margin: 0 2px !important;
+    }
 
     &.collapsed,
     &.expanded,
-    &.leaf {}
+    &.leaf {
+      .region-header & {
+        list-style-type: none;
+        list-style-image: none;
+        list-style-position: outside;
+        padding-right: 10px;
+      }
+    }
 
     a {
+      .region-header & {
+        border-bottom: 3px double #E1E1E1;
+        display: block;
+        height: 2em;
+        line-height: 2em;
+        padding: 0 8px;    
+        color: #000;
+        font-size: .9em;
+        &:hover,
+        &:focus {
+          color: #8B9084;
+        } 
+      }
 
       &:link,
       &:visited {}
@@ -623,17 +919,18 @@ ul.menu {
       &:focus {}
     }
 
-    &.active a,
-    &.active-trail a {}
+    &.active a, &.active-trail a {}
 
-    &.first,
-    &.last {}
+    &.first, &.last {}
   }
 }
 
 
+
 /* If li.content exists it's a problem, so reset the padding */
-.block .menu li.content {}
+.block .menu li.content {
+	padding: 0;
+}
 
 
 /* =============================================================================
@@ -650,7 +947,9 @@ ul.menu {
 
   .page-up {}
 
-  .menu {}
+  .menu {
+	  margin-left: 0;
+  }
 }
 
 
@@ -659,24 +958,48 @@ ul.menu {
  * ========================================================================== */
 
 #breadcrumb {
-
+  color: #3B3B3C;
+  padding-top: 0.05em;
+  padding-bottom: 0.05em;
+  font-size: 0.9em;
+  #breadcrumb {
+    margin-left: 0px;
+  }
+  // If the label is set to show in theme settings the label class is added
   .breadcrumb-label {
+    font-size: 1em;
+    display: inline;
+    padding-right: 10px;
 
-    &:after {}
+    &:after {
+      content: ":";
+    }
   }
 
-  ol {}
+  ol {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .with-breadcrumb-label ol {
+    display: inline;
+  }
 
-  .with-breadcrumb-label ol {}
-
-  li {}
+  li {
+    list-style: none;
+    display: inline;
+    ;
+  }
 
   li.crumb-first {}
 
   li.crumb-last {}
 
   a {
-
+    color: #3B3B3C;  
+    font-size: 1.0em;
+    font-weight: normal;
+    
     &:link,
     &:visited {}
 
@@ -693,19 +1016,33 @@ ul.menu {
  *   Pagers
  * ========================================================================== */
 
-ul.pager {}
-
-
-.item-list ul.pager li {}
-
-
-ul.pager li {
-
-  &.pager-current {}
+ul.pager {
+  clear: both;
+  margin: 0;
+  text-align: center;
 }
 
 
-.block ul.pager li {}
+.item-list ul.pager li {
+  margin: 0;
+}
+
+
+ul.pager li {
+  background-image: none;
+  display: inline;
+  list-style-type: none;
+  padding: .5em;
+
+  &.pager-current {
+    font-weight: 700;
+  }
+}
+
+
+.block ul.pager li {
+  margin: 0;
+}
 
 
 /*
@@ -726,12 +1063,19 @@ ul.pager li {
   }
 
   &.pager-item {}
+
   &.first {}
+
   &.last {}
+
   &.pager-current {}
+
   &.pager-first {}
+
   &.pager-previous {}
+
   &.pager-next {}
+
   &.pager-last {}
 }
 
@@ -741,14 +1085,40 @@ ul.pager li {
  * ========================================================================== */
 
 #skip-link {
+  left: 50%;
+  margin-left: -6.5em;
+  margin-top: 0;
+  padding: 0 0.5em;
+  position: absolute;
+  width: 12em;
+  z-index: 50;
 
   a {
+    background: #444;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    display: block;
+    line-height: 2;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
 
     &:link,
-    &:visited {}
+    &:visited {
+      background: #444;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      display: block;
+      line-height: 2;
+      padding: 0;
+      text-align: center;
+      text-decoration: none;
+    }
     &:hover,
     &:focus,
-    &:active {}
+    &:active {
+      outline: 0;
+    }
   }
 }
 
@@ -757,35 +1127,54 @@ ul.pager li {
  *   Tabs (local tasks)
  * ========================================================================== */
 
-#tasks {}
+#tasks {
+  margin-bottom: 1em;
+}
 
 
 ul.primary {
+  border-bottom-color: #ccc;
+  margin: 1.5em 0 0;
+  padding: 0 0 .2em .3em;
 
-  li {
+  li a {
+    background-color: #f5f5f5;
+    margin-right: .08em;
+    border-color: #ccc;
+    padding: .1em 10px .2em;
+  }
+}
 
-    a {
 
-      &:hover,
-      &:focus {}
-    }
+.local-tasks ul.primary li {
+  a:hover {
+    background-color: #f7f7f7;
+    border-color: #ddd;
   }
 
-  li.active {
-    a,
-    a:hover,
-    a:focus {}
+  &.active a {
+    background-color: #fff;
+    border-bottom-color: #fff;
   }
 }
 
 
 ul.secondary {
+  border-bottom: 1px solid #ccc;
+  margin: 1em 0 0;
+  padding: 0 .3em 1em;
 
   li {
+    border-right: 0;
+    list-style: none;
+    padding: 0 10px 0 0;
 
     a {
       &:hover,
-      &.active {}
+      &.active {
+        border-bottom: none;
+        text-decoration: underline;
+      }
     }
   }
 }
@@ -796,10 +1185,12 @@ ul.secondary {
  * ========================================================================== */
 
 ul.action-links {
+  margin-left: 0;
+  margin-right: 0;
+  list-style: none;
 
   li {}
 }
-
 
 /* =============================================================================
  *  Field Styling
@@ -826,7 +1217,13 @@ ul.action-links {
 /*
  * Labels are h2 in Adaptivetheme. Use a strong selector to mitigate unwanted ineritance issues
  */
-.field-label {}
+.field-label {
+  font-size: 1em;
+  font-weight: 700;
+  font-family: inherit; // Forces the h2 to inherit the global font family instead of the h2 font family.
+  line-height: inherit;
+  margin: 0;
+}
 
 
 /*
@@ -851,9 +1248,16 @@ ul.action-links {
  */
 .field-type-taxonomy-term-reference {
 
-  &.field-label-inline .field-items {}
+  &.field-label-inline .field-items {
+	  margin: 0;
+	  padding: 0;
+  }
 
-  &.field-label-inline .field-item {}
+  &.field-label-inline .field-item {
+	  display: inline;
+	  list-style: none;
+	  padding: 0 10px 0 0;
+  }
 }
 
 
@@ -964,21 +1368,27 @@ ul.action-links {
  * Float left setting
  */
 .ia-l .field-type-image figure,
-.iat-l .field-type-image figure {}
+.iat-l .field-type-image figure {
+	margin: 0.5em 15px 1.5em 0;
+}
 
 
 /*
  * Centered setting
  */
 .ia-c .field-type-image figure,
-.iat-c .field-type-image figure {}
+.iat-c .field-type-image figure {
+	margin: 0.5em auto 1.5em;
+}
 
 
 /*
  * Float right setting
  */
 .ia-r .field-type-image figure,
-.iat-r .field-type-image figure {}
+.iat-r .field-type-image figure {
+	margin: 0.5em 0 1.5em 15px;
+}
 
 
 
@@ -989,7 +1399,12 @@ ul.action-links {
 /*
  * Main wrapper for most blocks, block_system_main does not have it
  */
-.block {}
+.block {
+	margin-bottom: 20px;
+	.region-header & {
+		margin-top: 20px;
+	}
+}
 
 
 /*
@@ -1040,9 +1455,15 @@ ul.action-links {
 .block-content {
 
   ul,
-  ol {}
+  ol {
+	  margin: 0 0 0 15px;
+	  padding: 0;
+  }
 
-  li {}
+  li {
+	  margin: 0;
+	  padding: 0;
+  }
 }
 
 
@@ -1151,7 +1572,37 @@ ul.action-links {
 /*
  * "Main menu" block
  */
-#block-system-main-menu {}
+#block-system-main-menu, .site-name-grant-accounting-office #block-menu-block-2 {
+  a {
+  color: #000 !important;
+  }
+  li {
+    border-bottom: 1px solid #FFC344;
+    padding: 10px 10px 10px 0;
+    position: relative;
+    &:after {
+      content: ' ';
+      background: #FFC344;
+      height: 6px;
+      width: 6px;
+      position: absolute;
+      bottom: -3px;
+      right: 0;
+    }
+    li {
+      border-bottom: none;
+      padding: 2px;
+      margin-left: 0px;
+      &:after {
+        display: none;
+      }
+    }
+  }
+  .block-inner {
+    margin-left: 0;
+    margin-right: 20px;
+  }
+}
 
 
 /*
@@ -1213,6 +1664,7 @@ ul.action-links {
  * ========================================================================== */
 
 .node {
+  margin-bottom: 20px;
 
   &.node-promoted {}
 
@@ -1276,6 +1728,16 @@ ul.action-links {
 
 .node-poll {}
 
+// Custom style for Iowa Now Articles
+.node-iowa-now-article .publication_source {
+  color: #3B3B3C;
+  font-style: italic;
+}
+
+.field-name-field-iowanow-thumbnail-image {
+  float: left;
+  margin: 0.5em 0.5em 0.5em 0;
+}
 
 /* =============================================================================
  *   Comment Styling - Comments, comment wrapper, comment form
@@ -1285,6 +1747,7 @@ ul.action-links {
  * Wrapper for the list of comments and its titles
  */
 #comments {
+  margin: 1.5em 0;
 
   h2 {
     &.comment-title {}
@@ -1298,6 +1761,7 @@ ul.action-links {
  * Wrapper for a single comment
  */
 .comment {
+  margin-bottom: 20px;
 
   &.first {}
 
@@ -1351,13 +1815,17 @@ ul.action-links {
 /*
  * Preview of the comment before submitting new or updated comment
  */
-.comment-preview {}
+.comment-preview {
+	background-color: #FFFFEA;
+}
 
 
 /*
  * "New" marker for comments that are new for the current user
  */
-.new {}
+.new {
+	color: #c00;
+}
 
 
 /*
@@ -1374,6 +1842,7 @@ ul.action-links {
  * Wrapper for a form element (or group of form elements) and its label
  */
 .form-item {
+  margin: 18px 0;
 
   input.error,
   textarea.error,
@@ -1381,16 +1850,23 @@ ul.action-links {
   }
 
   label {
+    display: block;
+    font-weight: bold;
   }
 
   label.option {
+  	display: inline;
+  	font-weight: normal;
   }
 
   .description {
+    font-size: 0.8em;
+    color: #555;
   }
 
   &.form-checkboxes ,
   &.form-radios {
+    margin: 0;
   }
 }
 
@@ -1399,7 +1875,9 @@ ul.action-links {
  * Highlight marks and form required mark
  */
 .marker,
-.form-required {}
+.form-required {
+	color: #C00;
+}
 
 
 /*
@@ -1411,18 +1889,68 @@ ul.action-links {
 
 .container-inline {
   div,
-  label {}
+  label {
+	  display: inline;
+  }
 }
 
 /*
- * Define consistent borders
+ * Fieldsets
  */
-fieldset {}
+fieldset {
+  background: transparent;
+  border: 1px solid #dadada;
+  margin: 10px 0;
+  padding: 10px;
+
+  fieldset:last-child {
+    margin-bottom: 0;
+  }
+}
+
+html.js fieldset.collapsed {
+  background: transparent;
+  padding-top: 5px;
+}
+
+legend,
+fieldset legend {
+  border: 0;
+  display: block;
+  font-weight: 400;
+  padding: 0 10px 0 0;
+  white-space: normal;
+  *margin-left: -7px;
+}
 
 /*
  * Tips for Drupal's input formats
  */
 .tips {
+  font-size: .857em;
+  margin: 0 0 0 15px;
+  padding: 0;
+}
+
+
+.field-type-text-long fieldset {
+  padding: 10px 0;
+  .form-item {
+    margin: 0;
+    padding: 0 0 0 15px;
+  }
+}
+
+
+fieldset .filter-help {
+  padding: 0 15px 5px;
+}
+
+
+.filter-guidelines {
+  font-size: .923em;
+  margin: 0;
+  padding: 5px 18px 10px;
 }
 
 
@@ -1433,12 +1961,246 @@ a.button {
   @include appearance(button);
 }
 
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+
+button {
+  cursor: pointer;
+  -webkit-appearance: button;
+  *overflow: visible;
+}
+
+
+button[disabled] {
+  cursor: default;
+}
+
+/*
+ * Input
+ */
+input {
+  margin: 0;
+
+  .form-text {
+    max-width: 100%;
+  }
+
+  &[disabled] {
+    cursor: default;
+   }
+
+  &[type="checkbox"],
+  &[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+    *height: 13px;
+    *width: 13px;
+  }
+
+  &[type="button"],
+  &[type="reset"],
+  &[type="submit"] {
+    cursor: pointer;
+    -webkit-appearance: button;
+    *overflow: visible;
+  }
+}
+
+// Reset form-text, textarea and selects
+input.form-text,
+textarea,
+select {
+  border: 1px solid #ccc;
+  height: auto;
+  padding: 1px 2px;
+  font-family: inherit; // inherit the default site font and not the browsers monospace font
+  font-size: 1em;
+}
+
+
+// Adjust trobber background position when changing text field padding
+html.js input.form-autocomplete {
+  background-position: 100% 5px;
+}
+
+
+html.js input.throbbing {
+  background-position: 100% -15px;
+}
+
+/*
+ * Textarea
+ */
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+
+div.resizable-textarea textarea {
+  margin-top: 0;
+}
+
+// Addresses styling for 'hidden' attribute not present in IE7/8/9, FF3, S4
+[hidden] {
+  display: none;
+}
+
+// Highlight vertical tabs that contain form errors
+.vertical-tabs ul.vertical-tabs-list li.vertical-tab-button-error a {
+  color: #8c2e0b;
+  background: #fef5f1;
+  outline: 1px solid #ed541d;
+  margin-right: 1px;
+}
 
 /*
  * Password confirmation
  */
 .password-parent,
-.confirm-parent {}
+.confirm-parent {
+	margin: 0;
+}
+
+/*
+ * Drupal's default login form block
+ */
+#user-login-form {
+  text-align: left; /* LTR */
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+
+    &.openid-link {}
+    &.user-link {}
+  }
+}
+
+
+#user-login ul {
+  margin: 0 0 5px;
+
+  li {
+    margin: 0;
+  }
+}
+
+
+#user-login-form {
+
+  .item-list li {
+    list-style: none;
+    margin: 0;
+  }
+
+  li.openid-link {
+    background: none;
+  }
+}
+
+
+#user-login li.openid-link {
+  background: none;
+}
+
+/*
+ * OpenID
+ */
+// OpenID creates a new ul above the login form's links.
+#user-login-form ul {
+
+  // Position OpenID's ul next to the rest of the links.
+  margin-bottom: 0;
+}
+
+
+// The "Log in using OpenID" link.
+html.js #user-login-form li.openid-link,
+#user-login-form li.openid-link {}
+
+
+// The "Cancel OpenID login" link.
+#user-login-form li.user-link {}
+
+
+html.js #user-login-form li.openid-link {
+  cursor: pointer;
+}
+
+
+#user-login-form li {
+
+  &.openid-link,
+  &.user-link {
+    cursor: pointer;
+  }
+}
+
+
+#user-login ul {
+}
+
+/*
+ * Search
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+  }
+}
+
+.panel-pane #search-block-form {
+  margin-bottom: 20px;
+}
+
+/*
+ * Advanced search form 
+ */
+fieldset#edit-advanced fieldset {
+  float: left;
+  margin: 0 10px 10px 0;
+
+  .fieldset-legend {
+    background: none;
+    padding-left: 1em;
+  }
+}
+
+
+.advanced-search-submit {
+  clear: both;
+}
+
+
+.search-advanced .criterion {
+  float: none;
+  margin: 0 5px;
+}
+
+
+#edit-keywords-fieldset .form-item:first-child {
+  margin-top: 5px;
+}
+
+
+#search-form {
+  margin: 10px 0;
+}
 
 
 /* =============================================================================
@@ -1512,6 +2274,43 @@ tr {
   }
 }
 
+/*
+ * Drupal admin tables
+ */
+form {
+
+  th {
+    text-align: left; /* LTR */
+    padding-right: 1em; /* LTR */
+    border-bottom: 3px solid #ccc;
+  }
+
+  tbody {
+    border-top: 1px solid #ccc;
+  }
+
+  tr.even {
+    background-color: #fff;
+  }
+
+  table .item-list ul {
+    margin: 0;
+  }
+}
+
+.lt-ie8 tr {
+
+  &.even,
+  &.odd {
+
+    th,
+    td {
+      // IE doesn't display borders on table rows
+      border-bottom: 1px solid #ccc;
+    }
+  }
+}
+
 
 /*
  * Forum tables
@@ -1533,8 +2332,12 @@ tr {
 
 div {
   &.messages {
+    margin: 1.5em 0;
 
-    ul {}
+    ul {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
   }
 
   &.status {
@@ -1561,6 +2364,7 @@ tr.error {
 }
 
 
+
 /*
  * Unpublished nodes
  */
@@ -1573,7 +2377,29 @@ tr.error {
 .comment-unpublished {
 
   p.unpublished {
-    @include unpublished;
+    color: #fff;
+    color: rgba(239, 170, 170, 0.4);
+    font-family: Impact,"Arial Narrow",Helvetica,sans-serif;
+    font-size: 75px;
+    font-weight: bold;
+    height: 0;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+    text-align: center;
+    text-transform: uppercase;
+    word-wrap: break-word;
+  }
+}
+
+
+// Otherwise these elements will appear below the "Unpublished" text
+.lt-ie8 {
+  .node-unpublished > *,
+  .comment-unpublished > * {
+    position: relative;
+
   }
 }
 
@@ -1606,13 +2432,23 @@ tr.error {
 /*
  * Admin menu overrides
  */
-#admin-menu {}
+#admin-menu {
+  margin: 0;
+  padding: 0;
+}
 
 
 /*
  * Devel Module
  */
-.dev-query {}
+.dev-query {
+  background: #eee;
+  padding: 30px;
+}
+
+#devel-switch-user-form {
+  margin-bottom: 0;
+}
 
 
 /*
@@ -1621,4 +2457,178 @@ tr.error {
 #styleguide-header {
 
   .item-list {}
+}
+
+/* =============================================================================
+ *   Panels & Panes
+ * ========================================================================== */
+ 
+.panel-pane {
+  margin-bottom: 20px;
+
+  h2 {
+    border-bottom: 1px solid #FFC344;
+    margin-bottom: 16px;
+    position: relative;
+ 
+    :after {
+      background: none repeat scroll 0 0 #FFC344;
+      bottom: -3px;
+      content: " ";
+      height: 6px;
+      position: absolute;
+      right: 0;
+      width: 6px;
+    }
+  }
+}
+
+.block-panels_mini {
+  padding: 0;
+}
+
+.page-pnaels #content {
+	margin-left: -10px;
+	margin-right: -10px;
+}
+
+/* =============================================================================
+ *   Misc.
+ * ========================================================================== */
+ // Aggregator feed source
+#aggregator .feed-source .feed-icon {
+  display: inline;
+  float: none;
+  margin-right: 10px;
+}
+
+.feed-details dt,
+.feed-details dd {
+  display: inline;
+  margin: 0;
+}
+
+
+// Search results are an ordered list so reset the margin
+.search-results {
+  margin: 0;
+}
+
+// js tooltip
+.tooltip {
+	display:none;
+	background:transparent url(../images/black_arrow.png);
+	font-size:12px;
+	height:70px;
+	width:160px;
+	padding:25px;
+	color:#fff;	
+}
+
+
+/* =============================================================================
+ *   Site-specific styles
+ * ========================================================================== */
+ 
+// Staff Directory View on FO
+.view-staff-directory{
+	.views-row{
+		margin-top: 30px;
+		clear: left;
+	}
+	.views-field{
+		margin-left: 120px;
+	}
+	.views-field-field-photo{
+		margin-left: 0px;
+		margin-bottom: 30px;
+		float: left;
+	}
+	.views-field-nothing{
+		font-weight: bold;
+	}
+}
+
+// Department & Unit List on FO
+.view-id-departments_units{
+	h3{
+		margin-top: 20px;
+	}
+}
+
+//Fix for header nav on GAO
+.site-name-grant-accounting-office #branding {
+	width: inherit;
+}
+
+//Hide Book Nav on GAO
+.site-name-grant-accounting-office .book-navigation{
+	display:none;
+}
+
+// Announcements Titles on GAO
+.page-announcements h2 a {
+	color: #086782;
+	text-decoration: none;
+	&:hover{
+		text-decoration: underline;
+	}
+}
+
+// Featured Page on GAO
+.pane-front-page-featured-content, #block-book-navigation{
+	background-color: #D9EDF7;
+	border: 1px solid #BCE8F1;
+	border-radius: 4px;
+	h1{
+		font-size: 1.2em;
+		line-height: 1.2em;
+	}
+	.block-title{
+		text-transform: uppercase;
+		font-size: 1.4em;
+		padding: 10px 0;
+	}
+	h2{
+		font-family: 'Trebuchet MS', sans-serif;
+		line-height: 1.2em;
+		border-bottom: none;
+		margin-bottom: 0;
+		a{
+			text-transform: capitalize;
+			text-decoration: none;
+			&:hover,
+			&:focus {
+				text-decoration: underline;
+				color: inherit;
+			}
+		}
+		&:after {
+			background: none;
+		}
+	}
+	.node {
+	margin-bottom:0;
+	}
+}
+
+// Contact Page on CAM
+.site-name-capital-assets-management{
+	.view-contact-us{
+		.views-field-nothing{
+			margin: 10px 0;
+		}
+	}
+}
+
+// 'Controller Units' label for department nav bar on GAO, CAM, Controller's Office
+.site-name-grant-accounting-office,
+.site-name-capital-assets-management,
+.site-name-controlleramp039s-office {
+	#menu-bar li.last a:before {
+		content: "Controller Units:";
+		font-style: italic;
+		font-weight: normal;
+		padding-right: 10px;
+	}
 }

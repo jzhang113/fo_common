@@ -46,7 +46,10 @@
    * "Float Region blocks" is an extension for floating blocks in regions, see
    * your themes appearance settings, under the Extensions tab.
    */
-  .region[class*="float-blocks"] .block {}
+  .region[class*="float-blocks"] .block {
+	  float: none;
+	  width: 100%;
+  }
 }
 
 

@@ -31,7 +31,9 @@ header,
 hgroup,
 nav,
 section,
-summary {}
+summary {
+	display: block;
+}
 
 
 /*
@@ -39,14 +41,20 @@ summary {}
  */
 audio,
 canvas,
-video {}
+video {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
 
 
 /*
  * Prevents modern browsers from displaying 'audio' without controls
  * Remove excess height in iOS5 devices
  */
-audio:not([controls]) {}
+audio:not([controls]) {
+	display: none;
+}
 
 
 /*
@@ -69,13 +77,26 @@ audio:not([controls]) {}
  * 2. Prevents iOS text size adjust after orientation change, without disabling user zoom
  *    www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
  */
-html {}
+html {
+  line-height: 1.5;
+  height: 100%;
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
 
 
 /*
  * 1 . Addresses margins handled incorrectly in IE6/7
  */
-body {}
+body {
+margin: 0px;
+  min-height: 100%;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
 
 
 /*
@@ -133,6 +154,19 @@ h5 {}
 
 h6 {}
 
+h1, h2, h3, h4, h5, h6, h1 img, h2 img, h3 img, h4 img, h5 img, h6 img, em, dfn, del, ins, a, tbody, tfoot, thead, tr, ul, li, label, legend, figure, figcaption {
+  margin: 0;
+  padding: 0;
+}
+
+// Link color for headings
+h2, h3, h4, h5, h6 {
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+}
+
 
 /*
  * Addresses styling not present in IE7/8/9, S5, Chrome
@@ -153,7 +187,21 @@ blockquote {}
 /*
  * Addresses styling not present in S5, Chrome
  */
-dfn {}
+dfn, em {
+	font-style: italic;
+}
+
+ins {
+	border-bottom: none;
+	text-decoration: none;
+}
+
+strong,
+dfn,
+caption,
+th {
+	font-weight: 700;
+}
 
 
 /*
@@ -166,7 +214,10 @@ mark {}
  * Addresses margins set differently in IE6/7
  */
 p,
-pre {}
+pre {
+	margin: 0 0 1.5em;
+	padding: 0;
+}
 
 
 /*
@@ -175,8 +226,13 @@ pre {}
  */
 pre,
 code,
+tt,
 kbd,
-samp {}
+samp,
+var {
+	font-size: 1em;
+	font-family: Consolas, "Lucida Consolue", Menlo, Monaco, "DejaVu Sans Mono", monospace, sans-serif;
+}
 
 
 /*
@@ -190,12 +246,25 @@ pre {}
  * 2. Addresses quote property not supported in S4
  */
 
-q {
+blockquote, q {
+  font-style: italic;
+  quotes: "" "";
 }
 
 
-q:before,
-q:after {}
+blockquote:before, q:before,
+blockquote:after, q:after {
+  content: "";
+}
+
+blockquote {
+	margin: 0 0 1.5em;
+	padding: 0 0 0 40px;
+	
+	p {
+		margin: 0;
+	}
+}
 
 
 small {
@@ -222,31 +291,77 @@ sub {
     Lists
    ========================================================================== */
 
-/*
- * Addresses margins set differently in IE6/7
- */
-dl,
-menu,
-ol,
-ul {}
+ul,
+ol {
+  margin: 0 0 1.5em 40px;
+  padding: 0;
+}
 
 
-dd {}
+.item-list {
+
+  ul, ol {
+    margin: 0 0 0 15px;
+    padding: 0;
+  }
+
+  ul li {
+    margin: 0;
+    padding: 0;
+  }
+}
 
 
-/*
- * Addresses paddings set differently in IE6/7
- */
-menu,
-ol,
-ul {}
+ul, ol {
+
+  ul, ol {
+    &, .block &, .item-list & {
+      margin-bottom: 0;
+    }
+  }
+}
 
 
-/*
- * Corrects list images handled incorrectly in IE7
- */
-nav ul,
-nav ol {}
+ul {
+  list-style-type: disc;
+
+  ul ul {
+    list-style-type: square;
+  }
+}
+
+
+ol {
+  list-style-type: decimal;
+
+  ol {
+
+    list-style-type: lower-alpha;
+
+    ol {
+      list-style-type: lower-roman;
+    }
+  }
+}
+
+
+ul ul {
+  list-style-type: circle;
+
+  ul ul {
+    list-style-type: circle;
+  }
+}
+
+
+dt {
+  font-weight: 700;
+}
+
+
+dd {
+  margin: 0 0 1.5em 40px;
+}
 
 
 /* =============================================================================
@@ -264,7 +379,9 @@ img {}
 /*
  * Corrects overflow displayed oddly in IE9
  */
-svg:not(:root) {}
+svg:not(:root) {
+	overflow: hidden;
+}
 
 
 /* =============================================================================
@@ -384,7 +501,114 @@ textarea {}
 /*
  * 1. Remove most spacing between table cells
  */
-table {}
+table {
+  border: 1px solid;
+  border-spacing: 0;
+  border-collapse: collapse;
+  font-size: inherit;
+  font: 100%;
+  margin: 10px 0;
+  padding: 0;
+  width: 100%;
+  border-color: #ccc;
+}
+
+
+thead,
+tbody,
+tr,
+th,
+td {
+  border-color: #ccc;
+}
+
+
+table {
+  vertical-align: middle;
+
+  &.sticky-header {
+    z-index: 10;
+  }
+
+}
+
+
+td,
+th {
+  vertical-align: middle;
+}
+
+
+caption,
+th,
+td {
+  text-align: left;
+}
+
+
+thead th {
+  color: #494949;
+  font-weight: 700;
+}
+
+
+td,
+th {
+  border-bottom: 0;
+  margin: 0;
+  padding: 5px 7px; // Reset the padding on th and td to something more usable
+}
+
+
+tbody {}
+
+
+tr {
+
+  &.even,
+  &:nth-child(2n+2) {
+    border-bottom: 0;
+    background-color: #fff;
+  }
+
+  &.info,
+  &.odd,
+  &:nth-child(2n+1)  {
+    border-bottom: 0;
+    background-color: #E5E5E5;
+  }
+
+  &.drag {}
+
+  &.drag-previous {}
+
+  &.odd td.active {
+    background-color: #eee;
+  }
+
+  &.even td.active {
+    background-color: #f7f7f7;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+}
+
+
+//
+// Forum tables
+//
+
+// Core sets white-space to nowrap, which makes no sense at all
+#forum td {
+
+  .created,
+  .posts,
+  .topics,
+  .last-reply,
+  .replies,
+  .pager {
+     white-space: normal;
+  }
+}
 
 
 /* =============================================================================
@@ -407,6 +631,24 @@ table {}
 .block-panels-mini > .block-title,
 div.messages {}
 
+.block-inner, 
+.pane-inner, 
+div.messages, 
+#branding, 
+#primary-nav, 
+#secondary-nav, 
+#breadcrumb, 
+#main-content, 
+#attribution, 
+.at-panel .rounded-corner {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.breadcrumb-wrapper {
+  margin-left: 0;
+  margin-right: 0;
+}
 /*
  * Panel pages need negative margin equal to the gutter width applied to #content,
  * this is taken care of in theme settings as per above for normal gutters
@@ -427,7 +669,11 @@ div.messages {}
  * - Mapping services such as Google Maps may break also, see below for fixes.
  */
 
-img {}
+img {
+  max-width: 100%;
+  height: auto;
+  -ms-interpolation-mode: bicubic;
+}
 
 
 /* Ethan Marcotte - http://front.ie/l8rJaA */
@@ -435,6 +681,7 @@ img,
 embed,
 object,
 video {
+  max-width: 100%;
 }
 
 
@@ -442,7 +689,9 @@ video {
 .lt-ie9 img,
 .lt-ie9 object,
 .lt-ie9 embed,
-.lt-ie9 video {}
+.lt-ie9 video {
+	max-width: none;
+}
 
 
 /* Override max-width 100% for map displays */
@@ -453,7 +702,9 @@ video {
 #getlocations_map_canvas img,
 #locationmap_map img,
 .geofieldMap img,
-.views_horizontal_slider img {}
+.views_horizontal_slider img {
+	max-width: none !important;
+}
 
 
 /* =============================================================================
@@ -468,4 +719,385 @@ header[role=banner],
 .region-sidebar-second,
 .region-secondary-content,
 .region-tertiary-content,
-.region-footer {}
+.region-footer {
+	overflow: visible;
+	word-wrap: break-word;
+}
+
+.nav {
+  margin: 0;
+}
+
+
+/* =============================================================================
+    Helpful classes for hiding content
+   ========================================================================== */
+   
+.element-invisible {
+  border: 0;
+  clip: rect(1px 1px 1px 1px); // IE6, IE7
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+}
+
+.element-invisible.element-focusable:active,
+.element-invisible.element-focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static !important;
+  width: auto;
+}
+
+.offscreen {
+  position: absolute;
+  top: -99999em;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  outline: 0;
+}
+
+.element-hidden {
+  display: none;
+}
+
+
+/* =============================================================================
+    Distinct styling for lists of content, hompages, etc.
+   ========================================================================== */
+   
+.distinct-header h2 {
+    &.pane-title, &.block-title {
+      border-bottom: 1px solid #FFC344;
+      position: relative;
+      margin-bottom: 15px; 
+      font-weight: 400;
+      & a {
+        text-decoration: none;
+      }
+      &:after {
+        background: none repeat scroll 0 0 #FFC344;
+        bottom: -3px;
+        content: " ";
+        height: 6px;
+        position: absolute;
+        right: 0;
+        width: 6px;
+      }
+  }
+}
+
+.minimal {
+  h3 {
+    font-size: 1.2em;
+    font-weight: 100;
+    a {
+      color: #086782;
+      text-decoration: none;
+      &:hover, &:focus {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.sub {
+  color: #3B3B3C;
+  font-style: italic;
+}
+
+   
+/* =============================================================================
+    Views
+   ========================================================================== */
+.view {}
+.view-content {}
+
+.views-row {}
+.views-row-odd {}
+.views-row-even {}
+.views-row-first {}
+.views-row-last {}
+
+.views-field {}
+.views-field-title {}
+.views-field .field-content {}
+
+.page-views {}
+.block-views {}
+.view-content  {}
+
+/* Views Slideshow */
+.skin-default {}
+.skin-default img {}
+
+.views-slideshow-controls-top {}
+.views-slideshow-controls-bottom {}
+
+//
+// Basic Styles for Calendar
+// Additonal assets include: slider-controls.png, and date-views-pager.tpl.php
+//
+
+// CUSTOM MIXINS
+@mixin highlightBtn {
+	@include background-image(linear-gradient(#FAFAFA, #DCDCDC));
+	padding: 10px;
+	outline: 1px solid #ddd;
+	border-top: 2px solid #fff;
+	border-bottom: 1px solid #aaa;
+	
+	text-align: left;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: .75em;
+	font-weight: bold;
+	color: #555;
+	@include single-text-shadow(#fff, 0px, 1px, 0);
+}
+
+@mixin imgReplace {
+	text-indent: -9999px;
+	font-size: 1em;
+	line-height: 0;
+}
+
+/************************* CALENDAR STYLES *************************/
+
+.views-calendar, .view-events-calendar, .view-ovpr-calendar {
+
+// COLOR VARIABLES
+	$hover: #1F69A9;
+	$today: #FFF3CD;
+	$todayBorder: $hover;
+	$containerColor: #F7F7F7;
+	$borderColor: #CCCCCC;
+	
+// OVERRIDES AND CLEARS
+	//*  { @include box-sizing(border-box); } // This ensures that "views-calendar" is using the box-border model
+	
+	.date-nav-wrapper { margin-top: 0; }
+	
+	.date-nav-wrapper .date-nav { margin-bottom: 0; padding:0; margin-bottom: 3px; }
+	
+	.pager .date-prev, 
+	.pager .date-next { background: transparent; border: none; top: 5px; }
+	
+	.pager .date-prev { right: auto; left: 0; }
+	
+	.item-list ul.pager .date-prev a, 
+	.item-list ul.pager .date-next a { background-color: transparent; border: none; outline: none; }
+	
+	.calendar-calendar div.day { width: auto; }
+	
+	.calendar-calendar tr td.today, 
+	.calendar-calendar tr.odd td.today, 
+	.calendar-calendar tr.even td.today { background-color: $today; }
+	
+	.calendar-calendar .month-view .full tr td.single-day.today,
+	.calendar-calendar .month-view .full td.date-box.today { border-color: $todayBorder; }
+	
+// CONTAINER STYLES
+	padding: 4px;
+	background: $containerColor;
+	border: 1px solid $borderColor;
+	
+	tbody { border: 1px solid $borderColor; }
+	
+	tr.odd, 
+	tr.info, 
+	tr:nth-child(2n+1) {
+		background-color: lighten(#000, 94%);
+	}
+	
+	.calendar-calendar table.mini td.empty { border-color: $borderColor; }
+	
+	.calendar-calendar th.days { border: none; }
+	
+	.calendar-calendar td {
+		border: 1px solid $borderColor;
+		padding: 7px 3px 3px;
+		text-align: center;
+	}
+	
+	.date-heading {
+		@include highlightBtn;
+		padding: 2px;
+		margin-top: 0 !important;
+		margin-bottom: 4px;
+	}
+	
+	.item-list ul.pager { 
+		margin: 0;
+		padding: 0;
+		
+		.date-prev a, 
+		.date-next a {
+			@include imgReplace;
+			background-image: url('images/slider-controls.png'); 
+			background-repeat: no-repeat;
+			width: 20px;
+			height: 20px;
+			display: block;
+			font-size: 0;
+			
+			&:hover, &:focus, &:active { 
+				background-color: lighten($hover, 30%);
+				@include border-radius(3px);
+				@include box-shadow(rgba(0,0,0,.2), 0px, 0px, 5px, inset);
+			}
+		}
+		
+		.date-prev a { background-position: 0 0; }
+		.date-next a { background-position: 0 -20px; }	
+	}
+}
+
+// Flexslider
+.flexslider {
+  background: #EBEBEB; /* Old browsers */
+  @include background(linear-gradient(top, #EBEBEB, #D1D1D1));
+  margin-bottom: 0;
+  h2 {
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: 100;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+      a {
+        color: #086782;
+        text-decoration: none;
+        &:hover {
+          color: #3B3B3C;
+        }
+      }
+  }
+  .views-field-body {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+div.flex-pauseplay {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  .flex-play {
+    cursor: pointer;
+  }
+}
+
+.view-featured-research-panes, .view-announcements-panes {
+  position: relative;
+}
+
+//Views read-more class
+.view p.top-read-more {
+    margin: 0;
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    display: block;
+    width: 4em;
+}
+
+/************************* FRONT PAGE EVENT STYLES *************************/
+
+#block-views-events-view-block {
+	
+	h2.event-header {
+      border-bottom: 1px solid #FFC344;
+      position: relative;
+      margin-bottom: 15px; 
+      font-weight: 400;
+      & a {
+        text-decoration: none;
+      }
+      &:after {
+        background: none repeat scroll 0 0 #FFC344;
+        bottom: -3px;
+        content: " ";
+        height: 6px;
+        position: absolute;
+        right: 0;
+        width: 6px;
+      }
+	}
+
+	table {
+
+			td {
+				border-right: 1px solid #CCCCCC;
+				border-bottom: 1px solid #CCCCCC;	
+			}
+		
+		.views-field-title {
+			margin-left: 65px;
+		    margin-top: -65px;
+		    position: absolute;
+		}
+
+		.views-field-field-location {
+			margin-left: 65px;
+		    margin-top: -45px;
+		    position: absolute;
+		}
+
+		.views-field-field-event-date {
+			background: none repeat scroll 0 0 #FFF6DC;
+    		border-radius: 6px 6px 6px 6px;
+    		height: 50px;
+    		padding: 1px 8px;
+    		width: 50px;
+    		border: 1px solid black;
+
+    		span#top-date-field {    
+				display: block;
+		    	height: 20px;
+		    	overflow: hidden;
+		    	width: 34px;
+	    	}
+
+			span#bottom-date-field {
+				display: block;
+			    font-size: 195%;
+			    height: 41px;
+			    overflow: hidden;
+			    text-indent: -53px;
+			    width: 36px;
+			    margin-top: -27px;
+	    	}	
+		}
+
+		.views-field-field-event-date-1 {
+		    background: none repeat scroll 0 0 #FFF6DC;
+		    border-bottom: medium none;
+		    border-left: 1px solid #CCCCCC;
+		    border-right: 1px solid #CCCCCC;
+		    border-top: 1px solid #CCCCCC;
+		    padding: 3px 10px;
+		    width: 60px;
+		    border-radius: 6px 6px 0px 0px;
+		    font-size: 130%
+		}
+
+		.views-field-field-event-date-2 {
+		    background: none repeat scroll 0 0 #FFF6DC;
+		    border-top: medium none;
+		    border-left: 1px solid #CCCCCC;
+		    border-right: 1px solid #CCCCCC;
+		    border-bottom: 1px solid #CCCCCC;
+		    padding: 3px 10px;
+		    width: 60px;
+		    border-radius: 0px 0px 6px 6px;
+		    font-size: 220%;
+		    margin-top:-15px;
+		}
+	}
+}

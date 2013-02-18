@@ -11,3 +11,113 @@
  *
  * - Read the _README file in this directory, it contains useful help and other information.
  */
+
+#name-and-slogan {
+  float: left;
+  padding: 0.5em 0 1em;
+  width: 100%;
+}
+
+#main-content {
+  margin-left: 40px;
+}
+
+#nav-wrapper {
+  .container {
+    background: #3B3B3C;
+    clear: both;
+    overflow: auto;
+    padding: 5px;
+    text-align: right;
+    width: 100%;
+  }
+  
+  li {
+	float: right;
+  }
+  
+  a {
+	color: #F1F1F1;
+    font-size: 0.8em;
+    font-weight: bold;
+    vertical-align: middle;
+    
+    &:hover,
+    &:focus {
+	  color: #FFFFFF;
+    }
+  }
+}
+
+#research-depts-nav {
+  background: #3B3B3C;
+  padding: 5px;
+  clear: both;
+  overflow: auto;
+  width: 100%;
+  text-align: right;
+  a {
+    color: #F1F1F1;
+    font-size: 0.8em;
+    font-weight: bold;
+    vertical-align: middle;
+
+    &:hover,
+    &:focus {
+      color:#FFF;
+    }
+  }
+  li{
+    float: right;
+  }
+  #current-department-link {
+    float: left;
+    background-color: #FFC344;
+    //height: 100%;
+    padding: 0 4px;
+    @include border-radius(5px);
+    color: #000;
+    margin-top: 2px;
+  }
+}
+
+#research-link {
+  float: left;
+  margin-right: 10px;
+  text-transform: uppercase; 
+  margin-top: 2px;
+}
+
+#depts-links-top {
+  margin: 0;
+  float: right;
+  a {
+    height: 100%;
+    padding: 0 4px;
+    &:hover {
+      color: #000;
+      background-color: #FFC344;
+      height: 100%;
+      @include border-radius(5px);
+    }
+  }
+  li {
+    display: inline;
+    margin: 0 5px;
+    border-left: 1px solid #FFC344;
+    padding-left: 10px;
+    &.first {
+      border-left: none;
+    }
+  }
+}
+
+// Featured content views
+.flexslider .slides img {
+    width: 440px;
+    float: left;
+}
+
+.flexslider ul.slides li img {
+    padding-right: 10px;
+}
