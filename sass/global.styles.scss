@@ -1594,14 +1594,6 @@ ul.action-links {
       bottom: -3px;
       right: 0;
     }
-    li {
-      border-bottom: none;
-      padding: 2px;
-      margin-left: 0px;
-      &:after {
-        display: none;
-      }
-    }
   }
   .block-inner {
     margin-left: 0;
@@ -2543,12 +2535,6 @@ tr.error {
 	position: relative !important;
 	width: auto;		
 }
-
-// fake breadcrumb area on the homepage
-.front #nav-wrapper .container {
-	border-bottom: solid 21px #FFC808;
-	margin-bottom: 2.5em; // same as breadcrumb wrapper
-} 
 
 
 /* =============================================================================
