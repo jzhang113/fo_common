@@ -120,7 +120,12 @@ q {}
 address {}
 
 
-ul {}
+ul {
+	li.leaf {
+		list-style-image: none;
+		list-style-type: none;
+	}
+}
 
 
 ol {}
@@ -2525,6 +2530,26 @@ tr.error {
 	color:#fff;	
 }
 
+// override 'element-invisible' for Department Navigation menu
+#block-menu-menu-departmental-navigation h2.element-invisible {
+	border: none;
+	color: #F1F1F1;
+	float: left;
+	font-family: Verdana, Geneva, 'DejaVu Sans', Arial, Helvetica, sans-serif;
+	font-size: 0.8em;
+	height: auto;
+	margin: 0;
+	overflow: visible;	
+	position: relative !important;
+	width: auto;		
+}
+
+// fake breadcrumb area on the homepage
+.front #nav-wrapper .container {
+	border-bottom: solid 21px #FFC808;
+	margin-bottom: 2.5em; // same as breadcrumb wrapper
+} 
+
 
 /* =============================================================================
  *   Site-specific styles
@@ -2554,6 +2579,11 @@ tr.error {
 	h3{
 		margin-top: 20px;
 	}
+}
+
+// Site Map block for 404 page on FO
+.site-name-finance-and-operations #block-menu-block-3 {
+  margin-left: 0;
 }
 
 //Fix for header nav on GAO
@@ -2612,23 +2642,16 @@ tr.error {
 	}
 }
 
+// Hide "printer-friendly version" link on Book pages
+.site-name-grant-accounting-office ul.links li.book_printer {
+	display: none;
+}
+
 // Contact Page on CAM
 .site-name-capital-assets-management{
 	.view-contact-us{
 		.views-field-nothing{
 			margin: 10px 0;
 		}
-	}
-}
-
-// 'Controller Units' label for department nav bar on GAO, CAM, Controller's Office
-.site-name-grant-accounting-office,
-.site-name-capital-assets-management,
-.site-name-controlleramp039s-office {
-	#menu-bar li.last a:before {
-		content: "Controller Units:";
-		font-style: italic;
-		font-weight: normal;
-		padding-right: 10px;
 	}
 }

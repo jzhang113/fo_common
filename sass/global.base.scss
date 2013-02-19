@@ -546,9 +546,15 @@ td {
 }
 
 
-thead th {
-  color: #494949;
-  font-weight: 700;
+thead {
+  th {
+    color: #F1F1F1;
+    font-weight: 700;
+  }
+  
+  tr {
+	background-color: #3B3B3C !important;
+  }
 }
 
 
