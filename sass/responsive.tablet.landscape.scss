@@ -1,55 +1,52 @@
 
-@import "base.scss";
+// _base.scss imports _custom.scss and other partials.
+@import "base";
 
-/**
+/*
  *   Important Information about this CSS File
  *
  * - Do not delete or rename this file, if you do not use it leave it blank (delete 
  *   everything) and the file will be skipped when you enable Production Mode in
  *   the Global theme settings.
- *   
- * - There is an scss (SASS) version of this file in the /sass/ directory in your
- *   sub-theme, if you set Compass to watch it or the directory this file will be
- *   overwritten!
  *
  * - Read the _README file in this directory, it contains useful help and other information.
  */
 
- #name-and-slogan {
+#name-and-slogan {
   float: left;
   margin-bottom: 10px;
   margin-top: 30px;
-  width:100%;
+  width: 100%;
 }
 
-#research-depts-nav {
-  background: #3B3B3C;
-  padding: 5px;
-  clear: both;
-  overflow: auto;
-  width: 100%;
+#main-content {
+  margin-left: 20px;
+}
+
+#nav-wrapper {
+  .container {
+    background: #3B3B3C;
+    clear: both;
+    overflow: auto;
+    padding: 5px;
+    text-align: right;
+    width: 100%;
+  }
+  
+  li {
+    float: right;
+  }
+  
   a {
-    color: #F1F1F1;
+	color: #F1F1F1;
     font-size: 0.8em;
     font-weight: bold;
     vertical-align: middle;
-
+    
     &:hover,
     &:focus {
-      color:#FFF;
+	  color: #FFFFFF;
     }
-  }
-  li{
-    float: right;
-  }
-  #current-department-link {
-    float: left;
-    background-color: #FFC344;
-    //height: 100%;
-    padding: 0 4px;
-    @include border-radius(5px);
-    color: #000;
-    margin-top: 2px;
   }
 }
 
@@ -84,10 +81,6 @@
   }
 }
 
-#main-content {
-  margin-left: 20px; 
-}
-
 // Featured content views
 .flexslider {
   .slides img {
@@ -98,4 +91,8 @@
 
 .flexslider ul.slides li img {
     padding-right: 10px;
+}
+
+.view-id-departments_units h3 {
+    margin-top: 20px;
 }

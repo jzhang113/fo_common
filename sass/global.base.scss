@@ -1,84 +1,82 @@
 
-@import "base.scss";
+// _base.scss imports _custom.scss and other partials.
+@import "base";
 
-//
-// global.base.scss
-// This is a big reset for html elements to set up global defaults.
-//
+/*
+ * @file
+ * global.base
+ *
+ * - normalize with small modifications for Drupal and AT: http://necolas.github.com/normalize.css/
+ * - Gutter widths, see $gutter-width in _custom.scss
+ * - Default container alignment.
+ * - Flexible images and media declarations.
+ * - Copies of the SCSS mixins for reference, which includes an improved
+ *   element-invisible and focusable styles.
+ */
 
-//
-// Fonts
-//
-// By default there is no global font size is reset. A common
-// method is to reset it to 62.5%, or 10px. This makes it very
-// easy to calculate the required font sizes in em, for example:
-//
-// 1.6em = 16px
-// 2.4em = 24px
-//
-// In Adaptivetheme this should be applied to the HTML element,
-// so it will play nicely with the theme settings. If you use
-// the body element or #page wrapper you will get unpredicable
-// font scaling issues.
-//
-// Font size chart from http://pxtoem.com/
-//
-// 6px	 0.6em	 60%	 5pt
-// 7px	 0.7em	 70%	 5pt
-// 8px	 0.8em	 80%	 6pt
-// 9px	 0.9em	 90%	 7pt
-// 10px	 1em	   100%	 8pt
-// 11px	 1.1em	 110%	 8pt
-// 12px	 1.2em	 120%	 9pt
-// 13px	 1.3em	 130%	 10pt
-// 14px	 1.4em	 140%	 11pt
-// 15px	 1.5em	 150%	 11pt
-// 16px	 1.6em	 160%	 12pt
-// 17px	 1.7em	 170%	 13pt
-// 18px	 1.8em	 180%	 14pt
-// 19px	 1.9em	 190%	 14pt
-// 20px	 2em	   200%	 15pt
-// 21px	 2.1em	 210%	 16pt
-// 22px	 2.2em	 220%	 17pt
-// 23px	 2.3em	 230%	 17pt
-// 24px	 2.4em	 240%	 18pt
-//
-//
-// Font Theme Settings
-//
-// Adaptivetheme includes powerful theme settings for adding
-// webfonts and setting font sizes - you can enable these
-// under "Site Tweaks", simply enable the Fonts setting and
-// start using them. You can choose from standard websafe font
-// stacks, Google fonts, add your own custom stacks, and if you
-// have @font-your-face module installed just set the font to
-// "-- add selector in theme CSS --" and the font will automatically
-// be available to you in theme settings.
-// @see http://drupal.org/project/fontyourface
-//
-//
-// Font Stacks
-//
-// These are the font stacks that used for the websafe fonts
-// in theme settings (if you enabled the Fonts feature). They are
-// included here for easy reference if you prefer to set your fonts
-// in CSS.
-//
-// font-family: 'Trebuchet MS', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-// font-family: Verdana, Geneva, 'DejaVu Sans', Arial, Helvetica, sans-serif;
-// font-family: Arial, Helvetica, sans-serif;
-// font-family: Calibri, Candara, Arial, Helvetica, sans-serif;
-// font-family: Segoe UI', 'Myriad Pro', Myriad, Arial, Helvetica, sans-serif;
-// font-family: 'Lucida Sans Unicode', 'Lucida Sans', 'Lucida Grande', Verdana, Geneva, sans-serif;
-// font-family: Impact, Haettenschweiler, 'Franklin Gothic Bold', Charcoal, 'Helvetica Inserat', 'Bitstream Vera Sans Bold', 'Arial Black', sans-serif;
-// font-family: Garamond, Perpetua, 'Times New Roman', serif;
-// font-family: Georgia, Baskerville, Palatino, 'Palatino Linotype', 'Book Antiqua', 'Times New Roman', serif;
-// font-family: Consolas, Monaco, 'Courier New', Courier, monospace, sans-serif;
-//
-@font-face { font-family: steelfish; src: url('steelfish/steelfish_bd.otf'); }
+/* =============================================================================
+    HTML5 display definitions
+   ========================================================================== */
+
+/*
+ * Corrects block display not defined in IE6/7/8/9 & FF3
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+	display: block;
+}
 
 
-// Always apply your global font size the the HTML element, not body or #page
+/*
+ * Corrects inline-block display not defined in IE6/7/8/9 & FF3
+ */
+audio,
+canvas,
+video {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+
+
+/*
+ * Prevents modern browsers from displaying 'audio' without controls
+ * Remove excess height in iOS5 devices
+ */
+audio:not([controls]) {
+	display: none;
+}
+
+
+/*
+ * Addresses styling for 'hidden' attribute not present in IE7/8/9, FF3, S4
+ * Known issue: no IE6 support
+ */
+[hidden] {}
+
+
+/* =============================================================================
+    Base
+   ========================================================================== */
+
+/*
+ * If you are using the themes Responsive JS feature (media_queries.js) do not
+ * set a font-family on the html element, use body.
+ *
+ * 1. Corrects text resizing oddly in IE6/7 when body font-size is set using em units
+ *    http://clagnut.com/blog/348/#c790
+ * 2. Prevents iOS text size adjust after orientation change, without disabling user zoom
+ *    www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
+ */
 html {
   line-height: 1.5;
   height: 100%;
@@ -89,6 +87,9 @@ html {
 }
 
 
+/*
+ * 1 . Addresses margins handled incorrectly in IE6/7
+ */
 body {
 margin: 0px;
   min-height: 100%;
@@ -98,104 +99,197 @@ margin: 0px;
 }
 
 
-h1, h2, h3, h4, h5, h6,
-h1 img, h2 img, h3 img, h4 img, h5 img, h6 img,
-em, dfn, del, ins,
-a, tbody, tfoot, thead, tr,
-ul, li,
-label, legend,
-figure, figcaption {
+/*
+ * Addresses font-family inconsistency between 'textarea' and other form elements.
+ */
+button,
+input,
+select,
+textarea {}
+
+
+/* =============================================================================
+    Links
+   ========================================================================== */
+
+/*
+ * Addresses outline displayed oddly in Chrome
+ */
+a:focus {}
+
+
+/*
+ * Improves readability when focused and also mouse hovered in all browsers
+ * people.opera.com/patrickl/experiments/keyboard/test
+ */
+a:hover,
+a:active {}
+
+
+/* =============================================================================
+    Typography
+   ========================================================================== */
+
+/*
+ * Headings
+ *
+ * Addresses font sizes and margins set differently in IE6/7
+ * Addresses font sizes within 'section' and 'article' in FF4+, Chrome, S5
+ */
+
+h1 {}
+
+
+h2 {}
+
+
+h3 {}
+
+
+h4 {}
+
+
+h5 {}
+
+
+h6 {}
+
+h1, h2, h3, h4, h5, h6, h1 img, h2 img, h3 img, h4 img, h5 img, h6 img, em, dfn, del, ins, a, tbody, tfoot, thead, tr, ul, li, label, legend, figure, figcaption {
   margin: 0;
   padding: 0;
 }
 
-
-// Reset HTML5 elements
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
+// Link color for headings
+h2, h3, h4, h5, h6 {
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
 }
 
 
-// Default font sizes for headings, can be overridden in theme settings or set them here
-h1 {}
-h2 {}
-h3 {}
-h4 {}
-h5, h6 {}
+/*
+ * Addresses styling not present in IE7/8/9, S5, Chrome
+ */
+abbr[title] {}
 
 
-img,
-a img {
-  border: 0;
+/*
+ * Addresses style set to 'bolder' in FF3+, S4/5, Chrome
+ */
+b,
+strong {}
+
+
+blockquote {}
+
+
+/*
+ * Addresses styling not present in S5, Chrome
+ */
+dfn, em {
+	font-style: italic;
 }
-
-
-p {
-  margin: 0 0 1.5em;
-  padding: 0;
-}
-
-
-em,
-dfn {
-  font-style: italic;
-}
-
 
 ins {
-  border-bottom: none;
-  text-decoration: none;
+	border-bottom: none;
+	text-decoration: none;
 }
-
-
-pre,
-code,
-tt,
-samp,
-kbd,
-var {
-  font-size: 1em;
-  font-family: Consolas, "Lucida Console", Menlo, Monaco, "DejaVu Sans Mono", monospace, sans-serif; // sans-serif Safari hack
-}
-
-
-blockquote,
-q {
-  font-style: italic;
-  quotes: "" "";
-  &:before, &:after {
-    content: "";
-  }
-}
-
-
-blockquote {
-  margin: 0 0 1.5em;
-  padding: 0 0 0 40px;
-
-  p {
-    margin: 0;
-  }
-}
-
 
 strong,
 dfn,
 caption,
 th {
-  font-weight: 700;
+	font-weight: 700;
 }
 
+
+/*
+ * Addresses styling not present in IE6/7/8/9
+ */
+mark {}
+
+
+/*
+ * Addresses margins set differently in IE6/7
+ */
+p,
+pre {
+	margin: 0 0 1.5em;
+	padding: 0;
+}
+
+
+/*
+ * Corrects font family set oddly in IE6, S4/5, Chrome
+ * en.wikipedia.org/wiki/User:Davidgothberg/Test59
+ */
+pre,
+code,
+tt,
+kbd,
+samp,
+var {
+	font-size: 1em;
+	font-family: Consolas, "Lucida Consolue", Menlo, Monaco, "DejaVu Sans Mono", monospace, sans-serif;
+}
+
+
+/*
+ * Improves readability of pre-formatted text in all browsers
+ */
+pre {}
+
+
+/*
+ * 1. Addresses CSS quotes not supported in IE6/7
+ * 2. Addresses quote property not supported in S4
+ */
+
+blockquote, q {
+  font-style: italic;
+  quotes: "" "";
+}
+
+
+blockquote:before, q:before,
+blockquote:after, q:after {
+  content: "";
+}
+
+blockquote {
+	margin: 0 0 1.5em;
+	padding: 0 0 0 40px;
+	
+	p {
+		margin: 0;
+	}
+}
+
+
+small {
+}
+
+
+/*
+ * Prevents sub and sup affecting line-height in all browsers
+ * gist.github.com/413930
+ */
+sub,
+sup {}
+
+
+sup {
+}
+
+
+sub {
+}
+
+
+/* =============================================================================
+    Lists
+   ========================================================================== */
 
 ul,
 ol {
@@ -270,14 +364,317 @@ dd {
 }
 
 
+/* =============================================================================
+    Embedded content
+   ========================================================================== */
+
+/*
+ * 1. Remove border when inside 'a' element in IE6/7/8/9, FF3
+ * 2. Improves image quality when scaled in IE7
+ *    code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
+ */
+img {}
+
+
+/*
+ * Corrects overflow displayed oddly in IE9
+ */
+svg:not(:root) {
+	overflow: hidden;
+}
+
+
+/* =============================================================================
+    Figures
+   ========================================================================== */
+
+/*
+ * Addresses margin not present in IE6/7/8/9, S5, O11
+ */
+figure {}
+
+
+/* =============================================================================
+    Forms
+   ========================================================================== */
+
+/*
+ * Corrects margin displayed oddly in IE6/7
+ */
+form {}
+
+
+/*
+ * Define consistent margin, and padding
+ */
+fieldset {}
+
+
+/*
+ * 1. Corrects color not being inherited in IE6/7/8/9
+ * 2. Corrects text not wrapping in FF3
+ * 3. Corrects alignment displayed oddly in IE6/7
+ */
+legend {}
+
+
+/*
+ * 1. Corrects font size not being inherited in all browsers
+ * 2. Addresses margins set differently in IE6/7, FF3+, S5, Chrome
+ * 3. Improves appearance and consistency in all browsers
+ */
+button,
+input,
+select,
+textarea {}
+
+
+/*
+ * Addresses FF3/4 setting line-height on 'input' using !important in the UA stylesheet
+ */
+button,
+input {}
+
+
+/*
+ * 1. Improves usability and consistency of cursor style between image-type 'input' and others
+ * 2. Corrects inability to style clickable 'input' types in iOS
+ * 3. Removes inner spacing in IE7 without affecting normal text inputs
+ *    Known issue: inner spacing remains in IE6
+ */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {}
+
+
+/*
+ * Re-set default cursor for disabled elements
+ */
+button[disabled],
+input[disabled] {}
+
+
+/*
+ * 1. Addresses box sizing set to content-box in IE8/9
+ * 2. Removes excess padding in IE8/9
+ * 3. Removes excess padding in IE7
+ *    Known issue: excess padding remains in IE6
+ */
+input[type="checkbox"],
+input[type="radio"] {}
+
+
+/*
+ * 1. Addresses appearance set to searchfield in S5, Chrome
+ * 2. Addresses box-sizing set to border-box in S5, Chrome (include -moz to future-proof)
+ */
+input[type="search"] {}
+
+
+/*
+ * Removes inner padding and search cancel button in S5, Chrome on OS X
+ */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {}
+
+
+/*
+ * Removes inner padding and border in FF3+
+ * www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {}
+
+
+/*
+ * 1. Removes default vertical scrollbar in IE6/7/8/9
+ * 2. Improves readability and alignment in all browsers
+ */
+textarea {}
+
+
+/* =============================================================================
+    Tables
+   ========================================================================== */
+
+/*
+ * 1. Remove most spacing between table cells
+ */
+table {
+  border: 1px solid;
+  border-spacing: 0;
+  border-collapse: collapse;
+  font-size: inherit;
+  font: 100%;
+  margin: 10px 0;
+  padding: 0;
+  width: 100%;
+  border-color: #ccc;
+}
+
+
+thead,
+tbody,
+tr,
+th,
+td {
+  border-color: #ccc;
+}
+
+
+table {
+  vertical-align: middle;
+
+  &.sticky-header {
+    z-index: 10;
+  }
+
+}
+
+
+td,
+th {
+  vertical-align: middle;
+}
+
+
+caption,
+th,
+td {
+  text-align: left;
+}
+
+
+thead {
+  th {
+    color: #F1F1F1;
+    font-weight: 700;
+  }
+  
+  tr {
+	background-color: #3B3B3C !important;
+  }
+}
+
+
+td,
+th {
+  border-bottom: 0;
+  margin: 0;
+  padding: 5px 7px; // Reset the padding on th and td to something more usable
+}
+
+
+tbody {}
+
+
+tr {
+
+  &.even,
+  &:nth-child(2n+2) {
+    border-bottom: 0;
+    background-color: #fff;
+  }
+
+  &.info,
+  &.odd,
+  &:nth-child(2n+1)  {
+    border-bottom: 0;
+    background-color: #E5E5E5;
+  }
+
+  &.drag {}
+
+  &.drag-previous {}
+
+  &.odd td.active {
+    background-color: #eee;
+  }
+
+  &.even td.active {
+    background-color: #f7f7f7;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+}
+
+
 //
-// Flexible Media and Cross browser improvements
-// - This can cause issues in table cells where no width is set on the column,
-//   only in some versions of webkit and IE 7/8.
-// - declaring the width attribute on image elements and using max-width causes
-//   the "dissappering images" bug in IE8.
-// - Google maps break also, see below for fixes.
+// Forum tables
 //
+
+// Core sets white-space to nowrap, which makes no sense at all
+#forum td {
+
+  .created,
+  .posts,
+  .topics,
+  .last-reply,
+  .replies,
+  .pager {
+     white-space: normal;
+  }
+}
+
+
+/* =============================================================================
+    Gutters
+   ========================================================================== */
+
+/*
+ * If gutters are set in theme settings they will override these values,
+ * see Extensions > Modify Output > Design
+ * $gutter-width is set in _base.scss
+ */
+#main-content,
+.block-inner,
+.pane-inner,
+.menu-wrapper,
+.branding-elements,
+.breadcrumb-wrapper,
+.attribution,
+.at-panel .rounded-corner,
+.block-panels-mini > .block-title,
+div.messages {}
+
+.block-inner, 
+.pane-inner, 
+div.messages, 
+#branding, 
+#primary-nav, 
+#secondary-nav, 
+#breadcrumb, 
+#main-content, 
+#attribution, 
+.at-panel .rounded-corner {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.breadcrumb-wrapper {
+  margin-left: 0;
+  margin-right: 0;
+}
+/*
+ * Panel pages need negative margin equal to the gutter width applied to #content,
+ * this is taken care of in theme settings as per above for normal gutters
+ */
+#content .panel-display,
+#content .panel-flexible {}
+
+
+/* =============================================================================
+    Flexible Media and Cross browser improvements
+   ========================================================================== */
+
+/*
+ * - This can cause issues in table cells where no width is set on the column,
+ *   only in some versions of webkit and IE 7/8.
+ * - declaring the width attribute on image elements and using max-width causes
+ *   the "dissappering images" bug in IE8.
+ * - Mapping services such as Google Maps may break also, see below for fixes.
+ */
+
 img {
   max-width: 100%;
   height: auto;
@@ -285,7 +682,8 @@ img {
 }
 
 
-// Ethan Marcotte - http://front.ie/l8rJaA
+/* Ethan Marcotte - http://front.ie/l8rJaA */
+img,
 embed,
 object,
 video {
@@ -293,52 +691,33 @@ video {
 }
 
 
-// Disable flexiblity for IE8 and below
-.lt-ie9 {
-  img,
-  object,
-  embed,
-  video {
-    max-width: none;
-  }
+/* Disable flexiblity for IE8 and below */
+.lt-ie9 img,
+.lt-ie9 object,
+.lt-ie9 embed,
+.lt-ie9 video {
+	max-width: none;
 }
 
 
-// Override max-width 100% for map displays, as much as possible anyway...
+/* Override max-width 100% for map displays */
 #map img,
 .gmap img,
 .view-gmap img,
 .openlayers-map img,
 #getlocations_map_canvas img,
 #locationmap_map img,
-.geofieldMap img {
-  max-width: none !important;
+.geofieldMap img,
+.views_horizontal_slider img {
+	max-width: none !important;
 }
 
 
-// Improve IE's resizing of images
-svg:not(:root) {
-  overflow: hidden;
-}
+/* =============================================================================
+    Misc helpers, Accessibility classes etc
+   ========================================================================== */
 
-
-// Corrects inline-block display not defined in IE6/7/8/9 & FF3
-audio,
-canvas,
-video {
-  display: inline-block;
-  *display: inline;
-  *zoom: 1;
-}
-
-
-// Prevents modern browsers from displaying 'audio' without controls
-audio:not([controls]) {
-  display: none;
-}
-
-
-// Prevent overflowing content
+/* Prevent overflowing content */
 header[role=banner],
 .content-inner,
 .nav,
@@ -347,12 +726,19 @@ header[role=banner],
 .region-secondary-content,
 .region-tertiary-content,
 .region-footer {
-  overflow: visible;
-  word-wrap: break-word;
+	overflow: visible;
+	word-wrap: break-word;
+}
+
+.nav {
+  margin: 0;
 }
 
 
-// Helpful classes for hiding content
+/* =============================================================================
+    Helpful classes for hiding content
+   ========================================================================== */
+   
 .element-invisible {
   border: 0;
   clip: rect(1px 1px 1px 1px); // IE6, IE7
@@ -388,8 +774,11 @@ header[role=banner],
   display: none;
 }
 
-// Distinct styling for lists of content, homepages, etc.
 
+/* =============================================================================
+    Distinct styling for lists of content, hompages, etc.
+   ========================================================================== */
+   
 .distinct-header h2 {
     &.pane-title, &.block-title {
       border-bottom: 1px solid #FFC344;
@@ -428,4 +817,293 @@ header[role=banner],
 .sub {
   color: #3B3B3C;
   font-style: italic;
+}
+
+   
+/* =============================================================================
+    Views
+   ========================================================================== */
+.view {}
+.view-content {}
+
+.views-row {}
+.views-row-odd {}
+.views-row-even {}
+.views-row-first {}
+.views-row-last {}
+
+.views-field {}
+.views-field-title {}
+.views-field .field-content {}
+
+.page-views {}
+.block-views {}
+.view-content  {}
+
+/* Views Slideshow */
+.skin-default {}
+.skin-default img {}
+
+.views-slideshow-controls-top {}
+.views-slideshow-controls-bottom {}
+
+//
+// Basic Styles for Calendar
+// Additonal assets include: slider-controls.png, and date-views-pager.tpl.php
+//
+
+// CUSTOM MIXINS
+@mixin highlightBtn {
+	@include background-image(linear-gradient(#FAFAFA, #DCDCDC));
+	padding: 10px;
+	outline: 1px solid #ddd;
+	border-top: 2px solid #fff;
+	border-bottom: 1px solid #aaa;
+	
+	text-align: left;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: .75em;
+	font-weight: bold;
+	color: #555;
+	@include single-text-shadow(#fff, 0px, 1px, 0);
+}
+
+@mixin imgReplace {
+	text-indent: -9999px;
+	font-size: 1em;
+	line-height: 0;
+}
+
+/************************* CALENDAR STYLES *************************/
+
+.views-calendar, .view-events-calendar, .view-ovpr-calendar {
+
+// COLOR VARIABLES
+	$hover: #1F69A9;
+	$today: #FFF3CD;
+	$todayBorder: $hover;
+	$containerColor: #F7F7F7;
+	$borderColor: #CCCCCC;
+	
+// OVERRIDES AND CLEARS
+	//*  { @include box-sizing(border-box); } // This ensures that "views-calendar" is using the box-border model
+	
+	.date-nav-wrapper { margin-top: 0; }
+	
+	.date-nav-wrapper .date-nav { margin-bottom: 0; padding:0; margin-bottom: 3px; }
+	
+	.pager .date-prev, 
+	.pager .date-next { background: transparent; border: none; top: 5px; }
+	
+	.pager .date-prev { right: auto; left: 0; }
+	
+	.item-list ul.pager .date-prev a, 
+	.item-list ul.pager .date-next a { background-color: transparent; border: none; outline: none; }
+	
+	.calendar-calendar div.day { width: auto; }
+	
+	.calendar-calendar tr td.today, 
+	.calendar-calendar tr.odd td.today, 
+	.calendar-calendar tr.even td.today { background-color: $today; }
+	
+	.calendar-calendar .month-view .full tr td.single-day.today,
+	.calendar-calendar .month-view .full td.date-box.today { border-color: $todayBorder; }
+	
+// CONTAINER STYLES
+	padding: 4px;
+	background: $containerColor;
+	border: 1px solid $borderColor;
+	
+	tbody { border: 1px solid $borderColor; }
+	
+	tr.odd, 
+	tr.info, 
+	tr:nth-child(2n+1) {
+		background-color: lighten(#000, 94%);
+	}
+	
+	.calendar-calendar table.mini td.empty { border-color: $borderColor; }
+	
+	.calendar-calendar th.days { border: none; }
+	
+	.calendar-calendar td {
+		border: 1px solid $borderColor;
+		padding: 7px 3px 3px;
+		text-align: center;
+	}
+	
+	.date-heading {
+		@include highlightBtn;
+		padding: 2px;
+		margin-top: 0 !important;
+		margin-bottom: 4px;
+	}
+	
+	.item-list ul.pager { 
+		margin: 0;
+		padding: 0;
+		
+		.date-prev a, 
+		.date-next a {
+			@include imgReplace;
+			background-image: url('images/slider-controls.png'); 
+			background-repeat: no-repeat;
+			width: 20px;
+			height: 20px;
+			display: block;
+			font-size: 0;
+			
+			&:hover, &:focus, &:active { 
+				background-color: lighten($hover, 30%);
+				@include border-radius(3px);
+				@include box-shadow(rgba(0,0,0,.2), 0px, 0px, 5px, inset);
+			}
+		}
+		
+		.date-prev a { background-position: 0 0; }
+		.date-next a { background-position: 0 -20px; }	
+	}
+}
+
+// Flexslider
+.flexslider {
+  background: #EBEBEB; /* Old browsers */
+  @include background(linear-gradient(top, #EBEBEB, #D1D1D1));
+  margin-bottom: 0;
+  h2 {
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: 100;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+      a {
+        color: #086782;
+        text-decoration: none;
+        &:hover {
+          color: #3B3B3C;
+        }
+      }
+  }
+  .views-field-body {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+div.flex-pauseplay {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  .flex-play {
+    cursor: pointer;
+  }
+}
+
+.view-featured-research-panes, .view-announcements-panes {
+  position: relative;
+}
+
+//Views read-more class
+.view p.top-read-more {
+    margin: 0;
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    display: block;
+    width: 4em;
+}
+
+/************************* FRONT PAGE EVENT STYLES *************************/
+
+#block-views-events-view-block {
+	
+	h2.event-header {
+      border-bottom: 1px solid #FFC344;
+      position: relative;
+      margin-bottom: 15px; 
+      font-weight: 400;
+      & a {
+        text-decoration: none;
+      }
+      &:after {
+        background: none repeat scroll 0 0 #FFC344;
+        bottom: -3px;
+        content: " ";
+        height: 6px;
+        position: absolute;
+        right: 0;
+        width: 6px;
+      }
+	}
+
+	table {
+
+			td {
+				border-right: 1px solid #CCCCCC;
+				border-bottom: 1px solid #CCCCCC;	
+			}
+		
+		.views-field-title {
+			margin-left: 65px;
+		    margin-top: -65px;
+		    position: absolute;
+		}
+
+		.views-field-field-location {
+			margin-left: 65px;
+		    margin-top: -45px;
+		    position: absolute;
+		}
+
+		.views-field-field-event-date {
+			background: none repeat scroll 0 0 #FFF6DC;
+    		border-radius: 6px 6px 6px 6px;
+    		height: 50px;
+    		padding: 1px 8px;
+    		width: 50px;
+    		border: 1px solid black;
+
+    		span#top-date-field {    
+				display: block;
+		    	height: 20px;
+		    	overflow: hidden;
+		    	width: 34px;
+	    	}
+
+			span#bottom-date-field {
+				display: block;
+			    font-size: 195%;
+			    height: 41px;
+			    overflow: hidden;
+			    text-indent: -53px;
+			    width: 36px;
+			    margin-top: -27px;
+	    	}	
+		}
+
+		.views-field-field-event-date-1 {
+		    background: none repeat scroll 0 0 #FFF6DC;
+		    border-bottom: medium none;
+		    border-left: 1px solid #CCCCCC;
+		    border-right: 1px solid #CCCCCC;
+		    border-top: 1px solid #CCCCCC;
+		    padding: 3px 10px;
+		    width: 60px;
+		    border-radius: 6px 6px 0px 0px;
+		    font-size: 130%
+		}
+
+		.views-field-field-event-date-2 {
+		    background: none repeat scroll 0 0 #FFF6DC;
+		    border-top: medium none;
+		    border-left: 1px solid #CCCCCC;
+		    border-right: 1px solid #CCCCCC;
+		    border-bottom: 1px solid #CCCCCC;
+		    padding: 3px 10px;
+		    width: 60px;
+		    border-radius: 0px 0px 6px 6px;
+		    font-size: 220%;
+		    margin-top:-15px;
+		}
+	}
 }

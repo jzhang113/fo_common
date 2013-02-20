@@ -1,10 +1,11 @@
 
-@import "base.scss";
+// _base.scss imports _custom.scss and other partials.
+@import "base";
 
 /*
  * @file
- * Print Styles
- * This probably needs work, but it's a good starting point.
+ * Print Styles Overrides
+ * These will override from the Parallaxy Base theme
  */
 
 // Body
@@ -307,4 +308,3 @@ form {
     padding: 0;
   }
 }
-
