@@ -41,7 +41,13 @@
 
 html {}
 
-body {}
+html .js {
+	background-color: #E5E5E5;
+}
+
+body {
+	background-color: #FFFFFF;
+}
 
 
 /* =============================================================================
@@ -624,6 +630,10 @@ ul.links {
  * First sidebar
  */
 .region-sidebar-first {
+	background-color: #FFF6DC;
+	border-bottom: #FFC344;
+	border-style:solid;
+	border-width: 6px 1px 1px;
 	
 	.menu-name-main-menu {
 	  
@@ -2522,8 +2532,8 @@ tr.error {
 	color:#fff;	
 }
 
-// override 'element-invisible' for Department Navigation menu
-#block-menu-menu-departmental-navigation h2.element-invisible {
+// override 'element-invisible' for blocks in Menu Bar region
+#menu-bar h2.element-invisible {
 	border: none;
 	color: #F1F1F1;
 	float: left;
