@@ -1,6 +1,5 @@
 
 -- SUBTHEME SETUP --
-
 NOTE: if you use Drush you can generate a new subtheme with the adaptivetheme
 command: drush adaptivetheme "Foobar Theme" foobartheme
 
