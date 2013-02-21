@@ -872,7 +872,7 @@ ul.sf-menu {
 
 
 ul.menu {
-  list-style-position: outside;
+  list-style-position: inside;
   
   .region-header & {
     text-transform: uppercase;
@@ -892,7 +892,7 @@ ul.menu {
   }
 
   li {
-    margin: 2px 0 2px 20px;
+    margin: 2px 0 2px 0;
     .region-header & {
       float: left;
       margin: 0 2px !important;
@@ -1587,13 +1587,15 @@ ul.action-links {
 /*
  * "Main menu" block
  */
-#block-system-main-menu, .site-name-grant-accounting-office #block-menu-block-2 {
+#block-system-main-menu, 
+.site-name-grant-accounting-office #block-menu-block-2, 
+.region-sidebar-first .block-menu-block {
   a {
   color: #000 !important;
   }
-  li {
+  ul li {
     border-bottom: 1px solid #FFC344;
-    padding: 10px 10px 10px 0;
+    padding: 10px;
     position: relative;
     &:after {
       content: ' ';
@@ -1611,6 +1613,29 @@ ul.action-links {
   }
 }
 
+/* nested menu items */
+#block-system-main-menu, .site-name-grant-accounting-office #block-menu-block-2 {
+	ul li ul li {
+		border-bottom: none !important;
+		&:after {
+			background: none !important;
+			height: 0 !important;
+		}
+	}
+}
+
+.region-sidebar-first .menu-name-main-menu ul li ul li *:after {
+	height: 0 !important;
+	width: 0 !important;
+}
+
+.region-sidebar-first .block-menu-block .block-inner {
+	margin-left: 0;
+}
+
+/*.region-sidebar-first .block-menu-block a {
+	color: #000000 !important;
+}*/
 
 /*
  * "Management" block for Drupal management menu
