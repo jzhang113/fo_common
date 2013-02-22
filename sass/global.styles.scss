@@ -2621,8 +2621,16 @@ ul.links li.book_printer {
 }
 
 // Slideshow images alignment on FO
-.site-name-finance-and-operations #views_slideshow_cycle_teaser_section_slideshow-block,
-.site-name-finance-and-operations #views_slideshow_cycle_teaser_section_slideshow-block img {
+.site-name-finance-and-operations .pane-slideshow .block-content {
+  position: relative;
+  right: -10px;
+}
+ /* eliminate resulting horizontal scroll */
+body.site-name-finance-and-operations {
+	overflow: hidden;
+}
+
+.site-name-finance-and-operations .views-field-field-slideshow-image img {
 	height: auto;
 	width: 100%;
 } 
