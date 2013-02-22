@@ -2620,6 +2620,21 @@ ul.links li.book_printer {
   margin-left: 0;
 }
 
+// Slideshow images alignment on FO
+.site-name-finance-and-operations .pane-slideshow .block-content {
+  position: relative;
+  right: -10px;
+}
+ /* eliminate resulting horizontal scroll */
+body.site-name-finance-and-operations {
+	overflow: hidden;
+}
+
+.site-name-finance-and-operations .views-field-field-slideshow-image img {
+	height: auto;
+	width: 100%;
+} 
+
 //Fix for header nav on GAO
 .site-name-grant-accounting-office #branding {
 	width: inherit;
