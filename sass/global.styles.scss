@@ -2647,6 +2647,11 @@ body.site-name-finance-and-operations {
   }
 }
 
+// Bullets for menu block on Information for FO Staff page
+.site-name-finance-and-operations #block-menu-block-1 ul.menu li {
+	list-style-type: disc; 
+}
+
 //Fix for header nav on GAO
 .site-name-grant-accounting-office #branding {
 	width: inherit;
