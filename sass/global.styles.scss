@@ -708,8 +708,10 @@ a {
   margin: 0;
 
   ul.menu {
+    font-family: 'trebuchet ms';
+    letter-spacing: 0.03em;
     margin: 0;
-    
+    text-transform: uppercase;
   }
 
   li, .menu li {
@@ -2568,14 +2570,18 @@ tr.error {
 // override 'element-invisible' for blocks in Menu Bar region
 #menu-bar h2.element-invisible {
 	border: none;
-	color: #F1F1F1;
+	color: #E0E0E0;
 	float: left;
-	font-family: Verdana, Geneva, 'DejaVu Sans', Arial, Helvetica, sans-serif;
-	font-size: 0.8em;
+	font-family: 'trebuchet ms', Verdana, Geneva, 'DejaVu Sans', Arial, Helvetica, sans-serif;
+	font-size: 0.9em;
+	font-style: italic;
+	font-weight: normal;
 	height: auto;
+	letter-spacing: 0.03em;
 	margin: 0;
 	overflow: visible;	
 	position: relative !important;
+	text-transform: uppercase;
 	width: auto;		
 }
 
