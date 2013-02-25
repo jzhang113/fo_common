@@ -2635,6 +2635,11 @@ body.site-name-finance-and-operations {
 	width: 100%;
 } 
 
+// Spacing of Organizational Chart link on FO staff directory
+.site-name-finance-and-operations .view-staff-directory .view-header p {
+	margin-top: 10px;
+}
+
 //Fix for header nav on GAO
 .site-name-grant-accounting-office #branding {
 	width: inherit;
