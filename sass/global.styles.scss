@@ -2640,6 +2640,13 @@ body.site-name-finance-and-operations {
 	margin-top: 10px;
 }
 
+// Spacing before menu block on Information for FO Staff page
+.site-name-finance-and-operations {
+ #node-8 {
+	margin-bottom: -20px;
+  }
+}
+
 //Fix for header nav on GAO
 .site-name-grant-accounting-office #branding {
 	width: inherit;
