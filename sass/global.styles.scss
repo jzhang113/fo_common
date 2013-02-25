@@ -499,21 +499,21 @@ var {}
 /*
  * Buttons
  */
-.btn {
+.btn a {
     -moz-border-bottom-colors: none;
     -moz-border-image: none;
     -moz-border-left-colors: none;
     -moz-border-right-colors: none;
     -moz-border-top-colors: none;
-    background-color: #F5F5F5;
-    background-image: -moz-linear-gradient(center top , #FFFFFF, #E6E6E6);
+    background-color: #49AFCD;
+    background-image: -moz-linear-gradient(center top , #5BC0DE, #2F96B4);
     background-repeat: repeat-x;
-    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) #A2A2A2;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
     border-radius: 4px 4px 4px 4px;
     border-style: solid;
     border-width: 1px;
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
-    color: #333333;
+    color: #F0F0F0;
     cursor: pointer;
     display: inline-block;
     font-size: 14px;
@@ -521,17 +521,40 @@ var {}
     margin-bottom: 0;
     padding: 4px 12px;
     text-align: center;
-    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
     vertical-align: middle;
 }
 
-.btn-info {
-    background-color: #49AFCD;
-    background-image: -moz-linear-gradient(center top , #5BC0DE, #2F96B4);
-    background-repeat: repeat-x;
-    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-    color: #FFFFFF;
-    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+.btn a:hover, .btn a:focus {
+	background-color: #2F96B4;
+	background-image: none;
+	background-position: 0 -15px;
+	transition: background-position 0.1s linear 0s;
+}
+
+/*
+ * Callout blocks
+ */
+.callout {
+    background: none repeat scroll 0 0 #F8F8F8;
+    border-bottom: 1px solid #DDDDDD;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+    
+	h2 {
+		background: -moz-linear-gradient(center top , #5BC0DE, #2F96B4);
+		border-bottom: 1px solid #2A87A2;
+		border-radius: 4px 4px 0 0;
+		box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.3) inset;
+		color: #F0F0F0;  
+		font-size: 1.4em;  
+		margin: 0;
+		padding: 0.5em 1em;
+	}
+	
+	p, ul, ol {
+		padding: 1em;
+	}
 }
 
 
@@ -2590,6 +2613,43 @@ ul.links li.book_printer {
 	display: none;
 }
 
+// PDF class for links
+.pdf {
+	background-image: url(/modules/file/icons/application-pdf.png);
+	background-repeat: no-repeat;
+	padding-left: 17px;
+}
+
+// Bootstrap style button class
+.button {
+	background-color: #49AFCD;
+	background-image: linear-gradient(to bottom, #5BC0DE, #2F96B4);
+	background-repeat: repeat-x;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	color: #FFFFFF;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+// Ink style block class
+.ink-block {
+	background: none repeat scroll 0 0 #FEFBF3;
+    border-bottom: 1px solid #DDDDDD;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+    
+    h2 {
+    	background: -moz-linear-gradient(center top , #FBE8BC 0%, #F7D88C 100%) repeat scroll 0 0 transparent;
+    	border-bottom: 1px solid #F6D074;
+    	border-radius: 4px 4px 0 0;
+    	box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.3) inset;
+    	margin: 0;
+    	padding: 1.1em 1em 1em;
+    }
+    
+    p, ol, ul {
+	    padding: 1em;
+    }
+}
 
 /* =============================================================================
  *   Site-specific styles
