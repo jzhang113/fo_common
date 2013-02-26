@@ -731,10 +731,8 @@ a {
   margin: 0;
 
   ul.menu {
-    font-family: 'trebuchet ms';
-    letter-spacing: 0.03em;
+    font-family: Helvetica, Arial;
     margin: 0;
-    text-transform: uppercase;
   }
 
   li, .menu li {
@@ -2595,16 +2593,14 @@ tr.error {
 	border: none;
 	color: #E0E0E0;
 	float: left;
-	font-family: 'trebuchet ms', Verdana, Geneva, 'DejaVu Sans', Arial, Helvetica, sans-serif;
-	font-size: 0.9em;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 1em;
 	font-style: italic;
 	font-weight: normal;
 	height: auto;
-	letter-spacing: 0.03em;
 	margin: 0;
 	overflow: visible;	
 	position: relative !important;
-	text-transform: uppercase;
 	width: auto;		
 }
 
