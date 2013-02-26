@@ -2728,12 +2728,25 @@ body.site-name-finance-and-operations {
 }
 
 // Announcements Titles on GAO
-.page-announcements h2 a {
+.site-name-grant-accounting-office .page-announcements h2 a {
 	color: #086782;
 	text-decoration: none;
 	&:hover{
 		text-decoration: underline;
 	}
+}
+
+.site-name-grant-accounting-office .view-announcements h3 a {
+	color: #086782;
+	text-decoration: none;
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+/* Announcement dates on GAo */
+.site-name-grant-accounting-office .view-announcements .views-field-field-publish-date {
+	font-style: italic;
 }
 
 // Featured Page on GAO
