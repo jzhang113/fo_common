@@ -2782,3 +2782,8 @@ body.site-name-finance-and-operations {
 		}
 	}
 }
+
+//Hide Book Nav on CAM
+.site-name-capital-assets-management .book-navigation{
+	display:none;
+}
