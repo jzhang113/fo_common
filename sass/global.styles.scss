@@ -2688,8 +2688,8 @@ ul.links li.book_printer {
 
 // Slideshow images alignment on FO
 .site-name-finance-and-operations .pane-slideshow .block-content {
-  position: relative;
-  right: -20px;
+  /*position: relative;
+  right: -20px;*/
 }
  /* eliminate resulting horizontal scroll */
 body.site-name-finance-and-operations {
@@ -2697,9 +2697,12 @@ body.site-name-finance-and-operations {
 }
 
 .site-name-finance-and-operations .views-field-field-slideshow-image img {
-	height: auto;
-	width: 100%;
-} 
+	/*max-width: none;*/
+}
+
+.site-name-finance-and-operations #views_slideshow_cycle_teaser_section_slideshow-block {
+	right: 0;
+}
 
 // Spacing of Organizational Chart link on FO staff directory
 .site-name-finance-and-operations .view-staff-directory .view-header p {
