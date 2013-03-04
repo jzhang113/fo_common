@@ -80,31 +80,11 @@
   }
 }
 
-// Featured content views
-.flexslider {
-  .slides img {
-    width: 410px;
-    float: left;
-  }
-}
-
-.flexslider ul.slides li img {
-    padding-right: 10px;
-}
-
 .view-id-departments_units h3 {
     margin-top: 20px;
 }
 
-// FO slideshow 
-.site-name-finance-and-operations .views-field-field-slideshow-image img {
-	width: 310px;
-}
-
-.site-name-finance-and-operations .view-slideshow .view-content {
-	/*position: relative;
-	right: -10px;*/
-	display: table-cell;
-	float: right;
-	margin-right: -20px;
+// FO slideshow
+.site-name-finance-and-operations .view-slideshow {
+  margin-right: -10px;
 }

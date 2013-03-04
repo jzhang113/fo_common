@@ -2522,6 +2522,13 @@ tr.error {
   margin-bottom: 0;
 }
 
+/*
+ * Flexslider
+ */
+.flexslider {
+  border: 15px solid #F5F5F5;
+  @include border-radius(6px);
+}
 
 /*
  * Styleguide module tweaks
