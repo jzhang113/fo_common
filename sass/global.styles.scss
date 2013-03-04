@@ -2528,6 +2528,11 @@ tr.error {
 .flexslider {
   border: 15px solid #F5F5F5;
   @include border-radius(6px);
+
+
+  .slides img {
+    width: 100%;
+  }
 }
 
 /*
