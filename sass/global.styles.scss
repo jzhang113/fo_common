@@ -2528,7 +2528,7 @@ tr.error {
 .flexslider {
   border: 15px solid #F5F5F5;
   @include border-radius(6px);
-
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
 
   .slides img {
     width: 100%;
