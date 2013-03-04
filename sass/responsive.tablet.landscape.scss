@@ -25,7 +25,9 @@
 
 #nav-wrapper {
   .container {
-    background: #3B3B3C;
+    background: #242424;
+    @include background-image(linear-gradient(#313131, #242424));
+    @include box-shadow(rgba(200,200,200,0.25) 0px 2px 3px);
     clear: both;
     overflow: auto;
     padding: 5px;
