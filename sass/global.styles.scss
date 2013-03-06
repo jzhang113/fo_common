@@ -211,7 +211,7 @@ var {}
  * Wraps the content region, avoid applying styles to this wrapper, its used mainly for position and invisible gutters and can be problematic to style
  */
 #content {
-	color: #150517;
+	color: #202020;
 }
 
 
@@ -437,7 +437,7 @@ var {}
 #site-name {
   float: left;
   a {
-    color: #414042;
+    color: #202020;
     font-family: Lato;
     font-weight: normal;
     letter-spacing: 0;
@@ -459,7 +459,7 @@ var {}
  * Site slogan (h2)
  */
 #site-slogan {
-  color: #414042;
+  color: #202020;
   float: right;
   font-style: italic;
   font-weight: normal;
@@ -1027,7 +1027,7 @@ ul.menu {
   }
 
   ol {
-    margin: 0;
+    margin: 0.5em;
     padding: 0;
   }
   
@@ -1626,7 +1626,7 @@ ul.action-links {
 .site-name-grant-accounting-office #block-menu-block-2, 
 .region-sidebar-first .block-menu-block {
   a {
-  color: #000 !important;
+  color: #202020 !important;
   }
   ul li {
     border-bottom: 1px solid #FFC344;
