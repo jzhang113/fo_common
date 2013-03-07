@@ -2714,21 +2714,13 @@ ul.links {
   margin-left: 0;
 }
 
-// Slideshow images alignment on FO
-.site-name-finance-and-operations .pane-slideshow .block-content {
-  /*position: relative;
-  right: -20px;*/
-}
+// Slideshow images alignment on homepages
  /* eliminate resulting horizontal scroll */
 body.site-name-finance-and-operations {
 	overflow: hidden;
 }
 
-.site-name-finance-and-operations .views-field-field-slideshow-image img {
-	/*max-width: none;*/
-}
-
-.site-name-finance-and-operations #views_slideshow_cycle_teaser_section_slideshow-block {
+.front #views_slideshow_cycle_teaser_section_slideshow-block {
 	right: 0;
 }
 
