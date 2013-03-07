@@ -2633,9 +2633,12 @@ tr.error {
 	width: auto;		
 }
 
-// Hide "printer-friendly version" link on Book pages
-ul.links li.book_printer {
-	display: none;
+// Hide "printer-friendly version"  and "add child page" links on Book pages
+ul.links {
+  li.book_printer,
+  li.book_add_child {
+	 display: none;
+  }
 }
 
 // PDF class for links
