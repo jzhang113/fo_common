@@ -2633,9 +2633,12 @@ tr.error {
 	width: auto;		
 }
 
-// Hide "printer-friendly version" link on Book pages
-ul.links li.book_printer {
-	display: none;
+// Hide "printer-friendly version"  and "add child page" links on Book pages
+ul.links {
+  li.book_printer,
+  li.book_add_child {
+	 display: none;
+  }
 }
 
 // PDF class for links
@@ -2711,21 +2714,13 @@ ul.links li.book_printer {
   margin-left: 0;
 }
 
-// Slideshow images alignment on FO
-.site-name-finance-and-operations .pane-slideshow .block-content {
-  /*position: relative;
-  right: -20px;*/
-}
+// Slideshow images alignment on homepages
  /* eliminate resulting horizontal scroll */
 body.site-name-finance-and-operations {
 	overflow: hidden;
 }
 
-.site-name-finance-and-operations .views-field-field-slideshow-image img {
-	/*max-width: none;*/
-}
-
-.site-name-finance-and-operations #views_slideshow_cycle_teaser_section_slideshow-block {
+.front #views_slideshow_cycle_teaser_section_slideshow-block {
 	right: 0;
 }
 
