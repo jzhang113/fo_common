@@ -21,6 +21,33 @@
  * 2. Uncomment the required function to use.
  */
 
+/**
+ * Implmenets hook_block_view_MODULE_DELTA_alter().
+ */
+function fo_common_block_view_book_navigation_alter(&$data, $block) {
+  // Display the title of the Book Navigation block as plain text, ie not a link
+  $current_bid = 0;
+  if ($node = menu_get_object()) {
+    $current_bid = empty($node->book['bid']) ? 0 : $node->book['bid'];
+  }
+
+  if ($current_bid) {
+    // Only display this block when the user is browsing a book.
+  $select = db_select('node', 'n')
+    ->fields('n', array('title'))
+    ->condition('n.nid', $node->book['bid'])
+    ->addTag('node_access');
+    $title = $select->execute()->fetchField();
+    // Only show the block if the user has view access for the top-level node.
+    if ($title) {
+      $tree = menu_tree_all_data($node->book['menu_name'], $node->book);
+      // There should only be one element at the top level.
+      $link_data = array_shift($tree);
+      $data['subject'] = $link_data['link']['link_title'];
+    }
+  }
+}
+
 
 /**
  * Preprocess variables for the html template.
