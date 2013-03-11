@@ -74,6 +74,10 @@ h5 {}
 
 h6 {}
 
+h2 a, h3 a, h4 a, h5 a, h6 a {
+  color: #086782;
+  text-decoration: none;
+}
 
 p {}
 
@@ -2847,14 +2851,4 @@ body.site-name-finance-and-operations {
 // Remove extra margin after Responsibilities on CAM homepage
 .site-name-capital-assets-management #panels-ipe-paneid-1 ul {
   margin-bottom: 0;
-}
-
-// CAM Forms page headers link style
-.page-node-27 {
-  h2, h3 {
-    a {
-      color: #086782;
-      text-decoration: none;
-    }
-  }
 }
