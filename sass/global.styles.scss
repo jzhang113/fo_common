@@ -2848,3 +2848,13 @@ body.site-name-finance-and-operations {
 .site-name-capital-assets-management #panels-ipe-paneid-1 ul {
   margin-bottom: 0;
 }
+
+// CAM Forms page headers link style
+.page-node-27 {
+  h2, h3 {
+    a {
+      color: #086782;
+      text-decoration: none;
+    }
+  }
+}
