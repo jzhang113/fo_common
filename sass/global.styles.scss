@@ -2808,6 +2808,12 @@ body.site-name-finance-and-operations {
   }
 }
 
+#block-book-navigation {
+  ul li.leaf {
+    list-style-type: circle; 
+  }
+}
+
 // Announcments nodes on GAO
 .site-name-grant-accounting-office .node-full{
 	.field-name-field-publish-date .field-label,
