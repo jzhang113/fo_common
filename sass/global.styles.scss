@@ -1652,6 +1652,13 @@ ul.action-links {
   }
 }
 
+.region-sidebar-first ul.menu {
+  li.collapsed, li.expanded {
+    list-style-image: none;
+    list-style-type: none;
+  }
+}
+
 .block-menu-block li.active {
   /*@include background-image(linear-gradient(right, rgba(255,255,255,0), #FFE68C));*/
   @include background-image(linear-gradient(right, rgba(255,255,255,0), #FFF6DC 8%, #FFE68C));
