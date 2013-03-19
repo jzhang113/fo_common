@@ -1614,7 +1614,7 @@ ul.action-links {
     margin-right: 6px;
 
     &.active {
-      background-color: #FFE68C;
+      background-color: #FFE791;
       @include background-image(linear-gradient(left, #FFE68C, #FFF6DC));
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFE68C', endColorstr='#FFF6DC',GradientType=1 );
     }
