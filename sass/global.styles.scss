@@ -2764,7 +2764,7 @@ body.site-name-finance-and-operations {
 }
 
 // Hide trailing breadcrumb separator on FO homepage
-.site-name-finance-and-operations.front li.crumb-last {
+.site-name-finance-and-operations.front #breadcrumb li.crumb-last {
   display: none;
 }
 
