@@ -2791,17 +2791,23 @@ body.site-name-finance-and-operations {
 	}
 }
 
-.site-name-grant-accounting-office .view-announcements h3 a {
-	color: #086782;
-	font-size: 0.93em;
-	text-decoration: none;
-	&:hover {
-		text-decoration: none;
-	}
+.site-name-grant-accounting-office .view-announcements h3 {
+  font-size: 1em;
+
+  a {
+	  color: #086782;
+    font-weight: normal;
+	  text-decoration: none;
+	  &:hover {
+	  	text-decoration: none;
+	  }
+  }
 }
 
-/* Announcement dates on GAo */
+/* Announcement dates on GAO */
 .site-name-grant-accounting-office .view-announcements .views-field-field-publish-date {
+  color: #4E4E4E;
+  font-size: 0.85em;
 	font-style: italic;
 }
 
@@ -2850,7 +2856,7 @@ body.site-name-finance-and-operations {
 }
 
 // Resources pane on GAO homepage
-.site-name-grant-accounting-office #panels-ipe-paneid-4 ul li { //CHANGE NUMBER to 5 FOR TEST
+.site-name-grant-accounting-office #panels-ipe-paneid-5 ul li { 
   list-style: none;
 }
 
