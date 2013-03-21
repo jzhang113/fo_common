@@ -94,7 +94,9 @@
 }
 
 // Arrange bottom panes on GAO front page
-.site-name-grant-accounting-office #panels-ipe-regionid-two_66_33_bottom .panels-ipe-portlet-wrapper {
-  float: left;
-  width: 50%;
+.site-name-grant-accounting-office { 
+  .pane-announcements, .pane-1 {
+    float: left;
+    width: 50%;
+  }
 }

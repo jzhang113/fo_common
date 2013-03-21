@@ -2847,7 +2847,12 @@ body.site-name-finance-and-operations {
 	.field-name-field-author .field-label {
 		font-weight: normal;
 	}
-} 
+}
+
+// Resources pane on GAO homepage
+.site-name-grant-accounting-office #panels-ipe-paneid-4 ul li { //CHANGE NUMBER to 5 FOR TEST
+  list-style: none;
+}
 
 // Hide front page title on CAM
 .site-name-capital-assets-management.front h1#page-title {
