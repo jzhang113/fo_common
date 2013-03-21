@@ -2763,6 +2763,11 @@ body.site-name-finance-and-operations {
 	list-style-type: disc; 
 }
 
+// Hide trailing breadcrumb separator on FO homepage
+.site-name-finance-and-operations.front li.crumb-last {
+  display: none;
+}
+
 //Fix for header nav on GAO
 .site-name-grant-accounting-office #branding {
 	width: inherit;
