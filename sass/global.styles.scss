@@ -2589,7 +2589,7 @@ tr.error {
     margin-bottom: 16px;
     position: relative;
  
-    :after {
+    &:after {
       background: none repeat scroll 0 0 #FFC344;
       bottom: -3px;
       content: " ";
