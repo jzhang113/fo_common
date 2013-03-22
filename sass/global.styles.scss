@@ -2860,6 +2860,11 @@ body.site-name-finance-and-operations {
   list-style: none;
 }
 
+// Do not display "Print this page" on Gift FAQ page
+.site-name-grant-accounting-office.page-node-151 #block-print-block-print-block {
+  display: none;
+} 
+
 // Hide front page title on CAM
 .site-name-capital-assets-management.front h1#page-title {
   display: none;
