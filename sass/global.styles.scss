@@ -2708,6 +2708,10 @@ ul.links {
 /* =============================================================================
  *   Site-specific styles
  * ========================================================================== */
+ // Hide site name on homepage of all sites
+ .front h1#page-title {
+   display: none;
+ }
  
 // Staff Directory View on FO
 .view-staff-directory{
