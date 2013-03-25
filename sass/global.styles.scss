@@ -2906,14 +2906,14 @@ body.site-name-finance-and-operations {
   h1, h2, h3 {
     border-bottom: 1px solid #FFC344;
     line-height: 1.8em;
-    margin-bottom: 0;
+    margin-bottom: 5px;
     position: relative;
     
     &:after {
       background: none repeat scroll 0 0 #FFC344;
       bottom: -3px;
       content: " ";
-      height: 6px;
+      height: 1px;
       position: absolute;
       right: 0;
       width: 6px;
