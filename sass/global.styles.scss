@@ -2920,3 +2920,9 @@ body.site-name-finance-and-operations {
     }
   }
 }
+
+// Adjust margins on FA homepage
+.site-name-financial-analysis.front .region-two-50-first .block-inner {
+  margin-left: 0;
+  margin-right: 20px;
+}
