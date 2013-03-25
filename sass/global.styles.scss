@@ -2900,3 +2900,23 @@ body.site-name-finance-and-operations {
 .site-name-capital-assets-management #panels-ipe-paneid-1 ul {
   margin-bottom: 0;
 }
+
+// FA underline for headings
+.site-name-financial-analysis #main-content {
+  h1, h2, h3 {
+    border-bottom: 1px solid #FFC344;
+    line-height: 1.8em;
+    margin-bottom: 0;
+    position: relative;
+    
+    &:after {
+      background: none repeat scroll 0 0 #FFC344;
+      bottom: -3px;
+      content: " ";
+      height: 6px;
+      position: absolute;
+      right: 0;
+      width: 6px;
+    }
+  }
+}
