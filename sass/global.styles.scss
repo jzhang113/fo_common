@@ -2931,6 +2931,11 @@ body.site-name-finance-and-operations {
   margin-right: 20px;
 }
 
+// Remove bullets from Frequently Needed list on FA homepage
+.site-name-financial-analysis.front .pane-1 .block-content li {
+  list-style: none;
+}
+
 // Controller Meeting styles 
 .site-name-controlleramp039s-office .inline-label {
   float: left;
