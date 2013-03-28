@@ -2815,10 +2815,11 @@ body.site-name-finance-and-operations {
 	font-style: italic;
 }
 
-// Featured Content on GAO, Book Navigation blocks, FA Contacts pane
+// Featured Content on GAO, Book Navigation blocks, FA Contacts pane, Second level+ Menu Blocks
 .pane-front-page-featured-content, 
 #block-book-navigation, 
-.site-name-financial-analysis.front .pane-2 {
+.site-name-financial-analysis.front .pane-2,
+.region-sidebar-second .block-menu-block {
 	background-color: #FCFCFC;
 	border: 1px solid #E5E5E5;
 	@include border-radius(6px, 4px);
@@ -2847,7 +2848,8 @@ body.site-name-finance-and-operations {
   }
 }
 
-#block-book-navigation {
+#block-book-navigation,
+.region-sidebar-second .block-menu-block {
   ul li.leaf {
     list-style-type: disc; 
   }
