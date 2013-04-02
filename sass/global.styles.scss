@@ -2847,6 +2847,13 @@ body.site-name-finance-and-operations {
 .region-sidebar-second .block-menu-block {
   ul li.leaf {
     list-style-type: disc; 
+    list-style-position: outside;
+    margin-left: 11px;
+  }
+
+  ul li.expanded, ul li.collapsed {
+    list-style-position: outside;
+    margin-left: 11px;
   }
 }
 
