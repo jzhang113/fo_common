@@ -2932,8 +2932,14 @@ body.site-name-finance-and-operations {
 }
 
 // Remove bullets from Frequently Needed list on FA homepage
-.site-name-financial-analysis.front .pane-1 .block-content li {
-  list-style: none;
+.site-name-financial-analysis.front .pane-1 .block-content {
+  ul {
+    margin-left: 0;
+  }
+  
+  li {
+    list-style: none;
+  }
 }
 
 // Controller Meeting styles 
