@@ -2925,6 +2925,21 @@ body.site-name-finance-and-operations {
   }
 }
 
+/* but not on search results */
+.site-name-financial-analysis.page-gsearch #main-content {
+  h2, h3 {
+    border-bottom: none;
+    line-height: 1.5em;
+
+    &:after {
+      background: none;
+      content: none;
+      height: 0;
+      width: 0;
+    }
+  }
+}
+
 // Adjust margins on FA homepage
 .site-name-financial-analysis.front .region-two-50-first .block-inner {
   margin-left: 0;
