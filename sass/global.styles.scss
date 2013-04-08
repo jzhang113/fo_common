@@ -3002,3 +3002,60 @@ body.site-name-finance-and-operations {
 .site-name-controlleramp039s-office .pane-3 p {
   margin-bottom: 0;
 }
+
+/* AFR Calendar Views */
+.site-name-accounting-and-financial-reporting .view-calendar-items {
+  div.deadline-date {
+    border: 1px solid #CCCCCC;
+    @include border-radius(6px, 6px);
+    float: left;
+    height: 50px;
+    line-height: 1.5em;
+    margin-right: 10px;
+    padding: 5px;
+    text-align: center;
+    width: 55px;
+
+    a {
+      color: #2D2D2D;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+  }
+
+  .views-field-body {
+    padding-left: 65px;
+  }
+
+  .views-field-term-node-tid {
+    margin-top: -1.5em;
+    padding-bottom: 10px;
+    padding-left: 65px;
+  }
+
+  .views-row {
+    border-bottom: solid 1px #CCCCCC;
+    margin-bottom: 1.5em;
+  }
+
+  &.view-display-id-page_1 {
+    .views-field-body {
+      padding-left: 30px;
+    }
+
+    .date-display-single {
+      float: left;
+      margin-right: 10px;
+    }
+
+    .views-field-term-node-tid {
+      padding-left: 30px;
+    }
+  }
+}
+
+.site-name-accounting-and-financial-reporting.node-type-calendar-item {
+    .field-name-field-deadline {
+      font-weight: bold;
+    }
+  }
