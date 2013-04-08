@@ -3008,7 +3008,10 @@ body.site-name-finance-and-operations {
   div.deadline-date {
     border: 1px solid #CCCCCC;
     @include border-radius(6px, 6px);
+    color: #2D2D2D;
     float: left;
+    font-size: 1.1em;
+    font-weight: bold;
     height: 50px;
     line-height: 1.5em;
     margin-right: 10px;
@@ -3018,8 +3021,6 @@ body.site-name-finance-and-operations {
 
     a {
       color: #2D2D2D;
-      font-size: 1.2em;
-      font-weight: bold;
     }
   }
 
