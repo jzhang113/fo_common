@@ -3083,14 +3083,24 @@ body.site-name-finance-and-operations {
   }
 }
 
-.site-name-accounting-and-financial-reporting .view-calendar-of-deadlines .calendar-calendar{
-  td.mini, td.empty {
-    border: 1px solid #CCCCCC;
-  }
+.site-name-accounting-and-financial-reporting .view-calendar-of-deadlines {
+  .calendar-calendar {
+    td.mini, td.empty {
+      border: 1px solid #CCCCCC;
+    }
 
-  th.days {
-    background-color: #FFFFFF;
-    border: none;
-    font-weight: normal;
-  }
+    th.days {
+      background-color: #FFFFFF;
+      border: none;
+      font-weight: normal;
+    }
+  } 
+
+  .date-nav {
+    padding-bottom: 0;
+
+    ul.pager {
+      margin-bottom: 0;
+    }
+  } 
 }
