@@ -3004,7 +3004,8 @@ body.site-name-finance-and-operations {
 }
 
 /* AFR Calendar Views */
-.site-name-accounting-and-financial-reporting .view-calendar-items {
+.site-name-accounting-and-financial-reporting .view-calendar-of-deadlines,
+.site-name-accounting-and-financial-reporting .view-taxonomy-calendar-categories {
   div.deadline-date {
     border: 1px solid #CCCCCC;
     @include border-radius(6px, 6px);
@@ -3039,7 +3040,7 @@ body.site-name-finance-and-operations {
     margin-bottom: 1.5em;
   }
 
-  &.view-display-id-page_1 {
+  &.view-display-id-page_3 {
     .views-field-body {
       padding-left: 30px;
     }
