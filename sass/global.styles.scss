@@ -3027,10 +3027,13 @@ body.site-name-finance-and-operations {
 
   .views-field-body {
     padding-left: 65px;
+
+      p {
+        margin-bottom: 0;
+      }
   }
 
   .views-field-term-node-tid {
-    margin-top: -1.5em;
     padding-bottom: 10px;
     padding-left: 65px;
   }
