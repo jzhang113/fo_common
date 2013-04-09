@@ -2838,11 +2838,12 @@ body.site-name-finance-and-operations {
 	font-style: italic;
 }
 
-// Featured Content on GAO, Book Navigation blocks, FA Contacts pane, Second level+ Menu Blocks
+// Featured Content on GAO, Book Navigation blocks, FA Contacts pane, Second level+ Menu Blocks, AFR mini calendar
 .pane-front-page-featured-content, 
 #block-book-navigation, 
 .site-name-financial-analysis.front .pane-2,
-.region-sidebar-second .block-menu-block {
+.region-sidebar-second .block-menu-block,
+.site-name-accounting-and-financial-reporting #block-views-calendar-of-deadlines-block-1 {
 	background-color: #FCFCFC;
 	border: 1px solid #E5E5E5;
 	@include border-radius(6px, 4px);
@@ -3077,7 +3078,19 @@ body.site-name-finance-and-operations {
 }
 
 .site-name-accounting-and-financial-reporting.node-type-calendar-item {
-    .field-name-field-deadline {
-      font-weight: bold;
-    }
+  .field-name-field-deadline {
+    font-weight: bold;
   }
+}
+
+.site-name-accounting-and-financial-reporting .view-calendar-of-deadlines .calendar-calendar{
+  td.mini, td.empty {
+    border: 1px solid #CCCCCC;
+  }
+
+  th.days {
+    background-color: #FFFFFF;
+    border: none;
+    font-weight: normal;
+  }
+}
