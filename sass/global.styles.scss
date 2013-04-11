@@ -3111,3 +3111,16 @@ body.site-name-finance-and-operations {
     width: auto;
   }
 }
+
+/* Calendar Categoy links in view header */
+.site-name-accounting-and-financial-reporting .view-list-of-calendar-categories {
+  .views-row {
+    margin-bottom: 0;
+    min-height: 0;
+    border-bottom: none; 
+  }
+
+  .item-list ul {
+    margin-bottom: 10px !important;
+  } 
+}
