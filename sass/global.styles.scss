@@ -3124,3 +3124,20 @@ body.site-name-finance-and-operations {
     margin-bottom: 10px !important;
   } 
 }
+
+/* AFR staff directory */
+.site-name-accounting-and-financial-reporting .view-contact-us {
+  th {
+    &.views-field-title {
+      width: 30%;
+    }
+
+    &.views-field-field-job-title {
+      width: 50%;
+    }
+
+    &.views-field-field-phone-number {
+      width: 20%;
+    }
+  }
+}
