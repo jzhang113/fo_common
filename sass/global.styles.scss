@@ -1705,6 +1705,14 @@ ul.action-links {
   }
 }
 
+/* adjustments for Menu Block */
+.region-sidebar-first .block-menu-block {
+  .block-inner {
+    margin-left: 0;
+  }
+}
+
+
 /*
  * "Management" block for Drupal management menu
  */
