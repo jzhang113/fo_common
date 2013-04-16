@@ -1637,7 +1637,6 @@ ul.action-links {
  */
 .region-sidebar-first ul.menu {
   margin-bottom: 0;
-  margin-left: -10px;
   margin-top: 0;
 
   a {
@@ -1694,6 +1693,10 @@ ul.action-links {
 
 /* adjustments for core menu block*/
 .region-sidebar-first #block-system-main-menu {
+  .block-inner {
+    margin-right: 10px;
+  }
+
   ul.menu {
 
     li {
