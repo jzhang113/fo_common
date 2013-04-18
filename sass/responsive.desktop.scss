@@ -155,6 +155,11 @@
       }
     }
 
+    .views-field-field-photo {
+      float: left;
+      width: 445px;
+    }
+
     li {
       background-color: #F5F5F5;
     }
@@ -162,18 +167,18 @@
 
   .flex-direction-nav li {
     a {
-      background-size: 52px;
-      height: 26px;
-      width: 26px;
+      background-size: 78px;
+      height: 39px;
+      width: 39px;
     }
 
     .prev {
-      left: -10px;
+      left: -14px;
     }
 
     .next {
-      background-position: -26px 0;
-      right: -10px;
+      background-position: -39px 0;
+      right: -14px;
     }
   }
 
