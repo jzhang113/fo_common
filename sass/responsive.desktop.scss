@@ -138,6 +138,8 @@
 // UBill Slider
 .site-name-university-billing-office {
   .flexslider {
+    background: #F5F5F5;
+
     .slides img {
       width: 445px;
     }
@@ -153,8 +155,38 @@
       }
     }
 
+    .views-field-field-photo {
+      float: left;
+      width: 445px;
+    }
+
     li {
       background-color: #F5F5F5;
+    }
+  }
+
+  .flex-direction-nav li {
+    a {
+      background-size: 78px;
+      height: 39px;
+      width: 39px;
+    }
+
+    .prev {
+      left: -14px;
+    }
+
+    .next {
+      background-position: -39px 0;
+      right: -14px;
+    }
+  }
+
+  .flex-pauseplay span {
+    color: #086782;
+
+    &:hover {
+      cursor: pointer;
     }
   }
 }

@@ -3147,3 +3147,23 @@ body.site-name-finance-and-operations {
     }
   }
 }
+
+// UBill Slider
+.site-name-university-billing-office {
+  .flexslider {
+    background: #F5F5F5;
+
+    .views-field-body {
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+  }
+
+  .flex-pauseplay span {
+    color: #086782;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

@@ -102,3 +102,48 @@
   margin-left: 20px;
   margin-right: 0;
 }
+
+// UBill Slider
+.site-name-university-billing-office {
+  .flexslider {
+    background: #F5F5F5;
+
+    .views-field-body {
+      float: right;
+      padding-left: 15px;
+      padding-right: 18px;
+      width: 40%;
+
+      h3 {
+        margin-bottom: 5px;
+      }
+    }
+
+    .views-field-field-photo {
+      float: left;
+      width: 60%;
+    }
+
+    li {
+      background-color: #F5F5F5;
+    }
+  }
+
+  .flex-direction-nav li {
+    .prev {
+      left: -18px;
+    }
+
+    .next {
+      right: -18px;
+    }
+  }
+
+  .flex-pauseplay span {
+    color: #086782;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
