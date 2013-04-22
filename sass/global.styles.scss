@@ -3029,8 +3029,22 @@ body.site-name-finance-and-operations {
   margin-bottom: 0;
 }
 
-/* AFR Calendar Views */
-.site-name-accounting-and-financial-reporting .view-calendar-of-deadlines,
+/* AFR Calendar views */
+.site-name-accounting-and-financial-reporting {
+  td.views-field-field-deadline-1 {
+    width: 20%;
+  }
+
+  div.day {
+    width: auto;
+  }
+
+  .view-display-id-afr_attachment_1 ul {
+    margin-left: 15px;
+  }
+}
+
+.site-name-accounting-and-financial-reporting .view-calendar-of-deadlines.view-display-id-block_2,
 .site-name-accounting-and-financial-reporting .view-taxonomy-calendar-categories {
   div.deadline-date {
     border: 1px solid #CCCCCC;
@@ -3083,39 +3097,6 @@ body.site-name-finance-and-operations {
     .views-field-term-node-tid {
       padding-left: 30px;
     }
-  }
-}
-
-.site-name-accounting-and-financial-reporting.node-type-calendar-item {
-  .field-name-field-deadline {
-    font-weight: bold;
-  }
-}
-
-.site-name-accounting-and-financial-reporting .view-calendar-of-deadlines {
-  .calendar-calendar {
-    td.mini, td.empty {
-      border: 1px solid #CCCCCC;
-      text-align: center;
-    }
-
-    th.days {
-      background-color: #FFFFFF;
-      border: none;
-      font-weight: normal;
-    }
-  } 
-
-  .date-nav {
-    padding-bottom: 0;
-
-    ul.pager {
-      margin-bottom: 0;
-    }
-  } 
-
-  div.day {
-    width: auto;
   }
 }
 
