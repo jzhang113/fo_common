@@ -3132,8 +3132,16 @@ body.site-name-finance-and-operations {
 
 
 // AFR Calendar Item Export
-.site-name-accounting-and-financial-reporting .view-calendar-items-export .views-row {
-  margin-bottom: 15px;
+.site-name-accounting-and-financial-reporting .view-afr-calendar-items-export {
+  .views-row {
+    margin-bottom: 15px;
+  }
+
+  tr.even, tr.odd {
+    td.active {
+      background-color: transparent;
+    }
+  }
 }
 
 /* UBill FAQs */
