@@ -3195,3 +3195,24 @@ body.site-name-finance-and-operations {
     color: #202020;
   }
 }
+
+// UBill Calendar
+.site-name-university-billing-office {
+    div.day {
+    width: auto;
+  }
+
+  .calendar-calendar .month-view .full td.multi-day .inner .monthview .continues, 
+  .calendar-calendar .month-view .full td.multi-day .inner .monthview .cutoff, 
+  .calendar-calendar .week-view .full td.multi-day .inner .weekview .continues, 
+  .calendar-calendar .week-view .full td.multi-day .inner .weekview .cutoff, 
+  .calendar-calendar .month-view .full td.multi-day div.monthview, 
+  .calendar-calendar .week-view .full td.multi-day div.weekview, 
+  .calendar-calendar .day-view .full td.multi-day div.dayview {
+    background-color: #FFD478;
+  }
+
+  .node-calendar-item .field-name-field-date {
+    margin-bottom: 10px;
+  }
+}
