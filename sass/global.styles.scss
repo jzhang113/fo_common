@@ -3217,3 +3217,10 @@ body.site-name-finance-and-operations {
     margin-bottom: 10px;
   }
 }
+
+// Treasury Operations staff directory
+.site-name-treasury-operations .view-staff-directory {
+  td.views-field-title, td.views-field-field-phone-number{
+    width: 25%;
+  }
+}
