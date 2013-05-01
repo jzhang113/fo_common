@@ -2746,6 +2746,11 @@ ul.links {
     }
 }
 
+// Sub-labels
+.sub-label {
+  font-weight: normal;
+}
+
 /* =============================================================================
  *   Site-specific styles
  * ========================================================================== */
@@ -3245,5 +3250,24 @@ body.site-name-finance-and-operations {
 
   thead th {
     color: #202020;
+  }
+}
+
+// FMB Records
+.site-name-financial-management-and-budget .node-record {
+  fieldset {
+    border: none;
+    margin: 0 0 1.5em 0;
+    padding: 0;
+
+    legend {
+      font-family: Lato;
+      font-size: 1.4em;
+      font-weight: bold;
+    }
+
+    .field-items {
+      margin-bottom: 10px;
+    }
   }
 }
