@@ -21,6 +21,30 @@
  * 2. Uncomment the required function to use.
  */
 
+function fo_common_preprocess_field(&$variables, $hook) {
+  // Add sub-labels to Records fields with HTML classes for styling
+  switch($variables['element']['#field_name']) {
+    case 'field_record_active':
+      $variables['label'] = $variables['label'] . ' <span class="sub-label">(Used during the course of University or departmental operations)</span>';
+      break;
+    case 'field_record_location':
+      $variables['label'] = $variables['label'] . ' <span class="sub-label">(Central Administrative Unit or Local Department)</span>';
+      break;
+    case 'field_record_inactive':
+      $variables['label'] = $variables['label'] . ' <span class="sub-label">(No longer needed during regular course of operations, but retained for legal or business purposes)</span>';
+      break;
+    case 'field_record_permanent':
+      $variables['label'] = $variables['label'] . ' <span class="sub-label">(May be required for legal, historical or business purposes or recommended for records of enduring value)</span>';
+      break;
+    case 'field_record_confidential':
+      $variables['label'] = $variables['label'] . ' <span class="sub-label">(Yes/No) *17.3 Records Management Policy</span>';
+      break;
+    case 'field_record_vital':
+      $variables['label'] = $variables['label'] . ' <span class="sub-label">(Yes/No) *17.3 Records Management Policy</span>';
+      break;
+  }
+}
+
 /**
  * Implmenets hook_block_view_MODULE_DELTA_alter().
  */
