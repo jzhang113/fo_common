@@ -2746,6 +2746,11 @@ ul.links {
     }
 }
 
+// Sub-labels
+.sub-label {
+  font-weight: normal;
+}
+
 /* =============================================================================
  *   Site-specific styles
  * ========================================================================== */
@@ -2869,7 +2874,8 @@ body.site-name-finance-and-operations {
 .region-sidebar-second .block-menu-block,
 .region-sidebar-second .block-menu,
 .site-name-accounting-and-financial-reporting #block-views-calendar-of-deadlines-block-1,
-.site-name-treasury-operations .pane-treasury-front-page-featured-content {
+.site-name-treasury-operations .pane-treasury-front-page-featured-content,
+.site-name-tax-office .useful-forms-documents {
 	background-color: #FCFCFC;
 	border: 1px solid #E5E5E5;
 	@include border-radius(6px, 4px);
@@ -3245,5 +3251,24 @@ body.site-name-finance-and-operations {
 
   thead th {
     color: #202020;
+  }
+}
+
+// FMB Records
+.site-name-financial-management-and-budget .node-record {
+  fieldset {
+    border: none;
+    margin: 0 0 1.5em 0;
+    padding: 0;
+
+    legend {
+      font-family: Lato;
+      font-size: 1.4em;
+      font-weight: bold;
+    }
+
+    .field-items {
+      margin-bottom: 10px;
+    }
   }
 }
