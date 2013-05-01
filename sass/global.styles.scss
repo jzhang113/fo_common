@@ -2753,6 +2753,17 @@ ul.links {
  .front h1#page-title {
    display: none;
  }
+
+ // Add margin-top to p, ol, ul {
+.site-name-finance-and-operations #block-system-main {
+  p, ol, ul {
+    margin-top: 15px;
+  }
+
+  .flexslider ul {
+    margin-top: 0;
+  }
+}
  
 // Staff Directory View on FO
 .view-staff-directory{
