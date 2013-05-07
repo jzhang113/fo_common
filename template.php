@@ -36,12 +36,6 @@ function fo_common_preprocess_field(&$variables, $hook) {
     case 'field_record_permanent':
       $variables['label'] = $variables['label'] . ' <span class="sub-label">(May be required for legal, historical or business purposes or recommended for records of enduring value)</span>';
       break;
-    case 'field_record_confidential':
-      $variables['label'] = $variables['label'] . ' <span class="sub-label">(Yes/No) *17.3 Records Management Policy</span>';
-      break;
-    case 'field_record_vital':
-      $variables['label'] = $variables['label'] . ' <span class="sub-label">(Yes/No) *17.3 Records Management Policy</span>';
-      break;
   }
 }
 
