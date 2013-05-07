@@ -3278,6 +3278,14 @@ body.site-name-finance-and-operations {
 
     .field-items {
       margin-bottom: 10px;
+
+      .field-item {
+        margin-left: 30px;
+      }
+
+      li.field-item {
+        margin-left: 0;
+      }
     }
   }
 }
