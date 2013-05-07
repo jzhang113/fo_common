@@ -696,11 +696,20 @@ ul.links {
  * First sidebar
  */
 .region-sidebar-first {
-	background-color: #FFF6DC;
-	border-color: #FFC344;
-  @include border-radius(6px);
-	border-style:solid;
-	border-width: 6px 1px 1px;
+  background-color: transparent;
+  border: none;
+
+  .block-menu, .block-menu-block {
+	  background-color: #FFF6DC;
+	  border-color: #FFC344;
+    @include border-radius(6px);
+	  border-style:solid;
+	  border-width: 6px 1px 1px;
+
+    li.last.menu-depth-1 {
+      margin-bottom: 20px;
+    }
+  }
 }
 
 
