@@ -3282,8 +3282,14 @@ body.site-name-finance-and-operations {
   }
 }
 
-.site-name-financial-management-and-budget .view-fmb-records-a-z {
-  ul {
-    margin-bottom: 15px;
+.site-name-financial-management-and-budget {
+  .view-fmb-records-a-z {
+    ul {
+      margin-bottom: 15px;
+    }
+  }
+
+  #edit-submit-fmb-records-a-z {
+    margin-top: 0;
   }
 }
