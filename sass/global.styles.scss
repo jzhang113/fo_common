@@ -696,11 +696,20 @@ ul.links {
  * First sidebar
  */
 .region-sidebar-first {
-	background-color: #FFF6DC;
-	border-color: #FFC344;
-  @include border-radius(6px);
-	border-style:solid;
-	border-width: 6px 1px 1px;
+  background-color: transparent;
+  border: none;
+
+  .block-menu, .block-menu-block {
+	  background-color: #FFF6DC;
+	  border-color: #FFC344;
+    @include border-radius(6px);
+	  border-style:solid;
+	  border-width: 6px 1px 1px;
+
+    li.last.menu-depth-1 {
+      margin-bottom: 20px;
+    }
+  }
 }
 
 
@@ -2746,6 +2755,11 @@ ul.links {
     }
 }
 
+// Sub-labels
+.sub-label {
+  font-weight: normal;
+}
+
 /* =============================================================================
  *   Site-specific styles
  * ========================================================================== */
@@ -2869,7 +2883,9 @@ body.site-name-finance-and-operations {
 .region-sidebar-second .block-menu-block,
 .region-sidebar-second .block-menu,
 .site-name-accounting-and-financial-reporting #block-views-calendar-of-deadlines-block-1,
-.site-name-treasury-operations .pane-treasury-front-page-featured-content {
+.site-name-treasury-operations .pane-treasury-front-page-featured-content,
+.site-name-tax-office .useful-forms-documents,
+.site-name-id-card-programs .pane-idcard-front-page-featured-content {
 	background-color: #FCFCFC;
 	border: 1px solid #E5E5E5;
 	@include border-radius(6px, 4px);
@@ -3043,7 +3059,7 @@ body.site-name-finance-and-operations {
 
 /* AFR Calendar views */
 .site-name-accounting-and-financial-reporting {
-  td.views-field-field-deadline-1, .view-calendar-of-deadlines.view-display-id-page_2 .views-field-field-deadline {
+  td.views-field-field-deadline-1, .view-calendar-of-deadlines.view-display-id-page_2 td.views-field-field-deadline {
     width: 20%;
   }
 
@@ -3123,6 +3139,13 @@ body.site-name-finance-and-operations {
   .item-list ul {
     margin-bottom: 10px !important;
   } 
+}
+
+// AFR calendar tables
+.site-name-accounting-and-financial-reporting .view-calendar-of-deadlines {
+  td {
+    vertical-align: top;
+  }
 }
 
 /* AFR staff directory */
@@ -3245,5 +3268,56 @@ body.site-name-finance-and-operations {
 
   thead th {
     color: #202020;
+  }
+}
+
+// FMB Records
+.site-name-financial-management-and-budget .node-record {
+  fieldset {
+    border: none;
+    margin: 0 0 1.5em 0;
+    padding: 0;
+
+    legend {
+      font-family: Lato;
+      font-size: 1.4em;
+      font-weight: bold;
+    }
+
+    .field-items {
+      margin-bottom: 10px;
+
+      .field-item {
+        margin-left: 30px;
+      }
+
+      li.field-item {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.site-name-financial-management-and-budget {
+  .view-fmb-records-a-z {
+    ul {
+      margin-bottom: 15px;
+    }
+  }
+
+  #edit-submit-fmb-records-a-z {
+    margin-top: 0;
+  }
+}
+
+// ID Card Featured Content
+.site-name-id-card-programs .pane-idcard-front-page-featured-content {
+  p { margin-bottom: 0; }
+}
+
+// ID Card FAQs
+.site-name-id-card-programs .view-idcard-faq {
+  ul {
+    margin-bottom: 10px;
   }
 }
