@@ -1,4 +1,4 @@
-a[href^="http"]:after,a[href^="/"]:after,a[href^="http"]:visited:after,a[href^="/"]:visited:after{content:"(" attr(href) ")";font-size:10pt}
+a[href^="http"]:after,a[href^="http"]:visited:after{content:"(" attr(href) ")";font-size:10pt}
 
 #toolbar, #nav-wrapper, #breadcrumb-wrapper, #block-print-block-print-block, .region-sidebar-first .block-menu, .region-sidebar-first .block-menu-block, #footer-panels-wrapper, #ui-global-footer {display:none;}
 #site-name,#content-wrapper,table {width: 100%; margin: 0; float: none;}
