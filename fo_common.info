@@ -19,7 +19,7 @@
   stylesheets[screen][] = css/global.styles.css
 
   ; Print - uncomment to load basic print styles.
-  ; stylesheets[print][] = css/print.css
+   stylesheets[print][] = css/print.css
 
 
   ; Internet Explorer Stylesheets
@@ -73,6 +73,8 @@
   ; following as a guide:
 
   ; ie_scripts[lte IE 8][] = js/my-script.js
+
+  scripts[] = scripts/crazyegg.js
 
 
 ;----------// Regions
