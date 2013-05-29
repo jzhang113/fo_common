@@ -1,14 +1,4 @@
-a[href^="http"]:after,a[href^="http"]:visited:after{content:"(" attr(href) ")";font-size:10pt}
-
-#toolbar, #nav-wrapper, #breadcrumb-wrapper, #block-print-block-print-block, .region-sidebar-first .block-menu, .region-sidebar-first .block-menu-block, #footer-panels-wrapper, #ui-global-footer {display:none;}
-#site-name,#content-wrapper,table {width: 100%; margin: 0; float: none;}
- table { page-break-inside:auto }
-    tr    { page-break-inside:avoid; page-break-after:auto }
-    thead { display:table-header-group }
-    tfoot { display:table-footer-group }
-#site-name a {color: #000; font-size: 24px; text-decoration: none;}
-
-/* AFR calendar field */
+/* AFR calendar */
 .site-name-accounting-and-financial-reporting .field-content.deadline-date {
   border: 1px solid black !important;
   float: left;
@@ -16,6 +6,26 @@ a[href^="http"]:after,a[href^="http"]:visited:after{content:"(" attr(href) ")";f
   padding: 5px;
   width: auto;
 }
+
+.view .date-nav-wrapper li.date-prev, 
+.view .date-nav-wrapper li.date-next {
+  display: none !important;
+}
+
+.view-calendar-of-deadlines tr.date-box a:after {
+  content:"" !important;
+}
+
+
+a[href^="http"]:after,a[href^="http"]:visited:after{content:" (" attr(href) ") ";font-size:10pt}
+ 
+#toolbar, #nav-wrapper, #breadcrumb-wrapper, #block-print-block-print-block, .region-sidebar-first .block-menu, .region-sidebar-first .block-menu-block, #footer-panels-wrapper, #ui-global-footer {display:none;}
+#site-name,#content-wrapper,table {width: 100%; margin: 0; float: none;}
+ table { page-break-inside:auto }
+    tr    { page-break-inside:avoid; page-break-after:auto }
+    thead { display:table-header-group }
+    tfoot { display:table-footer-group }
+#site-name a {color: #000; font-size: 24px; text-decoration: none;}
 
 /* don't print non-active slideshow items */
 li.views_slideshow_cycle_hidden { display: none;}
