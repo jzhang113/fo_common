@@ -165,6 +165,10 @@ ul {
 
 ol {}
 
+h2 + ul, h2 + ol {
+  margin-top: 1em;
+}
+
 
 li {}
 
