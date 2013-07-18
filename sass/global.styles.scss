@@ -2905,7 +2905,9 @@ body.site-name-finance-and-operations {
     border-bottom: 1px solid #FFC344;
 		margin-bottom: 0;
     position: relative;
-		
+		    
+
+
 		&:after {
       background: none repeat scroll 0 0 #FFC344;
       bottom: -3px;
@@ -2914,6 +2916,8 @@ body.site-name-finance-and-operations {
       position: absolute;
       right: 0;
       width: 6px;
+
+    
     }
   }
 	
@@ -3328,5 +3332,14 @@ body.site-name-finance-and-operations {
 .site-name-id-card-programs .view-idcard-faq {
   ul {
     margin-bottom: 10px;
+  }
+}
+
+.site-name-tax-office .useful-forms-documents{
+  .block-title {
+    font-size: 1.2em;
+  }
+  ul {
+    padding-top: 12px;
   }
 }
