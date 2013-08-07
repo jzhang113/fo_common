@@ -17,6 +17,7 @@
 #environment = :development
 environment = :production
 
+require 'breakpoint'
 
 # Location of the theme's resources.
 # Compass will overwrite the CSS files in the css_dir when set to watch.

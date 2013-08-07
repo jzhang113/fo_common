@@ -1,3 +1,5 @@
+require 'breakpoint'
+
 #
 # This file is only needed for Compass/Sass integration. If you are not using
 # Compass, you may safely ignore or delete this file.
@@ -18,6 +20,8 @@ sass_dir = "sass"
 images_dir = "css/images"
 #extensions_dir = "sass-extensions"
 #javascripts_dir = "js"
+
+
 
 ##
 ## You probably don't need to edit anything below this.

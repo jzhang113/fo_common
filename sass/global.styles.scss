@@ -50,6 +50,14 @@ html .js {
 
 body {
 	background-color: #FFFFFF;
+  font-family: $sans-serif-arial-helvetica;
+  
+  @include breakpoint($tablet-portrait) {
+    font-size: 81.6%;
+
+  }
+
+
 }
 
 
@@ -57,24 +65,47 @@ body {
  *   HTML Elements
  * ========================================================================== */
 
-h1 {}
+h1 {
+  font-family: $header-font-stack;
+  font-size: 2em;
+
+}
 
 
 h2 {
   margin-top: 0.5em;
+  font-family: $header-font-stack;
+  font-size: 1.4em;
+
 }
 
 
-h3 {}
+h3 {
+  font-family: $header-font-stack;
+  font-size: 1.4em;
+
+}
 
 
-h4 {}
+h4 {
+  font-family: $header-font-stack;
+  font-size: 1.2em;
+
+}
 
 
-h5 {}
+h5 {
+  font-family: $header-font-stack;
+  font-size: 1em;
+
+}
 
 
-h6 {}
+h6 {
+  font-family: $header-font-stack;
+  font-size: 1em;
+
+}
 
 h2 a, h3 a, h4 a, h5 a, h6 a {
   color: #086782;
@@ -240,7 +271,13 @@ hr {
 /*
  * Wraps the main-content-header, the content region and feed-icons. Use this wrapper to style the entire main content column
  */
-#main-content {}
+#main-content {
+  
+  @include breakpoint($tablet-size) {
+    margin-left: 20px;
+
+  }
+}
 
 
 /*
@@ -372,7 +409,40 @@ hr {
  * Wraps the nav elements
  */
 #nav-wrapper {
-  .container {}
+
+  .container {
+    @include element-invisible;
+
+    @include breakpoint($tablet-size) {
+      @include element-invisible-off;
+      background: #242424;
+      @include background-image(linear-gradient(#313131, #242424));
+      @include box-shadow(rgba(200,200,200,0.25) 0px 2px 3px);
+      clear: both;
+      overflow: auto;
+      padding: 5px;
+      text-align: right;
+      width: 100%;
+
+    }
+
+    @include breakpoint($desktop-size) {
+      @include border-top-radius(6px);
+
+    }
+  }
+
+  a {
+  color: #E0E0E0;
+    font-size: 1em;
+    vertical-align: middle;
+    
+    &:hover,
+    &:focus {
+    color: #FFFFFF;
+
+    }
+  }
 }
 
 
@@ -383,12 +453,17 @@ hr {
   margin-bottom: 2.5em;
   
   .container {
-	background: #FFC822;
-  @include background-image(linear-gradient(#FFEDAC, #FFC822));
-	border: 1px solid #FFC61A;
-  @include box-shadow(rgba(200,200,200,0.25) 0px 2px 4px);
-	height: auto;
-	min-height: 18px;
+  	background: #FFC822;
+    @include background-image(linear-gradient(#FFEDAC, #FFC822));
+  	border: 1px solid #FFC61A;
+    @include box-shadow(rgba(200,200,200,0.25) 0px 2px 4px);
+  	height: auto;
+  	min-height: 18px;
+    
+    @include breakpoint($desktop-size) {
+      @include border-bottom-radius(6px);
+
+    }
   }
 }
 
@@ -468,7 +543,20 @@ hr {
 /*
  * Wrapper for the site name and slogan (hgroup)
  */
-#name-and-slogan {}
+#name-and-slogan {
+  @include breakpoint($tablet-portrait) {
+    float: left;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    width: 100%;
+  }
+
+  @include breakpoint($desktop-size) {
+    padding: .5em 0 1em;
+
+  }
+
+}
 
 
 /*
@@ -505,6 +593,7 @@ hr {
   font-weight: normal;
   margin-right: 0.83em;
   margin-top: 0.4em;
+  font-size:1.2em;
 }
 
 
@@ -702,7 +791,11 @@ ul.links {
 .region-sidebar-first {
   background-color: transparent;
   border: none;
+  @include breakpoint(tablet-size) {
+    float:none;
+    width:auto;
 
+  }
   .block-menu, .block-menu-block {
 	  background-color: #FFF6DC;
 	  border-color: #FFC344;
@@ -1784,6 +1877,7 @@ ul.action-links {
  * "Print Block" block
  */
 #block-print-block-print-block {
+  
   float: right;
   margin-bottom: 0;
   margin-top: -2.5em;
@@ -2768,584 +2862,681 @@ ul.links {
   font-weight: normal;
 }
 
-/* =============================================================================
- *   Site-specific styles
- * ========================================================================== */
+
  // Hide site name on homepage of all sites
  .front h1#page-title {
    display: none;
  }
 
+// Hide breadcrumb wrapper on front page when in mobile
+ .front #breadcrumb-wrapper .container  {
+  @include element-invisible;
+
+  @include breakpoint($tablet-portrait) {
+    @include element-invisible-off;
+  }
+}
+
+//Style resaerch links
+#research-link {
+  @include breakpoint($tablet-size) {
+    float: left;
+    margin-right: 10px;
+    text-transform: uppercase; 
+    margin-top: 2px;
+  }
+}
+
+//Department links
+#depts-links-top {
+  @include breakpoint($tablet-size) {
+    margin: 0;
+    float: right;
+    a {
+      height: 100%;
+      padding: 0 4px;
+      &:hover {
+        color: #000;
+        background-color: #FFC344;
+        height: 100%;
+        @include border-radius(5px);
+      }
+    }
+    li {
+      display: inline;
+      margin: 0 5px;
+      border-left: 1px solid #FFC344;
+      padding-left: 10px;
+      &.first {
+        border-left: none;
+      }
+    }
+  }
+}
+
+
+.view-id-departments_units h3 {
+    @include breakpoint($tablet-size) {
+      margin-top: 20px;
+
+    }
+}
+
+// Front page slideshows
+.front .view-slideshow {
+  @include breakpoint($tablet-size) {
+    margin-right: -10px;
+  }
+}
+
+#research-depts-nav {
+  @include breakpoint($desktop-size) {
+    background: #3B3B3C;
+    padding: 5px;
+    clear: both;
+    overflow: auto;
+    width: 100%;
+    text-align: right;
+    a {
+      color: #F1F1F1;
+      font-size: 0.8em;
+      font-weight: bold;
+      vertical-align: middle;
+
+      &:hover,
+      &:focus {
+        color:#FFF;
+      }
+    }
+  
+  
+  li{
+    float: right;
+   
+   } 
+
+    #current-department-link {
+      float: left;
+      background-color: #FFC344;
+      //height: 100%;
+      padding: 0 4px;
+      @include border-radius(5px);
+      color: #000;
+      margin-top: 2px;
+    }
+  }
+}
+
  // Add margin-top to p, ol, ul {
-.site-name-finance-and-operations #block-system-main {
-  p, ol, ul {
-    margin-top: 15px;
-  }
+// .site-name-finance-and-operations #block-system-main {
+//   p, ol, ul {
+//     margin-top: 15px;
+//   }
 
-  .flexslider ul {
-    margin-top: 0;
-  }
-}
+//   .flexslider ul {
+//     margin-top: 0;
+//   }
+// }
  
-// Staff Directory View on FO
-.view-staff-directory{
-	.views-row{
-		margin-top: 30px;
-		clear: left;
-	}
-	.views-field{
-		margin-left: 120px;
-	}
-	.views-field-field-photo{
-		margin-left: 0px;
-		margin-bottom: 30px;
-		float: left;
-	}
-	.views-field-nothing{
-		font-weight: bold;
-	}
-}
+// // Staff Directory View on FO
+// .view-staff-directory{
+// 	.views-row{
+// 		margin-top: 30px;
+// 		clear: left;
+// 	}
+// 	.views-field{
+// 		margin-left: 120px;
+// 	}
+// 	.views-field-field-photo{
+// 		margin-left: 0px;
+// 		margin-bottom: 30px;
+// 		float: left;
+// 	}
+// 	.views-field-nothing{
+// 		font-weight: bold;
+// 	}
+// }
 
-// Department & Unit List on FO
-.view-id-departments_units{
-	h3{
-		margin-top: 20px;
-	}
-}
+// // Department & Unit List on FO
+// .view-id-departments_units{
+// 	h3{
+// 		margin-top: 20px;
+// 	}
+// }
 
-// Site Map block for 404 page on FO
-.site-name-finance-and-operations #block-menu-block-3 {
-  margin-left: 0;
-}
+// // Site Map block for 404 page on FO
+// .site-name-finance-and-operations #block-menu-block-3 {
+//   margin-left: 0;
+// }
 
-// Slideshow images alignment on homepages
- /* eliminate resulting horizontal scroll */
-body.site-name-finance-and-operations {
-	overflow: hidden;
-}
+// // Slideshow images alignment on homepages
+//  /* eliminate resulting horizontal scroll */
+// body.site-name-finance-and-operations {
+// 	overflow: hidden;
+// }
 
-.front #views_slideshow_cycle_teaser_section_slideshow-block {
-	right: 0;
-}
+// .front #views_slideshow_cycle_teaser_section_slideshow-block {
+// 	right: 0;
+// }
 
-// Spacing of Organizational Chart link on FO staff directory
-.site-name-finance-and-operations .view-staff-directory .view-header p {
-	margin-top: 10px;
-}
+// // Spacing of Organizational Chart link on FO staff directory
+// .site-name-finance-and-operations .view-staff-directory .view-header p {
+// 	margin-top: 10px;
+// }
 
-// Spacing before menu block on Information for FO Staff page
-.site-name-finance-and-operations {
- #node-8 {
-	margin-bottom: -20px;
-  }
-}
+// // Spacing before menu block on Information for FO Staff page
+// .site-name-finance-and-operations {
+//  #node-8 {
+// 	margin-bottom: -20px;
+//   }
+// }
 
-// Bullets for menu block on Information for FO Staff page
-.site-name-finance-and-operations #block-menu-block-1 ul.menu li {
-	list-style-type: disc; 
-}
+// // Bullets for menu block on Information for FO Staff page
+// .site-name-finance-and-operations #block-menu-block-1 ul.menu li {
+// 	list-style-type: disc; 
+// }
 
-// Hide trailing breadcrumb separator on FO homepage
-.site-name-finance-and-operations.front #breadcrumb li.crumb-last {
-  display: none;
-}
+// // Hide trailing breadcrumb separator on FO homepage
+// .site-name-finance-and-operations.front #breadcrumb li.crumb-last {
+//   display: none;
+// }
 
-//Fix for header nav on GAO
-.site-name-grant-accounting-office #branding {
-	width: inherit;
-}
+// //Fix for header nav on GAO
+// .site-name-grant-accounting-office #branding {
+// 	width: inherit;
+// }
 
-// Announcements Titles on GAO
-.site-name-grant-accounting-office .view-announcements.view-display-id-page h3 a {
-	color: #086782;
-	text-decoration: none;
-	&:hover{
-		text-decoration: underline;
-	}
-}
+// // Announcements Titles on GAO
+// .site-name-grant-accounting-office .view-announcements.view-display-id-page h3 a {
+// 	color: #086782;
+// 	text-decoration: none;
+// 	&:hover{
+// 		text-decoration: underline;
+// 	}
+// }
 
-.site-name-grant-accounting-office .pane-gao-announcements h3 {
-  font-size: 1em;
+// .site-name-grant-accounting-office .pane-gao-announcements h3 {
+//   font-size: 1em;
 
-  a {
-	  color: #086782;
-    font-weight: normal;
-	  text-decoration: none;
-	  &:hover {
-	  	text-decoration: none;
-	  }
-  }
-}
+//   a {
+// 	  color: #086782;
+//     font-weight: normal;
+// 	  text-decoration: none;
+// 	  &:hover {
+// 	  	text-decoration: none;
+// 	  }
+//   }
+// }
 
-/* Announcement dates on GAO */
-.site-name-grant-accounting-office .pane-gao-announcements .views-field-field-publish-date {
-  color: #4E4E4E;
-  font-size: 0.85em;
-	font-style: italic;
-}
+// /* Announcement dates on GAO */
+// .site-name-grant-accounting-office .pane-gao-announcements .views-field-field-publish-date {
+//   color: #4E4E4E;
+//   font-size: 0.85em;
+// 	font-style: italic;
+// }
 
-// Featured Content on GAO, Book Navigation blocks, FA Contacts pane, Second level+ Menu Blocks, AFR mini calendar
-.pane-front-page-featured-content, 
-#block-book-navigation, 
-.site-name-financial-analysis.front .pane-2,
-.region-sidebar-second .block-menu-block,
-.region-sidebar-second .block-menu,
-.site-name-accounting-and-financial-reporting #block-views-calendar-of-deadlines-block-1,
-.site-name-treasury-operations .pane-treasury-front-page-featured-content,
-.site-name-tax-office .useful-forms-documents,
-.site-name-id-card-programs .pane-idcard-front-page-featured-content,
-.site-name-finance-and-operations #block-views-featured-block {
-	background-color: #FCFCFC;
-	border: 1px solid #E5E5E5;
-	@include border-radius(6px, 4px);
-  @include box-shadow(rgba(0,0,0,0.25) 1px 1px 2px);
-  padding: 10px;
+// // Featured Content on GAO, Book Navigation blocks, FA Contacts pane, Second level+ Menu Blocks, AFR mini calendar
+// .pane-front-page-featured-content, 
+// #block-book-navigation, 
+// .site-name-financial-analysis.front .pane-2,
+// .region-sidebar-second .block-menu-block,
+// .region-sidebar-second .block-menu,
+// .site-name-accounting-and-financial-reporting #block-views-calendar-of-deadlines-block-1,
+// .site-name-treasury-operations .pane-treasury-front-page-featured-content,
+// .site-name-tax-office .useful-forms-documents,
+// .site-name-id-card-programs .pane-idcard-front-page-featured-content,
+// .site-name-finance-and-operations #block-views-featured-block {
+// 	background-color: #FCFCFC;
+// 	border: 1px solid #E5E5E5;
+// 	@include border-radius(6px, 4px);
+//   @include box-shadow(rgba(0,0,0,0.25) 1px 1px 2px);
+//   padding: 10px;
 
-	h2{
-    border-bottom: 1px solid #FFC344;
-		margin-bottom: 0;
-    position: relative;
+// 	h2{
+//     border-bottom: 1px solid #FFC344;
+// 		margin-bottom: 0;
+//     position: relative;
 		    
 
 
-		&:after {
-      background: none repeat scroll 0 0 #FFC344;
-      bottom: -3px;
-      content: " ";
-      height: 6px;
-      position: absolute;
-      right: 0;
-      width: 6px;
+// 		&:after {
+//       background: none repeat scroll 0 0 #FFC344;
+//       bottom: -3px;
+//       content: " ";
+//       height: 6px;
+//       position: absolute;
+//       right: 0;
+//       width: 6px;
 
     
-    }
-  }
+//     }
+//   }
 	
-  .views-field-title {
-    margin-top: 10px;
-  }
-}
+//   .views-field-title {
+//     margin-top: 10px;
+//   }
+// }
 
-#block-book-navigation,
-.region-sidebar-second .block-menu-block {
-  ul li.leaf {
-    list-style-type: disc; 
-    list-style-position: outside;
-    margin-left: 11px;
-  }
+// #block-book-navigation,
+// .region-sidebar-second .block-menu-block {
+//   ul li.leaf {
+//     list-style-type: disc; 
+//     list-style-position: outside;
+//     margin-left: 11px;
+//   }
 
-  ul li.expanded, ul li.collapsed {
-    list-style-position: outside;
-    margin-left: 11px;
-  }
-}
+//   ul li.expanded, ul li.collapsed {
+//     list-style-position: outside;
+//     margin-left: 11px;
+//   }
+// }
 
-// Announcments nodes on GAO
-.site-name-grant-accounting-office .node-full{
-	.field-name-field-publish-date .field-label,
-	.field-name-field-author .field-label {
-		font-weight: normal;
-	}
-}
+// // Announcments nodes on GAO
+// .site-name-grant-accounting-office .node-full{
+// 	.field-name-field-publish-date .field-label,
+// 	.field-name-field-author .field-label {
+// 		font-weight: normal;
+// 	}
+// }
 
-// Resources pane on GAO homepage
-.site-name-grant-accounting-office #panels-ipe-paneid-5 ul li { 
-  list-style: none;
-}
+// // Resources pane on GAO homepage
+// .site-name-grant-accounting-office #panels-ipe-paneid-5 ul li { 
+//   list-style: none;
+// }
 
-// Do not display "Print this page" on Gift FAQ page
-.site-name-grant-accounting-office.page-node-151 #block-print-block-print-block {
-  display: none;
-} 
+// // Do not display "Print this page" on Gift FAQ page
+// .site-name-grant-accounting-office.page-node-151 #block-print-block-print-block {
+//   display: none;
+// } 
 
-// Hide front page title on CAM
-.site-name-capital-assets-management.front h1#page-title {
-  display: none;
-}
+// // Hide front page title on CAM
+// .site-name-capital-assets-management.front h1#page-title {
+//   display: none;
+// }
 
-// Contact Page on CAM
-.site-name-capital-assets-management{
-	.view-contact-us{
-		.views-field-nothing{
-			margin-top: 10px;
-		}
-	}
-}
+// // Contact Page on CAM
+// .site-name-capital-assets-management{
+// 	.view-contact-us{
+// 		.views-field-nothing{
+// 			margin-top: 10px;
+// 		}
+// 	}
+// }
 
-//FAQ view on CAM
-.site-name-capital-assets-management #block-views-3d2632baea7e9b93dc5c7c9af2ac322a .views-row-last {
-  margin-bottom: 20px;
-}
+// //FAQ view on CAM
+// .site-name-capital-assets-management #block-views-3d2632baea7e9b93dc5c7c9af2ac322a .views-row-last {
+//   margin-bottom: 20px;
+// }
 
-// Contact Us view on CAM
-.site-name-capital-assets-management .views-field-field-responsibilities ul {
-	margin-left: 40px;
-}
+// // Contact Us view on CAM
+// .site-name-capital-assets-management .views-field-field-responsibilities ul {
+// 	margin-left: 40px;
+// }
 
-// Remove extra margin after Responsibilities on CAM homepage
-.site-name-capital-assets-management #panels-ipe-paneid-1 ul {
-  margin-bottom: 0;
-}
+// // Remove extra margin after Responsibilities on CAM homepage
+// .site-name-capital-assets-management #panels-ipe-paneid-1 ul {
+//   margin-bottom: 0;
+// }
 
-// FA underline for headings
-.site-name-financial-analysis #main-content {
-  h2, h3 {
-    border-bottom: 1px solid #FFC344;
-    line-height: 1.8em;
-    margin-bottom: 5px;
-    position: relative;
+// // FA underline for headings
+// .site-name-financial-analysis #main-content {
+//   h2, h3 {
+//     border-bottom: 1px solid #FFC344;
+//     line-height: 1.8em;
+//     margin-bottom: 5px;
+//     position: relative;
     
-    &:after {
-      background: none repeat scroll 0 0 #FFC344;
-      bottom: -3px;
-      content: " ";
-      height: 6px;
-      position: absolute;
-      right: 0;
-      width: 6px;
-    }
-  }
-}
+//     &:after {
+//       background: none repeat scroll 0 0 #FFC344;
+//       bottom: -3px;
+//       content: " ";
+//       height: 6px;
+//       position: absolute;
+//       right: 0;
+//       width: 6px;
+//     }
+//   }
+// }
 
-/* but not on search results */
-.site-name-financial-analysis.page-gsearch #main-content {
-  h2, h3 {
-    border-bottom: none;
-    line-height: 1.5em;
+// /* but not on search results */
+// .site-name-financial-analysis.page-gsearch #main-content {
+//   h2, h3 {
+//     border-bottom: none;
+//     line-height: 1.5em;
 
-    &:after {
-      background: none;
-      content: none;
-      height: 0;
-      width: 0;
-    }
-  }
-}
+//     &:after {
+//       background: none;
+//       content: none;
+//       height: 0;
+//       width: 0;
+//     }
+//   }
+// }
 
-// Adjust margins on FA homepage
-.site-name-financial-analysis.front .region-two-50-first .block-inner {
-  margin-left: 0;
-  margin-right: 20px;
-}
+// // Adjust margins on FA homepage
+// .site-name-financial-analysis.front .region-two-50-first .block-inner {
+//   margin-left: 0;
+//   margin-right: 20px;
+// }
 
-// Remove bullets from Frequently Needed list on FA homepage
-.site-name-financial-analysis.front .pane-1 .block-content {
-  ul {
-    margin-left: 0;
-  }
+// // Remove bullets from Frequently Needed list on FA homepage
+// .site-name-financial-analysis.front .pane-1 .block-content {
+//   ul {
+//     margin-left: 0;
+//   }
   
-  li {
-    list-style: none;
-  }
-}
+//   li {
+//     list-style: none;
+//   }
+// }
 
-// Controller Meeting styles 
-.site-name-controlleramp039s-office .inline-label {
-  float: left;
-  font-weight: bold;
-  margin-right: 5px;
-}
+// // Controller Meeting styles 
+// .site-name-controlleramp039s-office .inline-label {
+//   float: left;
+//   font-weight: bold;
+//   margin-right: 5px;
+// }
 
-.site-name-controlleramp039s-office.page-budget-officers-past-meetings .views-row {
-  margin-bottom: 20px;
-}
+// .site-name-controlleramp039s-office.page-budget-officers-past-meetings .views-row {
+//   margin-bottom: 20px;
+// }
 
-// Related Departments pane on Controller
-.site-name-controlleramp039s-office .menu-name-menu-off-site-links ul.menu li {
-  list-style-type: disc;
-}
+// // Related Departments pane on Controller
+// .site-name-controlleramp039s-office .menu-name-menu-off-site-links ul.menu li {
+//   list-style-type: disc;
+// }
 
-// Controller Announcements page
-.site-name-controlleramp039s-office.page-announcements .views-row {
-  margin-bottom: 10px;
-}
+// // Controller Announcements page
+// .site-name-controlleramp039s-office.page-announcements .views-row {
+//   margin-bottom: 10px;
+// }
 
-// Controller more links 
-.site-name-controlleramp039s-office .more-link {
-  margin-top: 10px;
-  text-align: left;
-}
+// // Controller more links 
+// .site-name-controlleramp039s-office .more-link {
+//   margin-top: 10px;
+//   text-align: left;
+// }
 
-.site-name-controlleramp039s-office .pane-3 p {
-  margin-bottom: 0;
-}
+// .site-name-controlleramp039s-office .pane-3 p {
+//   margin-bottom: 0;
+// }
 
-/* AFR Calendar views */
-.site-name-accounting-and-financial-reporting {
-  td.views-field-field-deadline-1, .view-calendar-of-deadlines.view-display-id-page_2 td.views-field-field-deadline {
-    width: 20%;
-  }
+// /* AFR Calendar views */
+// .site-name-accounting-and-financial-reporting {
+//   td.views-field-field-deadline-1, .view-calendar-of-deadlines.view-display-id-page_2 td.views-field-field-deadline {
+//     width: 20%;
+//   }
 
-  div.day {
-    width: auto;
-  }
+//   div.day {
+//     width: auto;
+//   }
 
-  .view-display-id-afr_attachment_1 ul {
-    margin-left: 15px;
-  }
-}
+//   .view-display-id-afr_attachment_1 ul {
+//     margin-left: 15px;
+//   }
+// }
 
-.site-name-accounting-and-financial-reporting .view-calendar-of-deadlines.view-display-id-block_2,
-.site-name-accounting-and-financial-reporting .view-taxonomy-calendar-categories {
-  div.deadline-date {
-    border: 1px solid #CCCCCC;
-    @include border-radius(6px, 6px);
-    color: #2D2D2D;
-    float: left;
-    font-size: 1.1em;
-    font-weight: bold;
-    height: 50px;
-    line-height: 1.5em;
-    margin-right: 10px;
-    padding: 5px;
-    text-align: center;
-    width: 55px;
+// .site-name-accounting-and-financial-reporting .view-calendar-of-deadlines.view-display-id-block_2,
+// .site-name-accounting-and-financial-reporting .view-taxonomy-calendar-categories {
+//   div.deadline-date {
+//     border: 1px solid #CCCCCC;
+//     @include border-radius(6px, 6px);
+//     color: #2D2D2D;
+//     float: left;
+//     font-size: 1.1em;
+//     font-weight: bold;
+//     height: 50px;
+//     line-height: 1.5em;
+//     margin-right: 10px;
+//     padding: 5px;
+//     text-align: center;
+//     width: 55px;
 
-    a {
-      color: #2D2D2D;
-    }
-  }
+//     a {
+//       color: #2D2D2D;
+//     }
+//   }
 
-  .views-field-body {
-    padding-left: 65px;
+//   .views-field-body {
+//     padding-left: 65px;
 
-      p {
-        margin-bottom: 0;
-      }
-  }
+//       p {
+//         margin-bottom: 0;
+//       }
+//   }
 
-  .views-field-term-node-tid {
-    padding-bottom: 10px;
-    padding-left: 65px;
-  }
+//   .views-field-term-node-tid {
+//     padding-bottom: 10px;
+//     padding-left: 65px;
+//   }
 
-  .views-row {
-    border-bottom: solid 1px #CCCCCC;
-    margin-bottom: 1.5em;
-    min-height: 60px;
-  }
+//   .views-row {
+//     border-bottom: solid 1px #CCCCCC;
+//     margin-bottom: 1.5em;
+//     min-height: 60px;
+//   }
 
-  &.view-display-id-page_3 {
-    .views-field-body {
-      padding-left: 30px;
-    }
+//   &.view-display-id-page_3 {
+//     .views-field-body {
+//       padding-left: 30px;
+//     }
 
-    .date-display-single {
-      float: left;
-      margin-right: 10px;
-    }
+//     .date-display-single {
+//       float: left;
+//       margin-right: 10px;
+//     }
 
-    .views-field-term-node-tid {
-      padding-left: 30px;
-    }
-  }
-}
+//     .views-field-term-node-tid {
+//       padding-left: 30px;
+//     }
+//   }
+// }
 
-/* Calendar Categoy links in view header */
-.site-name-accounting-and-financial-reporting .view-list-of-calendar-categories {
-  .views-row {
-    margin-bottom: 0;
-    min-height: 0;
-    border-bottom: none; 
-  }
+// /* Calendar Categoy links in view header */
+// .site-name-accounting-and-financial-reporting .view-list-of-calendar-categories {
+//   .views-row {
+//     margin-bottom: 0;
+//     min-height: 0;
+//     border-bottom: none; 
+//   }
 
-  .item-list ul {
-    margin-bottom: 10px !important;
-  } 
-}
+//   .item-list ul {
+//     margin-bottom: 10px !important;
+//   } 
+// }
 
-// AFR calendar tables
-.site-name-accounting-and-financial-reporting .view-calendar-of-deadlines {
-  td {
-    vertical-align: top;
-  }
-}
+// // AFR calendar tables
+// .site-name-accounting-and-financial-reporting .view-calendar-of-deadlines {
+//   td {
+//     vertical-align: top;
+//   }
+// }
 
-/* AFR staff directory */
-.site-name-accounting-and-financial-reporting .view-contact-us {
-  th {
-    &.views-field-title {
-      width: 30%;
-    }
+// /* AFR staff directory */
+// .site-name-accounting-and-financial-reporting .view-contact-us {
+//   th {
+//     &.views-field-title {
+//       width: 30%;
+//     }
 
-    &.views-field-field-job-title {
-      width: 50%;
-    }
+//     &.views-field-field-job-title {
+//       width: 50%;
+//     }
 
-    &.views-field-field-phone-number {
-      width: 20%;
-    }
-  }
-}
+//     &.views-field-field-phone-number {
+//       width: 20%;
+//     }
+//   }
+// }
 
 
-// AFR Calendar Item Export
-.site-name-accounting-and-financial-reporting .view-afr-calendar-items-export {
-  .views-row {
-    margin-bottom: 15px;
-  }
+// // AFR Calendar Item Export
+// .site-name-accounting-and-financial-reporting .view-afr-calendar-items-export {
+//   .views-row {
+//     margin-bottom: 15px;
+//   }
 
-  tr.even, tr.odd {
-    td.active {
-      background-color: transparent;
-    }
-  }
-}
+//   tr.even, tr.odd {
+//     td.active {
+//       background-color: transparent;
+//     }
+//   }
+// }
 
-/* UBill FAQs */
-.site-name-university-billing-office .view-ubill-faq {
-  ul {
-    margin-bottom: 10px;
-  }
-}
+// /* UBill FAQs */
+// .site-name-university-billing-office .view-ubill-faq {
+//   ul {
+//     margin-bottom: 10px;
+//   }
+// }
 
-// UBill Slider
-.site-name-university-billing-office {
-  .flexslider {
-    background: #F5F5F5;
+// // UBill Slider
+// .site-name-university-billing-office {
+//   .flexslider {
+//     background: #F5F5F5;
 
-    .views-field-body {
-      padding-left: 18px;
-      padding-right: 18px;
-    }
-  }
+//     .views-field-body {
+//       padding-left: 18px;
+//       padding-right: 18px;
+//     }
+//   }
 
-  .flex-pauseplay span {
-    color: #086782;
+//   .flex-pauseplay span {
+//     color: #086782;
 
-    &:hover {
-      cursor: pointer;
-    }
-  }
-}
+//     &:hover {
+//       cursor: pointer;
+//     }
+//   }
+// }
 
-// UBill Staff Directory
-.site-name-university-billing-office .view-staff-directory {
-  th {
-    &.views-field-title {
-      width: 20%;
-    }
+// // UBill Staff Directory
+// .site-name-university-billing-office .view-staff-directory {
+//   th {
+//     &.views-field-title {
+//       width: 20%;
+//     }
 
-    &.views-field-field-job-title {
-      width: 40%;
-    }
+//     &.views-field-field-job-title {
+//       width: 40%;
+//     }
 
-    &.views-field-field-phone-number {
-      width: 20%;
-    }
-  }
+//     &.views-field-field-phone-number {
+//       width: 20%;
+//     }
+//   }
 
-  thead tr {
-    background-color: white !important;
-  }
+//   thead tr {
+//     background-color: white !important;
+//   }
 
-  thead th {
-    color: #202020;
-  }
+//   thead th {
+//     color: #202020;
+//   }
 
-  caption {
-    display: none;
-  }
-}
+//   caption {
+//     display: none;
+//   }
+// }
 
-// UBill Calendar
-.site-name-university-billing-office {
-    div.day {
-    width: auto;
-  }
+// // UBill Calendar
+// .site-name-university-billing-office {
+//     div.day {
+//     width: auto;
+//   }
 
-  .calendar-calendar .month-view .full td.multi-day .inner .monthview .continues, 
-  .calendar-calendar .month-view .full td.multi-day .inner .monthview .cutoff, 
-  .calendar-calendar .week-view .full td.multi-day .inner .weekview .continues, 
-  .calendar-calendar .week-view .full td.multi-day .inner .weekview .cutoff, 
-  .calendar-calendar .month-view .full td.multi-day div.monthview, 
-  .calendar-calendar .week-view .full td.multi-day div.weekview, 
-  .calendar-calendar .day-view .full td.multi-day div.dayview {
-    background-color: #FFD478;
-  }
+//   .calendar-calendar .month-view .full td.multi-day .inner .monthview .continues, 
+//   .calendar-calendar .month-view .full td.multi-day .inner .monthview .cutoff, 
+//   .calendar-calendar .week-view .full td.multi-day .inner .weekview .continues, 
+//   .calendar-calendar .week-view .full td.multi-day .inner .weekview .cutoff, 
+//   .calendar-calendar .month-view .full td.multi-day div.monthview, 
+//   .calendar-calendar .week-view .full td.multi-day div.weekview, 
+//   .calendar-calendar .day-view .full td.multi-day div.dayview {
+//     background-color: #FFD478;
+//   }
 
-  .node-calendar-item .field-name-field-date {
-    margin-bottom: 10px;
-  }
-}
+//   .node-calendar-item .field-name-field-date {
+//     margin-bottom: 10px;
+//   }
+// }
 
-// Treasury Operations staff directory
-.site-name-treasury-operations .view-staff-directory {
-  td.views-field-title, td.views-field-field-phone-number{
-    width: 25%;
-  }
+// // Treasury Operations staff directory
+// .site-name-treasury-operations .view-staff-directory {
+//   td.views-field-title, td.views-field-field-phone-number{
+//     width: 25%;
+//   }
 
-  thead tr {
-    background-color: white !important;
-  }
+//   thead tr {
+//     background-color: white !important;
+//   }
 
-  thead th {
-    color: #202020;
-  }
-}
+//   thead th {
+//     color: #202020;
+//   }
+// }
 
-// FMB Records
-.site-name-financial-management-and-budget .node-record {
-  fieldset {
-    border: none;
-    margin: 0 0 1.5em 0;
-    padding: 0;
+// // FMB Records
+// .site-name-financial-management-and-budget .node-record {
+//   fieldset {
+//     border: none;
+//     margin: 0 0 1.5em 0;
+//     padding: 0;
 
-    legend {
-      font-family: Lato;
-      font-size: 1.4em;
-      font-weight: bold;
-    }
+//     legend {
+//       font-family: Lato;
+//       font-size: 1.4em;
+//       font-weight: bold;
+//     }
 
-    .field-items {
-      margin-bottom: 10px;
+//     .field-items {
+//       margin-bottom: 10px;
 
-      .field-item {
-        margin-left: 30px;
-      }
+//       .field-item {
+//         margin-left: 30px;
+//       }
 
-      li.field-item {
-        margin-left: 0;
-      }
-    }
-  }
-}
+//       li.field-item {
+//         margin-left: 0;
+//       }
+//     }
+//   }
+// }
 
-.site-name-financial-management-and-budget {
-  .view-fmb-records-a-z {
-    ul {
-      margin-bottom: 15px;
-    }
-  }
+// .site-name-financial-management-and-budget {
+//   .view-fmb-records-a-z {
+//     ul {
+//       margin-bottom: 15px;
+//     }
+//   }
 
-  #edit-submit-fmb-records-a-z {
-    margin-top: 0;
-  }
-}
+//   #edit-submit-fmb-records-a-z {
+//     margin-top: 0;
+//   }
+// }
 
-// ID Card Featured Content
-.site-name-id-card-programs .pane-idcard-front-page-featured-content {
-  p { margin-bottom: 0; }
-}
+// // ID Card Featured Content
+// .site-name-id-card-programs .pane-idcard-front-page-featured-content {
+//   p { margin-bottom: 0; }
+// }
 
-// ID Card FAQs
-.site-name-id-card-programs .view-idcard-faq {
-  ul {
-    margin-bottom: 10px;
-  }
-}
+// // ID Card FAQs
+// .site-name-id-card-programs .view-idcard-faq {
+//   ul {
+//     margin-bottom: 10px;
+//   }
+// }
 
-.site-name-tax-office .region-two-66-33-second .useful-forms-documents {
+// .site-name-tax-office .region-two-66-33-second .useful-forms-documents {
   
-  .pane-title {
-    font-size: 1.2em;
-    margin-bottom:4px;
+//   .pane-title {
+//     font-size: 1.2em;
+//     margin-bottom:4px;
 
-  }
+//   }
   
-  .block-content p {
+//   .block-content p {
     
-    padding-top: 12px;
+//     padding-top: 12px;
 
-  }
-}
+//   }
+// }

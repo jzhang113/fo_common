@@ -17,6 +17,7 @@
 //   @include mix-in-name;
 //
 
+
 //
 // Color Variables
 // Colors used in the sample global.styles. You can use these to recolor many
@@ -43,6 +44,13 @@ $primary_task_hover:  $light;
 $primary_task_active: $page;
 
 
+
+//
+// Font imports
+//
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+
 //
 // Font Variables
 // These font stacks are an exact copy of the stacks found in AT Cores
@@ -59,6 +67,18 @@ $modern-myriad:               'Segoe UI', 'Myriad Pro', Myriad, Arial, Helvetica
 $lucida:                      'Lucida Sans Unicode', 'Lucida Sans', 'Lucida Grande', Verdana, Geneva, sans-serif;
 $impact:                      Impact, Haettenschweiler, 'Franklin Gothic Bold', Charcoal, 'Helvetica Inserat', 'Bitstream Vera Sans Bold', 'Arial Black', sans-serif;
 $mono:                        Consolas, Monaco, 'Courier New', Courier, monospace, sans-serif;
+$header-font-stack:           'Lato', sans-serif;
+
+//
+// Media query variables
+//
+
+$desktop-size: 1024px;
+$tablet-size: 780px;
+$tablet-portrait: 481px;
+
+
+
 
 
 //
