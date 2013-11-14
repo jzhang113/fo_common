@@ -126,7 +126,7 @@ regions[three_33_bottom] = Footer panel - bottom
   ; plugins[page_layout][layouts] = layouts/page
 
   ; Panels layout plugins
-  ; plugins[panels][layouts] = layouts/panels
+   plugins[panels][layouts] = layouts
 
 
 ;----------// Site Features
