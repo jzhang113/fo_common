@@ -20,7 +20,29 @@
 }
 
 #nav-wrapper {
-  display: none;
+  .container {
+    background: #242424;
+    @include background-image(linear-gradient(#313131, #242424));
+    @include box-shadow(rgba(200,200,200,0.25) 0px 2px 3px);
+    clear: both;
+    overflow: auto;
+    padding: 5px;
+    text-align: right;
+    width: 100%;
+  }
+  
+  li {}
+  
+  a {
+  color: #E0E0E0;
+    font-size: 1em;
+    vertical-align: middle;
+    
+    &:hover,
+    &:focus {
+    color: #FFFFFF;
+    }
+  }
 }
 
 // Arrange bottom panes on GAO front page
