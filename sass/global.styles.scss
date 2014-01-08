@@ -412,12 +412,12 @@ hr {
   .container {
     background: #242424;
     @include background-image(linear-gradient(#313131, #242424));
+    padding: 5px;
     
     @include breakpoint($tablet-size) {
       @include box-shadow(rgba(200,200,200,0.25) 0px 2px 3px);
       clear: both;
       overflow: auto;
-      padding: 5px;
       text-align: right;
       width: 100%;
     }
