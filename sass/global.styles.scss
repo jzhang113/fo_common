@@ -2864,15 +2864,6 @@ ul.links {
    display: none;
  }
 
-// Hide breadcrumb wrapper on front page when in mobile
- .front #breadcrumb-wrapper .container  {
-  @include element-invisible;
-
-  @include breakpoint($tablet-portrait) {
-    @include element-invisible-off;
-  }
-}
-
 //Style resaerch links
 #research-link {
   @include breakpoint($tablet-size) {
