@@ -42,7 +42,9 @@
  * element as these can be overridden using font theme settings.
  */
 
-html {}
+html {
+  font-size: 62.5%;
+}
 
 html .js {
 	background-color: #E5E5E5;
@@ -51,13 +53,7 @@ html .js {
 body {
 	background-color: #FFFFFF;
   font-family: $sans-serif-arial-helvetica;
-  
-  @include breakpoint($tablet-portrait) {
-    font-size: 81.6%;
-
-  }
-
-
+  @include font-size(1.3);
 }
 
 

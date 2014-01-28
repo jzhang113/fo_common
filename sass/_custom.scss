@@ -209,3 +209,11 @@ $gutter-width: 10px;
     }
   }
 }
+
+//
+// REM font sizing
+//
+@mixin font-size($sizeValue: 1.3){
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
