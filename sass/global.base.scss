@@ -984,18 +984,29 @@ header[role=banner],
         }
       }
   }
+  
   .views-field-body {
     padding-left: 10px;
     padding-right: 10px;
   }
-}
 
-div.flex-pauseplay {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  .flex-play {
-    cursor: pointer;
+  .flex-direction-nav {
+    a {
+      line-height: 40px; // match font-size from flexslider css
+    }
+  }
+
+  .flex-pauseplay {
+    position: relative;
+    bottom: 0;
+    right: 0;
+
+    a {
+      line-height: 20px; // match font-size from flexslider css
+      left: auto;
+      right: 0;
+      bottom: 0;
+    }
   }
 }
 
