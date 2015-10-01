@@ -1,0 +1,8 @@
+{
+    "name": "its-uofiowa/fo_common",
+    "description": "The shared common theme for Financial Ops affiliated websites.",
+    "type": "drupal-theme",
+    "require": {
+      "composer/installers": "*"
+    }
+}
